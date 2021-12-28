@@ -13,7 +13,7 @@
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "deploy": "yarn build && gh-pages -d public -b main"
+        "deploy": "yarn build && gh-pages -d public -b deploy"
     },
     "dependencies": {
         "@mdx-js/mdx": "^1.6.22",
