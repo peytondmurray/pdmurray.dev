@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import  { StaticImage } from 'gatsby-plugin-image'
+
+import { StaticImage } from 'gatsby-plugin-image'
 
 const pageStyles = {
     color: '#232129',
@@ -17,7 +18,7 @@ const HeroRow = styled.div`
     display: flex;
     flex-direction: row;
     > div:not(:first-child):not(:last-child) {
-        margin: 0px 15px 0px 15px
+        margin: 0px 15px 0px 15px;
     }
 `
 
@@ -39,15 +40,27 @@ export default function IndexPage() {
             <h1 style={headingStyles}>Peyton Murray</h1>
             <HeroRow>
                 <TextImageLink>
-                    <StaticImage src="../images/corner.png" alt="A corner plot of some MCMC samples" />
+                    <StaticImage
+                        src="../images/corner.png"
+                        alt="A corner plot of some MCMC samples"
+                        layout="fullWidth"
+                    />
                     <ImageTitle>Blog</ImageTitle>
                 </TextImageLink>
                 <TextImageLink>
-                    <StaticImage src="../images/OOP_ML.png" alt='My research interests in condensed matter physics.' />
+                    <StaticImage
+                        src="../images/OOP_ML.png"
+                        alt="My research interests in condensed matter physics."
+                        layout="fullWidth"
+                    />
                     <ImageTitle>Research</ImageTitle>
                 </TextImageLink>
                 <TextImageLink>
-                    <StaticImage src="../images/about_me_400x400px.jpg" alt="A picture of me." />
+                    <StaticImage
+                        src="../images/about_me_400x400px.jpg"
+                        alt="A picture of me."
+                        layout="fullWidth"
+                    />
                     <ImageTitle>About</ImageTitle>
                 </TextImageLink>
             </HeroRow>
