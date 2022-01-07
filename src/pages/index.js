@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import { StaticImage } from 'gatsby-plugin-image'
 
+import HeroLink from '../components/HeroLink'
+
 const pageStyles = {
     color: '#232129',
     padding: 96,
@@ -22,47 +24,33 @@ const HeroRow = styled.div`
     }
 `
 
-const TextImageLink = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-`
-
-const ImageTitle = styled.h2`
-    color: black;
-    text-align: center;
-`
-
 export default function IndexPage() {
     return (
         <main style={pageStyles}>
             <title>Home Page</title>
             <h1 style={headingStyles}>Peyton Murray</h1>
             <HeroRow>
-                <TextImageLink>
+                <HeroLink title="Blog" to="/blog">
                     <StaticImage
                         src="../images/corner.png"
                         alt="A corner plot of some MCMC samples"
                         layout="fullWidth"
                     />
-                    <ImageTitle>Blog</ImageTitle>
-                </TextImageLink>
-                <TextImageLink>
+                </HeroLink>
+                <HeroLink title="Research" to="/research">
                     <StaticImage
                         src="../images/OOP_ML.png"
                         alt="My research interests in condensed matter physics."
                         layout="fullWidth"
                     />
-                    <ImageTitle>Research</ImageTitle>
-                </TextImageLink>
-                <TextImageLink>
+                </HeroLink>
+                <HeroLink title="About" to="/about">
                     <StaticImage
                         src="../images/about_me_400x400px.jpg"
                         alt="A picture of me."
                         layout="fullWidth"
                     />
-                    <ImageTitle>About</ImageTitle>
-                </TextImageLink>
+                </HeroLink>
             </HeroRow>
         </main>
     )
