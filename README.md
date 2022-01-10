@@ -52,3 +52,6 @@
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+<!-- This repository uses [font-awesome icons](https://fontawesome.com/license). Some
+changes to the icons may have been made to match the theme of my site. -->
