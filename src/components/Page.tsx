@@ -13,8 +13,8 @@ const ContentLayout = styled.div`
 `
 
 const PageLayout = styled.div`
-    display: flex
-    flex-direction: row
+    display: flex;
+    flex-direction: row;
 `
 
 export default function Page(props: any): JSX.Element {

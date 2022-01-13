@@ -43,6 +43,14 @@ const links = [
 const SidebarLayout = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0px 40px 0px 0px;
+
+    a {
+        :not(:first-child) {
+            margin-top: 0.5em;
+        }
+        text-decoration: none;
+    }
 `
 
 const IconTextLayout = styled.div`
@@ -55,7 +63,8 @@ const Name = styled.div`
 `
 
 const Icon = styled.div`
-
+    width: 1em;
+    margin-right: 1em;
 `
 
 export default function SidebarBase(): JSX.Element {
@@ -64,7 +73,7 @@ export default function SidebarBase(): JSX.Element {
             {links.map(({name, to, icon}) => {
                 return (
                     <a href={to}>
-                        <IconTextLayout>
+                        <IconTextLayout key={name}>
                             <Icon>{icon}</Icon>
                             <Name>{name}</Name>
                         </IconTextLayout>
