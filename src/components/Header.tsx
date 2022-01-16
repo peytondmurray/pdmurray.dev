@@ -1,4 +1,5 @@
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
+import { Link } from 'theme-ui'
 import React from 'react'
 import styled from '@emotion/styled'
 
@@ -10,7 +11,7 @@ const HeaderLayout = styled.div`
 export default function Header(): JSX.Element {
     return (
         <HeaderLayout>
-            <Link to="/" sx={{ color: 'red' }}>
+            <Link to="/" as={GatsbyLink}>
                 <h1>Test</h1>
             </Link>
         </HeaderLayout>
