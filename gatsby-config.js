@@ -4,7 +4,6 @@ module.exports = {
         title: 'peytondmurray.github.io',
     },
     plugins: [
-        'gatsby-plugin-styled-components',
         'gatsby-plugin-image',
         {
             resolve: 'gatsby-plugin-google-analytics',
@@ -26,9 +25,9 @@ module.exports = {
             resolve: 'gatsby-plugin-sharp',
             options: {
                 defaults: {
-                    placeholder: 'blurred'
-                }
-            }
+                    placeholder: 'blurred',
+                },
+            },
         },
         'gatsby-transformer-sharp',
         {

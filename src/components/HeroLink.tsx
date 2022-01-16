@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { Link } from 'gatsby'
 
@@ -19,11 +19,10 @@ export default function HeroLink({
     title,
     to,
 }: {
-    children: JSX.Element,
-    title: string,
-    to: string,
+    children: JSX.Element
+    title: string
+    to: string
 }): JSX.Element {
-
     return (
         <TextImageLink>
             <Link to={to}>

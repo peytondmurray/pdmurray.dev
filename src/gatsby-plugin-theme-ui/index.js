@@ -44,6 +44,16 @@ const theme = {
     colors: {
         text: colormap[0],
         background: colormap[31],
+        primary: colormap[12],
+        secondary: colormap[18],
+        accent: colormap[25],
+    },
+    styles: {
+        a: {
+            color: colormap[20],
+            fontWeight: 'bold',
+            textDecoration: 'none',
+        },
     },
 }
 

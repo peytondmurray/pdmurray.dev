@@ -1,6 +1,8 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
+
+import { Link } from 'theme-ui'
 
 const links = [
     {
@@ -70,7 +72,7 @@ const SidebarLayout = styled.div`
     margin: 0px 40px 0px 0px;
 
     a {
-        :not(:first-child) {
+        :not(:first-of-type) {
             margin-top: 0.5em;
         }
         text-decoration: none;
@@ -97,12 +99,12 @@ export default function SidebarBase(): JSX.Element {
         <SidebarLayout>
             {links.map(({ name, to, icon }) => {
                 return (
-                    <a href={to}>
-                        <IconTextLayout key={name}>
+                    <Link href={to} key={name}>
+                        <IconTextLayout>
                             <Icon>{icon}</Icon>
                             <Name>{name}</Name>
                         </IconTextLayout>
-                    </a>
+                    </Link>
                 )
             })}
         </SidebarLayout>
