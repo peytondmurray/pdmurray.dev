@@ -6,7 +6,9 @@ import Header from './Header'
 
 const MainLayout = styled.div``
 
-const ContentLayout = styled.div``
+const ContentLayout = styled.div`
+    flex-grow: 1;
+`
 
 const PageLayout = styled.div`
     display: flex;

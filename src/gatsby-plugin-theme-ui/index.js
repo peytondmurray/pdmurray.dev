@@ -54,7 +54,11 @@ const theme = {
             fontWeight: 'bold',
             textDecoration: 'none',
         },
+        SidebarLayout: {
+            background: colormap[16],
+        },
     },
 }
 
 export default theme
+export { colormap }
