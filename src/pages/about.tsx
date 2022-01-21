@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'theme-ui'
 
 import Page from '../components/Page'

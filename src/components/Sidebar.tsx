@@ -1,15 +1,21 @@
-import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 
 import { Link } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
+
+import { getFilter } from '../util/colorFilter'
 
 const links = [
     {
         name: 'peynmurray@gmail.com',
         to: 'email:peynmurray@gmail.com',
         icon: (
-            <StaticImage src="../images/icons/at-solid.svg" alt="at symbol" />
+            <StaticImage
+                src="../images/icons/at-solid.svg"
+                alt="at symbol"
+                style={{ fill: 'white' }}
+            />
         ),
     },
     {
@@ -41,6 +47,9 @@ const links = [
             <StaticImage
                 src="../images/icons/google-scholar.svg"
                 alt="Google Scholar logo"
+                imgStyle={{
+                    filter: 'invert(1)',
+                }}
             />
         ),
     },
@@ -69,7 +78,8 @@ const links = [
 const SidebarLayout = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0px 40px 0px 0px;
+    margin-right: 1em;
+    padding-right: 1em;
 
     a {
         :not(:first-of-type) {
@@ -96,12 +106,22 @@ const Icon = styled.div`
 
 export default function SidebarBase(): JSX.Element {
     return (
-        <SidebarLayout>
+        <SidebarLayout
+            sx={{
+                borderRight: (theme) => `0.1em solid ${theme.colors.accent}`,
+            }}
+        >
             {links.map(({ name, to, icon }) => {
                 return (
                     <Link href={to} key={name}>
                         <IconTextLayout>
-                            <Icon>{icon}</Icon>
+                            <Icon
+                                sx={{
+                                    fill: 'red',
+                                }}
+                            >
+                                {icon}
+                            </Icon>
                             <Name>{name}</Name>
                         </IconTextLayout>
                     </Link>
