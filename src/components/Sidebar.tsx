@@ -67,7 +67,7 @@ const SidebarLayout = styled.div`
 const IconTextLayout = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
 `
 
 const Name = styled.div`
@@ -92,7 +92,7 @@ export default function SidebarBase(): JSX.Element {
                         <IconTextLayout>
                             <Icon
                                 sx={{
-                                    fill: (theme) => `${theme.colors.accent}`,
+                                    fill: (theme) => `${theme.styles.a.color}`,
                                 }}
                             >
                                 {icon}
