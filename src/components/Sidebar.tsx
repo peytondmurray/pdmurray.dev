@@ -21,18 +21,12 @@ const links = [
     {
         name: 'GitHub',
         to: 'https://github.com/peytondmurray',
-        icon: (
-            <GithubIcon alt="GitHub logo" />
-        ),
+        icon: <GithubIcon alt="GitHub logo" />,
     },
     {
         name: 'Linkedin',
         to: 'https://www.linkedin.com/in/peytondm/',
-        icon: (
-            <LinkedinIcon
-                alt="LinkedIn logo"
-            />
-        ),
+        icon: <LinkedinIcon alt="LinkedIn logo" />,
     },
     {
         name: 'ORCiD',
@@ -42,29 +36,17 @@ const links = [
     {
         name: 'Google Scholar',
         to: 'https://scholar.google.ca/citations?user=NXE8TDYAAAAJ&hl=en&oi=ao',
-        icon: (
-            <GoogleScholarIcon
-                alt="Google Scholar logo"
-            />
-        ),
+        icon: <GoogleScholarIcon alt="Google Scholar logo" />,
     },
     {
         name: 'ResearchGate',
         to: 'https://www.researchgate.net/profile/Peyton-Murray',
-        icon: (
-            <ResearchgateIcon
-                alt="ResearchGate logo"
-            />
-        ),
+        icon: <ResearchgateIcon alt="ResearchGate logo" />,
     },
     {
         name: 'Stack Overflow',
         to: 'https://stackoverflow.com/users/8100451/peytondmurray',
-        icon: (
-            <StackoverflowIcon
-                alt="Stack Overflow logo"
-            />
-        ),
+        icon: <StackoverflowIcon alt="Stack Overflow logo" />,
     },
 ]
 
@@ -110,7 +92,7 @@ export default function SidebarBase(): JSX.Element {
                         <IconTextLayout>
                             <Icon
                                 sx={{
-                                    fill: 'red',
+                                    fill: (theme) => `${theme.colors.accent}`,
                                 }}
                             >
                                 {icon}
