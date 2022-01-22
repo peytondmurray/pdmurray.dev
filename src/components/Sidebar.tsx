@@ -1,8 +1,6 @@
-import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
 
 import { Link } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
 
 import AtIcon from '../images/icons/at-solid.svg'
 import GithubIcon from '../images/icons/github.svg'
@@ -16,6 +14,7 @@ const links = [
     {
         name: 'peynmurray@gmail.com',
         to: 'email:peynmurray@gmail.com',
+        // icon: <AtIcon alt="at symbol" />,
         icon: <AtIcon alt="at symbol" />,
     },
     {

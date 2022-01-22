@@ -48,12 +48,12 @@ module.exports = {
         },
         'gatsby-plugin-theme-ui',
         {
-            resolve: "gatsby-plugin-react-svg",
+            resolve: 'gatsby-plugin-react-svg',
             options: {
                 rule: {
-                    include: /src\/images\/icons/
-                }
-            }
-        }
+                    include: /src\/images\/(icons|svgs)/,
+                },
+            },
+        },
     ],
 }
