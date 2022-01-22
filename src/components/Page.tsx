@@ -16,12 +16,14 @@ const PageLayout = styled.div`
 
 export default function Page(props: any): JSX.Element {
     return (
-        <MainLayout>
-            <Header />
-            <PageLayout>
-                <Sidebar />
-                <ContentLayout>{props.children}</ContentLayout>
-            </PageLayout>
-        </MainLayout>
+        <main>
+            <MainLayout>
+                <Header />
+                <PageLayout>
+                    <Sidebar />
+                    <ContentLayout>{props.children}</ContentLayout>
+                </PageLayout>
+            </MainLayout>
+        </main>
     )
 }

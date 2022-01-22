@@ -47,5 +47,13 @@ module.exports = {
             __key: 'pages',
         },
         'gatsby-plugin-theme-ui',
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /src\/images\/icons/
+                }
+            }
+        }
     ],
 }

@@ -4,33 +4,32 @@ import styled from '@emotion/styled'
 import { Link } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 
-import { getFilter } from '../util/colorFilter'
+import AtIcon from '../images/icons/at-solid.svg'
+import GithubIcon from '../images/icons/github.svg'
+import GoogleScholarIcon from '../images/icons/google-scholar.svg'
+import LinkedinIcon from '../images/icons/linkedin.svg'
+import OrcidIcon from '../images/icons/orcid.svg'
+import ResearchgateIcon from '../images/icons/researchgate.svg'
+import StackoverflowIcon from '../images/icons/stackoverflow.svg'
 
 const links = [
     {
         name: 'peynmurray@gmail.com',
         to: 'email:peynmurray@gmail.com',
-        icon: (
-            <StaticImage
-                src="../images/icons/at-solid.svg"
-                alt="at symbol"
-                style={{ fill: 'white' }}
-            />
-        ),
+        icon: <AtIcon alt="at symbol" />,
     },
     {
         name: 'GitHub',
         to: 'https://github.com/peytondmurray',
         icon: (
-            <StaticImage src="../images/icons/github.svg" alt="GitHub logo" />
+            <GithubIcon alt="GitHub logo" />
         ),
     },
     {
         name: 'Linkedin',
         to: 'https://www.linkedin.com/in/peytondm/',
         icon: (
-            <StaticImage
-                src="../images/icons/linkedin.svg"
+            <LinkedinIcon
                 alt="LinkedIn logo"
             />
         ),
@@ -38,18 +37,14 @@ const links = [
     {
         name: 'ORCiD',
         to: 'https://orcid.org/0000-0003-0389-0611',
-        icon: <StaticImage src="../images/icons/orcid.svg" alt="ORCiD logo" />,
+        icon: <OrcidIcon alt="ORCiD logo" />,
     },
     {
         name: 'Google Scholar',
         to: 'https://scholar.google.ca/citations?user=NXE8TDYAAAAJ&hl=en&oi=ao',
         icon: (
-            <StaticImage
-                src="../images/icons/google-scholar.svg"
+            <GoogleScholarIcon
                 alt="Google Scholar logo"
-                imgStyle={{
-                    filter: 'invert(1)',
-                }}
             />
         ),
     },
@@ -57,8 +52,7 @@ const links = [
         name: 'ResearchGate',
         to: 'https://www.researchgate.net/profile/Peyton-Murray',
         icon: (
-            <StaticImage
-                src="../images/icons/researchgate.svg"
+            <ResearchgateIcon
                 alt="ResearchGate logo"
             />
         ),
@@ -67,8 +61,7 @@ const links = [
         name: 'Stack Overflow',
         to: 'https://stackoverflow.com/users/8100451/peytondmurray',
         icon: (
-            <StaticImage
-                src="../images/icons/stackoverflow.svg"
+            <StackoverflowIcon
                 alt="Stack Overflow logo"
             />
         ),

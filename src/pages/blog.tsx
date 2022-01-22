@@ -1,7 +1,8 @@
+import Page from '../components/Page'
+
 export default function Blog(): JSX.Element {
     return (
-        <main>
-            <h1>Blog</h1>
-        </main>
+        <Page>
+        </Page>
     )
 }
