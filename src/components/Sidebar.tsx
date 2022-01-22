@@ -14,7 +14,6 @@ const links = [
     {
         name: 'peynmurray@gmail.com',
         to: 'email:peynmurray@gmail.com',
-        // icon: <AtIcon alt="at symbol" />,
         icon: <AtIcon alt="at symbol" />,
     },
     {
@@ -82,7 +81,7 @@ export default function SidebarBase(): JSX.Element {
     return (
         <SidebarLayout
             sx={{
-                borderRight: (theme) => `0.1em solid ${theme.colors.accent}`,
+                borderRight: (theme) => `0.1em solid ${theme?.colors?.accent}`,
             }}
         >
             {links.map(({ name, to, icon }) => {
@@ -91,7 +90,7 @@ export default function SidebarBase(): JSX.Element {
                         <IconTextLayout>
                             <Icon
                                 sx={{
-                                    fill: (theme) => `${theme.styles.a.color}`,
+                                    fill: (theme) => `${theme?.styles?.a?.color}`,
                                 }}
                             >
                                 {icon}
