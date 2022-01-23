@@ -31,18 +31,22 @@ export default function MainPage(): JSX.Element {
                         alt="My research interests in condensed matter physics."
                         layout="fullWidth"
                         sx={{
-                            fill: (theme) => `${theme.colors.accent} !important`,
-                            stroke: (theme) => `${theme.colors.accent} !important`,
                             '#curve': {
-                                stroke: (theme) => `${theme.colors.primary} !important`,
+                                stroke: (theme) =>
+                                    `${theme.colors.primary} !important`,
+                                strokeWidth: '0.3em !important',
                             },
                             '#labels': {
-                                fill: (theme) => `${theme.colors.accent} !important`,
+                                fill: (theme) =>
+                                    `${theme.colors.secondary} !important`,
                             },
                             '#axes': {
-                                fill: (theme) => `${theme.colors.accent} !important`,
-                                stroke: (theme) => `${theme.colors.accent} !important`,
-                            }
+                                path: {
+                                    stroke: (theme) =>
+                                        `${theme.colors.secondary} !important`,
+                                    strokeWidth: '0.15em !important',
+                                },
+                            },
                         }}
                     />
                 </HeroLink>
