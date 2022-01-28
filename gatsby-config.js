@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: 'https://www.yourdomain.tld',
+        siteUrl: 'https://peytondmurray.github.io',
         title: 'peytondmurray.github.io',
     },
     plugins: [
@@ -13,14 +13,6 @@ module.exports = {
         },
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
-        'gatsby-plugin-mdx',
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/content`,
-                name: `content`,
-            },
-        },
         {
             resolve: 'gatsby-plugin-sharp',
             options: {
@@ -31,10 +23,44 @@ module.exports = {
         },
         'gatsby-transformer-sharp',
         {
+            resolve: 'gatsby-plugin-mdx',
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    },
+                ],
+            },
+        },
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-katex`,
+                        options: {
+                            // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+                            strict: `ignore`,
+                        },
+                    },
+                ],
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/content/`,
+                name: `content`,
+            },
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
-                path: './src/images/',
+                path: `${__dirname}/src/images/`,
             },
             __key: 'images',
         },
@@ -42,7 +68,7 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'pages',
-                path: './src/pages/',
+                path: `${__dirname}/src/pages/`,
             },
             __key: 'pages',
         },
@@ -51,7 +77,7 @@ module.exports = {
             resolve: 'gatsby-plugin-react-svg',
             options: {
                 rule: {
-                    include: /src\/images\/(icons|svgs)/,
+                    include: /\.svg$/,
                 },
             },
         },

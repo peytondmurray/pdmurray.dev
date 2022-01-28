@@ -1,5 +1,6 @@
-// cmocean "tempo" colormap
+import nightOwl from '@theme-ui/prism/presets/night-owl.json'
 
+// cmocean "tempo" colormap
 const colormap = [
     '#EAFCFD',
     '#DBF4F5',
@@ -56,6 +57,9 @@ const theme = {
         },
         SidebarLayout: {
             background: colormap[16],
+        },
+        code: {
+            ...nightOwl,
         },
     },
 }

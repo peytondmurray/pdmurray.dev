@@ -1,6 +1,7 @@
 ---
-title: 'Undervolting drastically reduces CPU power draw'
+title: Undervolting drastically reduces CPU power draw
 layout: single
+classes: wide
 author_profile: true
 read_time: true
 share: true
@@ -10,15 +11,15 @@ categories: coding
 
 <!-- BokehJS CDN -->
 
-<script src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.0.min.js"></script>
+<!-- <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.0.min.js"></script>
 
 <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.3.0.min.js"></script>
 
-<script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.3.0.min.js"></script>
+<script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.3.0.min.js"></script> -->
 
 <!-- Bokeh plot info -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   (function() {
     var fn = function() {
       Bokeh.safely(function() {
@@ -52,7 +53,7 @@ categories: coding
     if (document.readyState != "loading") fn();
     else document.addEventListener("DOMContentLoaded", fn);
   })();
-</script>
+</script> -->
 
 I've spent a decent amount of time overclocking my computers in the past. I'm definitely no expert, but it's fun to fiddle with the CPU voltages and frequencies, trying to squeeze every last bit of performance out of the CPU. As the CPU frequency is raised beyond the manufacturers default setting, system performance, power draw, and heat produced will increase; at some point the system becomes unstable and will crash or refuse to boot. At this point, overclockers will often raise the CPU voltage, which tends to make the system more stable, at the cost of additional heat production. If your only concern is maximizing performance, you can fight the increased temperatures with a better CPU cooler. Underclocking, by contrast, is the pursuit of _lower_ clocks to minimize power draw and thermal loading. At lower clock frequencies, it may be possible to reduce the CPU voltage, i.e. _undervolt_, way below the default setting without compromising the system stability, allowing for exceptionally low temperatures and power consumption.
 

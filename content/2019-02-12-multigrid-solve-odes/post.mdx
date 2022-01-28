@@ -9,7 +9,18 @@ categories: coding
 toc: true
 ---
 
-# Introduction
+import Centered from '../../src/components/Centered'
+
+import ProblemLayout from './problem_layout.svg'
+import CoarseGridJacobi from './coarse_grid_jacobi.svg'
+import ErrorVsGridsize from './error_vs_gridsize.svg'
+import FineToCoarse from './fine_to_coarse.svg'
+import OneLevelV from './one_level_v.svg'
+import MultiLevelV from './multi_level_v.svg'
+import FullMultigrid from './full_multigrid.svg'
+import Efficiency from './efficiency.svg'
+
+## Introduction
 
 About a year ago, I was working on a for-fun problem where I needed to determine
 the voltage from an arbitrary charge distribution along 1 dimension. This is the
@@ -40,12 +51,14 @@ my Jacobi solver to finish with a simple 1D problem, my patience wore out and I
 decided to look at other options. One of these approaches - multigrid - is so
 cool that I had to share it here.
 
-# Defining the Problem
+## Defining the Problem
 
 I have a grid of equally spaced points with a charge distribution $\rho$ defined
 at each point:
 
-![problem_layout]{:class="img-responsive"}
+<Centered>
+    <ProblemLayout />
+</Centered>
 
 and so on. The goal is to find the voltage $v$ everywhere, where the voltage is
 determined by Poisson's equation ($\href{#poisson}{1}$). In the context of
@@ -116,7 +129,7 @@ inverting $A$, i.e. $v = A^{-1}f$, but in general we are talking about problems
 large enough that directly computing $A^{-1}$ is impractical (or at least really
 inefficient). This turns out to be the case even for very small systems.
 
-# Jacobi Iteration
+## Jacobi Iteration
 
 The simplest iterative method for solving ($\href{#ref2}{3}$) is _Jacobi
 iteration_. Let's take a look at ($\href{#ref2}{3}$): it would be great if we
@@ -169,9 +182,9 @@ where $w$ is a constant less than $1$. This is the _weighted Jacobi method_, and
 it's faster than standard Jacobi iteration. When $w=1$, the original Jacobi
 iteration is recovered.
 
-<video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
+<!-- <video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
   <source src="/assets/images/multigrid/jacobi.mp4" type="video/mp4">
-</video>
+</video> -->
 
 On the left side is the actual value of $f$ plotted as a function of $x$ in
 blue, with $Av$ shown in black. On the right is the $v$ plotted as a function of
@@ -184,7 +197,7 @@ if you want to find out what happens if we apply some voltage at the boundary,
 but I've left the details in the extra section at the bottom, and the math
 that follows still applies.
 
-# Why Is This So Slow???
+## Why Is This So Slow???
 
 Going back to ($\href{#ref3}{4}$) you can see that at each iteration, the value
 of $v_i$ is only affected by neighboring points. It therefore takes a lot of
@@ -192,25 +205,25 @@ iterations - $n$ iterations for a grid of $n$ points - for values of $v$ on one
 end of the lattice to have any effect on the other end. This makes the Jacobi
 method great for relaxing initial guesses like this:
 
-<video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
+<!-- <video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
   <source src="/assets/images/multigrid/jacobi_highfreq.mp4" type="video/mp4">
-</video>
+</video> -->
 
 See how quickly it suppresses the high frequency components of the initial
 guess? After only a few iterations $v$ is relaxed into a more sensible form, but
 it takes a _lot_ more iterations to actually get it close to the real solution.
 On the other hand, it's terrible for intial guesses like this:
 
-<video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
+<!-- <video autoplay="autoplay" loop="loop" width="1024" height="480" controls>
   <source src="/assets/images/multigrid/jacobi_lowfreq.mp4" type="video/mp4">
-</video>
+</video> -->
 
 which only have low frequencies; it just takes too many iterations for it to get
 smoothed out and converge. This is the most important point about the Jacobi
 method: it's only good at smoothing out trial solutions which have high
 frequencies - it's useless at anything else.
 
-# Multigrid
+## Multigrid
 
 At this point you might complain that the convergence in the examples above is
 slow because I used obviously bad initial guesses for $v$, and you'd be right.
@@ -222,26 +235,34 @@ to find the solution on the original grid with $n$ points (with spacing $h$),
 let's first use the Jacobi method on a coarse grid with $n/2$ points (with
 spacing $2h$) to try to improve our initial guess.
 
-![coarse_grid_jacobi]{:class="img-responsive"}
+<Centered>
+    <CoarseGridJacobi />
+</Centered>
 
 After iterating the Jacobi solver 100 times, the error $e=f-Av$ is much smaller
 on the coarse $2h$ grid than it is on the original $h$ grid (though a lot more
 iterations are still needed to get close to the actual answer). The efficiency
 gains can be even greater if you move to even more coarse grids:
 
-![error_vs_gridsize]{:class="img-responsive"}
+<Centered>
+    <ErrorVsGridsize />
+</Centered>
 
 This behavior is really simple to understand when you look at what happens when
 you move from a fine grid to a coarse grid:
 
-![fine_to_coarse]{:class="img-responsive"}
+<Centered>
+    <FineToCoarse />
+</Centered>
 
 Slowly varying functions on the fine grid _appear_ to vary more rapidly on the
 coarse grid! So this is why the Jacobi method is better on coarser grids, and it
 motivates the main steps of the multigrid method, which I think are best
 represented as a schematic:
 
-![one_level_v]{:class="img-responsive"}
+<Centered>
+    <OneLevelV />
+</Centered>
 
 Of course you don't have to stop with one grid-coarsening step - in fact, it's
 best to move to a coarse grid, iterate the Jacobi solver a few times, then move
@@ -250,7 +271,9 @@ coarse grid will only consist of a few points; then you move back to a finer
 grid, Jacobi-iterate a few times, move to a finer grid, Jacobi iterate a few
 more times, and so on until you get back to the original grid spacing:
 
-![multi_level_v]{:class="img-responsive"}
+<Centered>
+    <MultiLevelV />
+</Centered>
 
 This is called the V-cycle multigrid method (VMG), and it allows these sorts of
 problems to be solved way faster than using the Jacobi method on the original
@@ -258,9 +281,11 @@ problem alone. In practice, it turns out to be even better to start on the
 coarsest grid possible, and follow this sort of pattern, called Full Multigrid
 (FMG):
 
-![full_multigrid]{:class="img-responsive"}
+<Centered>
+    <FullMultigrid />
+</Centered>
 
-# Moving Between Grids
+## Moving Between Grids
 
 Up until now, I've swept the details of switching between different grid
 spacings under the rug. Of course, it's an important part of the machinery
@@ -329,7 +354,7 @@ A_{2h} &= I_{h\rightarrow 2h} A_h I_{2h\rightarrow h}
 \end{aligned}
 $$
 
-# How much faster is multigrid?
+## How much faster is multigrid?
 
 I wanted to benchmark the Jacobi, VMG, and FMG solvers, so I ran them on a few
 different grid sizes, each starting from the same initial guess $v_0$. For the
@@ -342,19 +367,21 @@ astonishingly effective even just a few Jacobi iterations on very coarse grids
 can be for helping convergence, and highlights how slowly the trial solution
 converges when trying to Jacobi iterate on a gigantic grid.
 
-![efficiency]
+<Centered>
+    <Efficiency />
+</Centered>
 
-I've purposely left out details of the implementation because I thought the
-concepts behind the algorithm are the most important part, but if you're
-interested in seeing how I generated these plots you can [view my implementation
-on github][github]. I've made an effort to optimize the code within reason.
+I've purposely left out details of the implementation because I thought the concepts behind the
+algorithm are the most important part, but if you're interested in seeing how I generated these
+plots you can [view my implementation on github](https://github.com/peytondmurray/mugrid). I've made
+an effort to optimize the code within reason.
 
-I'd like to write more about some of the algorithms hidden in the software we
-rely on in the future, and I hope you found this brief description of multigrid
-useful. If you want to learn more, Bill Briggs wrote [an excellent book][briggs]
-on the subject which goes into way more detail than I have here.
+I'd like to write more about some of the algorithms hidden in the software we rely on in the future,
+and I hope you found this brief description of multigrid useful. If you want to learn more, Bill
+Briggs wrote [an excellent book](https://dx.doi.org/10.1137/1.9780898719505) on the subject which
+goes into way more detail than I have here.
 
-# Appendix: Dirichlet Boundary Conditions
+## Appendix: Dirichlet Boundary Conditions
 
 To include the effects of fixed voltage at the boundary points $v_0$ and $v_n$
 into $(\href{#ref2}{3})$, we only need to write down the discrete Poisson's
@@ -379,23 +406,3 @@ f_1 - v_0 \\
 f_{n-1} - v_{n-1}
 \end{pmatrix}
 $$
-
-[github]: https://github.com/peytondmurray/mugrid
-[briggs]: https://dx.doi.org/10.1137/1.9780898719505
-[problem_layout]: /assets/images/multigrid/problem_layout.svg
-
-{: .align-center}
-[coarse_grid_jacobi]: /assets/images/multigrid/coarse_grid_jacobi.svg
-{: .align-center}
-[error_vs_gridsize]: /assets/images/multigrid/error_vs_gridsize.svg
-{: .align-center}
-[fine_to_coarse]: /assets/images/multigrid/fine_to_coarse.svg
-{: .align-center}
-[one_level_v]: /assets/images/multigrid/one_level_v.svg
-{: .align-center}
-[multi_level_v]: /assets/images/multigrid/multi_level_v.svg
-{: .align-center}
-[full_multigrid]: /assets/images/multigrid/full_multigrid.svg
-{: .align-center}
-[efficiency]: /assets/images/multigrid/efficiency.svg
-{: .align-left}

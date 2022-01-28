@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import Sidebar from './Sidebar'
 import Header from './Header'
 
+import 'katex/dist/katex.min.css'
+
 const MainLayout = styled.div``
 
 const ContentLayout = styled.div`

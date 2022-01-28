@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 
 import Page from '../components/Page'
 
+import 'katex/dist/katex.min.css'
+
 const BlogTitle = styled.h2``
 
 export default function PostPage({ data }: { data: any }): JSX.Element {
@@ -21,8 +23,8 @@ export default function PostPage({ data }: { data: any }): JSX.Element {
 }
 
 export const query = graphql`
-    query POST_QUERY($slug: String) {
-        mdx(slug: { eq: $slug }) {
+    query POST_QUERY($id: String) {
+        mdx(id: { eq: $id }) {
             body
             id
             slug
