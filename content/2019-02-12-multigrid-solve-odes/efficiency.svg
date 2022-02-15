@@ -2,21 +2,17 @@
 <!-- Created with matplotlib (https://matplotlib.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    height="309.6pt"
    version="1.1"
    viewBox="0 0 362.16 309.6"
    width="362.16pt"
    id="svg262"
-   sodipodi:docname="efficiency.svg"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+   
+   
+   
+   
+   
+   >
   <metadata
      id="metadata266">
     <rdf:RDF>
@@ -28,26 +24,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1845"
-     inkscape:window-height="988"
-     id="namedview264"
-     showgrid="false"
-     inkscape:zoom="1.1434108"
-     inkscape:cx="303.91404"
-     inkscape:cy="164.70956"
-     inkscape:window-x="1945"
-     inkscape:window-y="1122"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg262" />
   <defs
      id="defs4">
     <style
@@ -100,10 +76,9 @@
           <g
              id="text_1">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-               transform="rotate(-0, 75.446577, 282.238437)"
-               x="75.446577"
-               y="282.238437"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
+               x="75.446579"
+               y="282.23843"
                id="text20">0</text>
           </g>
         </g>
@@ -124,10 +99,9 @@
           <g
              id="text_2">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-               transform="rotate(-0, 139.010183, 282.238437)"
-               x="139.010183"
-               y="282.238437"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
+               x="139.01018"
+               y="282.23843"
                id="text29">2000</text>
           </g>
         </g>
@@ -148,10 +122,9 @@
           <g
              id="text_3">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-               transform="rotate(-0, 202.573788, 282.238437)"
-               x="202.573788"
-               y="282.238437"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
+               x="202.57379"
+               y="282.23843"
                id="text38">4000</text>
           </g>
         </g>
@@ -172,10 +145,9 @@
           <g
              id="text_4">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-               transform="rotate(-0, 266.137393, 282.238437)"
-               x="266.137393"
-               y="282.238437"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
+               x="266.13739"
+               y="282.23843"
                id="text47">6000</text>
           </g>
         </g>
@@ -196,20 +168,18 @@
           <g
              id="text_5">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-               transform="rotate(-0, 329.700998, 282.238437)"
-               x="329.700998"
-               y="282.238437"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
+               x="329.70099"
+               y="282.23843"
                id="text56">8000</text>
           </g>
         </g>
         <g
            id="text_6">
           <text
-             style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;"
-             transform="rotate(-0, 205.78375, 295.916562)"
+             style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:middle"
              x="205.78375"
-             y="295.916562"
+             y="295.91656"
              id="text60">Grid Size</text>
         </g>
       </g>
@@ -239,10 +209,9 @@
           <g
              id="text_7">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 259.879219)"
-               x="55.7275"
-               y="259.879219"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="259.87921"
                id="text72">0</text>
           </g>
         </g>
@@ -263,10 +232,9 @@
           <g
              id="text_8">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 228.017539)"
-               x="55.7275"
-               y="228.017539"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="228.01753"
                id="text81">200</text>
           </g>
         </g>
@@ -287,10 +255,9 @@
           <g
              id="text_9">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 196.15586)"
-               x="55.7275"
-               y="196.15586"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="196.15585"
                id="text90">400</text>
           </g>
         </g>
@@ -311,10 +278,9 @@
           <g
              id="text_10">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 164.294181)"
-               x="55.7275"
-               y="164.294181"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="164.29417"
                id="text99">600</text>
           </g>
         </g>
@@ -335,10 +301,9 @@
           <g
              id="text_11">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 132.432501)"
-               x="55.7275"
-               y="132.432501"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="132.4325"
                id="text108">800</text>
           </g>
         </g>
@@ -359,10 +324,9 @@
           <g
              id="text_12">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 100.570822)"
-               x="55.7275"
-               y="100.570822"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="100.57082"
                id="text117">1000</text>
           </g>
         </g>
@@ -383,10 +347,9 @@
           <g
              id="text_13">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 68.709143)"
-               x="55.7275"
-               y="68.709143"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="68.709145"
                id="text126">1200</text>
           </g>
         </g>
@@ -407,10 +370,9 @@
           <g
              id="text_14">
             <text
-               style="font-family:DejaVu Sans;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;"
-               transform="rotate(-0, 55.7275, 36.847463)"
-               x="55.7275"
-               y="36.847463"
+               style="font-style:normal;font-weight:normal;font-size:10px;font-family:'DejaVu Sans';text-anchor:end"
+               x="55.727501"
+               y="36.847462"
                id="text135">1400</text>
           </g>
         </g>
@@ -421,28 +383,23 @@
              transform="translate(23.4775 165.88)rotate(-90)"
              id="g149">
             <text
-               id="text147">
-              <tspan
-                 style="font-family:DejaVu Sans Display;font-size:10px;font-style:display;font-weight:display;"
+               id="text147"><tspan
+                 style="font-size:10px;font-family:'DejaVu Sans Display'"
                  x="0"
                  y="-0.828125"
-                 id="tspan139">∑</tspan>
-              <tspan
-                 style="font-family:DejaVu Sans;font-size:10px;font-style:book;font-weight:book;"
-                 x="9.526367 18.896484 41.982422"
+                 id="tspan139">∑</tspan><tspan
+                 style="font-size:10px;font-family:'DejaVu Sans'"
+                 x="9.5263672 18.896484 41.982422"
                  y="-0.828125"
-                 id="tspan141">(−)</tspan>
-              <tspan
-                 style="font-family:DejaVu Sans;font-size:10px;font-style:oblique;font-weight:oblique;"
+                 id="tspan141">(−)</tspan><tspan
+                 style="font-style:oblique;font-size:10px;font-family:'DejaVu Sans'"
                  x="13.427734 29.223633 36.064453"
                  y="-0.828125"
-                 id="tspan143">fAv</tspan>
-              <tspan
-                 style="font-family:DejaVu Sans;font-size:7px;font-style:book;font-weight:book;"
+                 id="tspan143">fAv</tspan><tspan
+                 style="font-size:7px;font-family:'DejaVu Sans'"
                  x="45.979492"
                  y="-4.65625"
-                 id="tspan145">2</tspan>
-            </text>
+                 id="tspan145">2</tspan></text>
           </g>
         </g>
       </g>
@@ -751,39 +708,34 @@
        id="text4778"
        y="73.054802"
        x="123.37455"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.86499977px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.865px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
        xml:space="preserve"><tspan
          y="73.054802"
          x="123.37455"
          style="stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-         id="tspan4776"
-         sodipodi:role="line">Jacobi</tspan><tspan
+         id="tspan4776">Jacobi</tspan><tspan
          id="tspan4780"
          y="87.886055"
-         x="123.37455"
-         style="stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-         sodipodi:role="line" /></text>
+         x="123.37455" /></text>
     <text
        id="text4786"
        y="88.586952"
        x="122.66775"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.86499977px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.865px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
        xml:space="preserve"><tspan
          y="88.586952"
          x="122.66775"
          style="fill:#ff0000;fill-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-         id="tspan4784"
-         sodipodi:role="line">VMG</tspan></text>
+         id="tspan4784">VMG</tspan></text>
     <text
        id="text4790"
        y="104.32766"
        x="121.59595"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.86499977px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.865px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
        xml:space="preserve"><tspan
          y="104.32766"
          x="121.59595"
          style="fill:#0000ff;fill-opacity:1;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-         id="tspan4788"
-         sodipodi:role="line">FMG</tspan></text>
+         id="tspan4788">FMG</tspan></text>
   </g>
 </svg>
