@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with matplotlib (http://matplotlib.org/) -->
-
 <svg
    height="281.25262pt"
    version="1.1"
    viewBox="0 0 387.74344 281.25262"
    width="387.74344pt"
    id="svg374"
-   
-   
-   
-   
-   
-   >
-  <metadata
-     id="metadata378">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+>
   <defs
      id="defs4"
      style="stroke-linecap:butt;stroke-linejoin:round">
@@ -42,12 +24,7 @@
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="patch_2"
-         style="stroke-linecap:butt;stroke-linejoin:round">
-        <path
-           d="M 57.6,171.28273 H 414.72 V 41.472 H 57.6 Z"
-           style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
-           id="path9" />
-      </g>
+         style="stroke-linecap:butt;stroke-linejoin:round" />
       <g
          id="matplotlib.axis_1"
          style="stroke-linecap:butt;stroke-linejoin:round">
@@ -549,12 +526,7 @@
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="patch_7"
-         style="stroke-linecap:butt;stroke-linejoin:round">
-        <path
-           d="M 57.6,307.584 H 414.72 V 177.77327 H 57.6 Z"
-           style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
-           id="path160" />
-      </g>
+         style="stroke-linecap:butt;stroke-linejoin:round" />
       <g
          id="matplotlib.axis_3"
          style="stroke-linecap:butt;stroke-linejoin:round">
@@ -1206,7 +1178,7 @@
         <path
            clip-path="url(#pa878a359d5)"
            d="m 73.832727,301.68351 2.924816,-10.16714 2.924816,-9.29122 2.924815,-8.49078 2.924816,-7.75929 2.924816,-7.09081 2.924816,-6.47994 2.924815,-5.92168 2.924816,-5.41152 2.924817,-4.94531 2.92481,-4.51926 2.92482,-4.12993 2.92482,-3.77413 3.24979,-3.81338 3.2498,-3.45013 3.24979,-3.12151 3.2498,-2.82416 3.57477,-2.79689 3.57478,-2.50527 3.57477,-2.24406 3.89976,-2.18208 3.89975,-1.9351 4.22473,-1.84999 4.54972,-1.74067 4.87469,-1.61322 5.19967,-1.47366 5.52465,-1.32756 5.84964,-1.17995 6.49959,-1.08433 7.14955,-0.96697 8.12448,-0.86901 9.09943,-0.74701 10.72432,-0.6496 12.67421,-0.53638 15.59901,-0.42851 20.47371,-0.32492 28.92318,-0.21804 49.39689,-0.11857 59.14627,-0.0278 v 0"
-           style="fill:none;stroke:#ff0000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
+           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
            id="path349" />
       </g>
       <g
