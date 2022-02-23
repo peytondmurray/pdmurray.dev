@@ -8,13 +8,33 @@ date: '2018-11-03 14:30:00 -0800'
 categories: coding
 ---
 
-I've been interested in doing some [molecular dynamics][md] (MD) simulations for a project I've been thinking about for a long time, but it's only recently that I've had the time to start tinkering with MD simulation packages. There are a few large projects to choose from if you're looking to get into MD simulations, with [GROMACS][gromacs] and [LAMMPS][lammps] being two of the more widely used packages. Although the literature suggests that GROMACS can be used for MD simulations of crystalline systems, it just seemed to me like it has been primarily used for simulating biological systems - proteins and that kind of stuff. So I decided to check out LAMMPS, an MD simulator maintained by Sandia, with contributions from people all over the world.
+I've been interested in doing some [molecular
+dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) (MD) simulations for a project I've been
+thinking about for a long time, but it's only recently that I've had the time to start tinkering
+with MD simulation packages. There are a few large projects to choose from if you're looking to get
+into MD simulations, with [GROMACS](http://www.gromacs.org) and [LAMMPS](https://lammps.sandia.gov)
+being two of the more widely used packages. Although the literature suggests that GROMACS can be
+used for MD simulations of crystalline systems, it just seemed to me like it has been primarily used
+for simulating biological systems - proteins and that kind of stuff. So I decided to check out
+LAMMPS, an MD simulator maintained by Sandia, with contributions from people all over the world.
 
-LAMMPS comes with a lot of extensions which add various functionality to the simulator, so building the source code is recommended because you can choose what packages you need for your specific application. Depending on your system, you can also find prebuilt binaries, but to take full advantage of the optimizations available to your system, building from source is the best. Fortunately, LAMMPS uses the [CMAKE][cmake] meta-build system. If you're not familiar with CMAKE, it's a tool which creates the files necessary to compile source code. On Linux, it builds makefiles; on Windows, you can use it to create Visual C++ project files. It can do lots of stuff beyond just creating the instructions for compiling and linking your source code for whatever platform you are using, but it's not the focus of this post, so I'm going to move on.
+LAMMPS comes with a lot of extensions which add various functionality to the simulator, so building
+the source code is recommended because you can choose what packages you need for your specific
+application. Depending on your system, you can also find prebuilt binaries, but to take full
+advantage of the optimizations available to your system, building from source is the best.
+Fortunately, LAMMPS uses the [CMAKE](https://cmake.org) meta-build system. If you're not familiar
+with CMAKE, it's a tool which creates the files necessary to compile source code. On Linux, it
+builds makefiles; on Windows, you can use it to create Visual C++ project files. It can do lots of
+stuff beyond just creating the instructions for compiling and linking your source code for whatever
+platform you are using, but it's not the focus of this post, so I'm going to move on.
 
-Since LAMMPS can be built with tons of different packages, based on the description of the package in the LAMMPS documentation, I took an educated guess as to whether or not I was going to want to have it, and made a shortlist of what to build. Each package has a short summary of what it does as a note to myself. Packages with a \* denote ones that require additional CMAKE variables to be defined, with the values needed for my system noted below.
+Since LAMMPS can be built with tons of different packages, based on the description of the package
+in the LAMMPS documentation, I took an educated guess as to whether or not I was going to want to
+have it, and made a shortlist of what to build. Each package has a short summary of what it does as
+a note to myself. Packages with a \* denote ones that require additional CMAKE variables to be
+defined, with the values needed for my system noted below.
 
-# Packages
+## Packages
 
 -   ASPHERE - Computes, time-integration fixes, and pair styles for aspherical particle models including ellipsoids, 2d lines, and 3d triangles.
 -   BODY - Body-style particles with internal structure. Computes, time-integration fixes, pair styles, as well as the body styles themselves. See the Howto body doc page for an overview.
@@ -67,17 +87,28 @@ Since LAMMPS can be built with tons of different packages, based on the descript
 -   USER-TALLY - Several compute styles that can be called when pairwise interactions are calculated to tally information (forces, heat flux, energy, stress, etc) about individual interactions.
 -   USER-VTK - VTK output
 
-# Get it in one CMAKE command
+## Get it in one CMAKE command
 
-If the LAMMPS git repo is cloned, and a `build` directory is created in the root directory, the CMAKE part of the building process can be completed in one go. You'll obviously have to change the part about python executable, but having it in one command is nice.
+If the LAMMPS git repo is cloned, and a `build` directory is created in the root directory, the
+CMAKE part of the building process can be completed in one go. You'll obviously have to change the
+part about python executable, but having it in one command is nice.
 
-`cmake -G "Unix Makefiles" -D PKG_ASPHERE=yes -D PKG_BODY=yes -D PKG_CLASS2=yes -D PKG_CORESHELL=yes -D PKG_DIPOLE=yes -D PKG_GPU=yes -D GPU_API=cuda -D GPU_ARCH=\<gpu_architecture\> -D CUDPP_OPT=yes -D PKG_GRANULAR=yes -D PKG_KIM=yes -D DOWNLOAD_KIM=yes -D PKG_KSPACE=yes -D PKG_MANYBODY=yes -D PKG_MC=yes -D PKG_MISC=yes -D PKG_OPT=yes -D PKG_PERI=yes -D PKG_PYTHON=yes -D PKG_QEQ=yes -D PKG_REPLICA=yes -D PKG_RIGID=yes -D PKG_SHOCK=yes -D PKG_SPIN=yes -D PKG_USER-COLVARS=yes -D PKG_USER-DIFFRACTION=yes -D PKG_USER-DRUDE=yes -D PKG_USER-FEP=yes -D PKG_USER-MISC=yes -D PKG_USER-MEAMC=yes -D PKG_USER-OMP=yes -D PKG_USER-PHONON=yes -D PKG_USER-QTB=yes -D PKG_USER-REAXC=yes -D PKG_USER-TALLY=yes -D PKG_USER-VTK=yes -D PYTHON_EXECUTABLE=\<path to python bin\> -D BUILD_OMP=yes -D BUILD_EXE=yes -D BUILD_LIB=yes -D BUILD_SHARED_LIBS=yes ../cmake`
+```bash
+cmake -G "Unix Makefiles" -D PKG_ASPHERE=yes -D PKG_BODY=yes -D PKG_CLASS2=yes -D PKG_CORESHELL=yes
+-D PKG_DIPOLE=yes -D PKG_GPU=yes -D GPU_API=cuda -D GPU_ARCH=\<gpu_architecture\> -D CUDPP_OPT=yes
+-D PKG_GRANULAR=yes -D PKG_KIM=yes -D DOWNLOAD_KIM=yes -D PKG_KSPACE=yes -D PKG_MANYBODY=yes -D
+PKG_MC=yes -D PKG_MISC=yes -D PKG_OPT=yes -D PKG_PERI=yes -D PKG_PYTHON=yes -D PKG_QEQ=yes -D
+PKG_REPLICA=yes -D PKG_RIGID=yes -D PKG_SHOCK=yes -D PKG_SPIN=yes -D PKG_USER-COLVARS=yes -D
+PKG_USER-DIFFRACTION=yes -D PKG_USER-DRUDE=yes -D PKG_USER-FEP=yes -D PKG_USER-MISC=yes -D
+PKG_USER-MEAMC=yes -D PKG_USER-OMP=yes -D PKG_USER-PHONON=yes -D PKG_USER-QTB=yes -D
+PKG_USER-REAXC=yes -D PKG_USER-TALLY=yes -D PKG_USER-VTK=yes -D PYTHON_EXECUTABLE=\<path to python
+bin\> -D BUILD_OMP=yes -D BUILD_EXE=yes -D BUILD_LIB=yes -D BUILD_SHARED_LIBS=yes ../cmake
+```
 
-# KOKKOS Broken?
+## KOKKOS Broken?
 
-That being said, I could not get KOKKOS to compile almost no matter what I did. I followed the instructions on the LAMMPS website only to discover that gcc 8 is not supported. I tried using gcc 4.9, which is on the Arch User Repository, but that didn't work either. In any case, choosing not to build KOKKOS seems bad, since it offers what seems like a lot of GPU-enabled features. I'll probably revisit this issue in the future, and if I find anything else I'll update this post.
-
-[md]: https://en.wikipedia.org/wiki/Molecular_dynamics
-[gromacs]: http://www.gromacs.org
-[lammps]: https://lammps.sandia.gov
-[cmake]: https://cmake.org
+That being said, I could not get KOKKOS to compile almost no matter what I did. I followed the
+instructions on the LAMMPS website only to discover that gcc 8 is not supported. I tried using gcc
+4.9, which is on the Arch User Repository, but that didn't work either. In any case, choosing not to
+build KOKKOS seems bad, since it offers what seems like a lot of GPU-enabled features. I'll probably
+revisit this issue in the future, and if I find anything else I'll update this post.

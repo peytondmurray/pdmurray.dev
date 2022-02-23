@@ -12,24 +12,24 @@ Recently, incredible changes to computationally intensive fields have been broug
 
 Here's the problem: we have a dataset composed of a bunch of different objects, and we'd like to process each object independently of one another. The easy way to process the dataset is to loop over each element in the dataset, processing each item sequentially:
 
-{% highlight python %}
+```python
 newDataset = []
 for item in dataset:
 newDataset.append(processItem(item))
-{% endhighlight %}
+```
 
 or using a one-liner list comprehension, `newDataset = [processItem(item) for item in dataset]`. We could also just as easily use the somewhat uglier `map` builtin: `newDataset = list(map(processItem, dataset))`. `map(f, args)` simply applies the function `f` to each element in `args`, effectively achieving the same result as the list comprehension above.
 
 What we'd really like to do is make the Python interpreter apply our `processItem` function to the items in `dataset` across multiple CPU cores simultaneously - this is exactly what the multiprocessing module does. All we have to do is include the module along with some boilerplate:
 
-{% highlight python %}
+```python
 from multiprocessing import Pool
 
 workerPool = Pool()
 newDataset = list(workerPool.map(processItem, dataset))
 workerPool.close()
 workerPool.join()
-{% endhighlight %}
+```
 
 Let's break it down:
 
