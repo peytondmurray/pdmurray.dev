@@ -1,6 +1,7 @@
 import React from 'react'
 import TeX from '@matejmazur/react-katex'
 import Prism from '@theme-ui/prism'
+import styled from '@emotion/styled'
 
 const settings = {
     trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
@@ -12,8 +13,14 @@ const settings = {
     strict: (errorCode) => (errorCode === 'htmlExtension' ? 'ignore' : 'warn'),
 }
 
+const Pre = styled.div`
+    pre {
+        padding: 1em;
+    }
+`
+
 const components = {
-    pre: (props) => props.children,
+    pre: Pre,
     code: Prism,
     div: (props) => {
         if (props?.className?.includes('math-display')) {

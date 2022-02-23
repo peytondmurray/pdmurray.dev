@@ -65,5 +65,12 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                icon: 'src/images/icons/ml.svg',
+                include_favicon: true,
+            },
+        },
     ],
 }
