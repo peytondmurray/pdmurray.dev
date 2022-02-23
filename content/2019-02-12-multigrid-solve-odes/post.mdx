@@ -61,7 +61,7 @@ at each point:
 </Centered>
 
 and so on. The goal is to find the voltage $v$ everywhere, where the voltage is
-determined by Poisson's equation ($\href{#poisson}{1}$). In the context of
+determined by Poisson's equation [\[1\]](#poisson). In the context of
 electromagnetism (where it's often encountered) it is written
 
 $$
@@ -89,7 +89,7 @@ $$
 
 Since it's annoying to write $v(x+\Delta x)$ everywhere, I'm just going to use
 $v_i$ for the value of the voltage at $x_i$, which means that $v(x+\Delta x)
-\rightarrow v_{i+1}$, etc. Now the LHS of $(\href{#ref1}{2})$ is just
+\rightarrow v_{i+1}$, etc. Now the LHS of [\[2\]](#ref1) is just
 
 $$
 \begin{aligned}
@@ -99,7 +99,7 @@ $$
 $$
 
 Rewriting this in terms of matrices allows us to reduce the amount of notation
-even further, making $(\href{#ref1}{2})$:
+even further, making [\[2\]](#ref1):
 
 $$
 \begin{aligned}
@@ -124,15 +124,15 @@ Av = f
 $$
 
 where $A$ is the (negative) discretized laplacian we found above and $f\equiv
-\rho \Delta x^2 / \epsilon$. Of course, ($\href{#ref2}{3}$) can be solved by
+\rho \Delta x^2 / \epsilon$. Of course, [\[3\]](#ref2) can be solved by
 inverting $A$, i.e. $v = A^{-1}f$, but in general we are talking about problems
 large enough that directly computing $A^{-1}$ is impractical (or at least really
 inefficient). This turns out to be the case even for very small systems.
 
 ## Jacobi Iteration
 
-The simplest iterative method for solving ($\href{#ref2}{3}$) is _Jacobi
-iteration_. Let's take a look at ($\href{#ref2}{3}$): it would be great if we
+The simplest iterative method for solving [\[3\]](#ref2) is _Jacobi
+iteration_. Let's take a look at [\[3\]](#ref2): it would be great if we
 could just invert $A$ to find the solution directly, but that's too hard because
 this matrix has off-diagonal elements. If the only nonzero elements were along
 the diagonal, finding $A^{-1}$ would be easy; the reciprocal of a diagonal
@@ -169,7 +169,7 @@ $$
 
 This is pretty good, because now the problem is just turning the crank as fast
 as the computer will go. But there's actually a neat trick which will speed up
-how fast this solution converges: instead of using the RHS of ($\href{#ref3}{4}$)
+how fast this solution converges: instead of using the RHS of [\[4\]](#ref3)
 as the improved solution, we can treat it as an intermediate value: $v^* =
 D^{-1}Qv^0_i + D^{-1}f$. We then mix $v^*$ with part of the original solution to
 get the next iteration,
@@ -199,7 +199,7 @@ that follows still applies.
 
 ## Why Is This So Slow???
 
-Going back to ($\href{#ref3}{4}$) you can see that at each iteration, the value
+Going back to [\[4\]](#ref3) you can see that at each iteration, the value
 of $v_i$ is only affected by neighboring points. It therefore takes a lot of
 iterations - $n$ iterations for a grid of $n$ points - for values of $v$ on one
 end of the lattice to have any effect on the other end. This makes the Jacobi
@@ -384,7 +384,7 @@ goes into way more detail than I have here.
 ## Appendix: Dirichlet Boundary Conditions
 
 To include the effects of fixed voltage at the boundary points $v_0$ and $v_n$
-into $(\href{#ref2}{3})$, we only need to write down the discrete Poisson's
+into [\[3\]](#ref2), we only need to write down the discrete Poisson's
 equation at the points _adjacent_ to the edge:
 
 $$

@@ -25,7 +25,7 @@ Back to Blender. Previously I made a [post][post] about how you can import scien
 
 I really wanted to make an animation of how a ferromagnet reacts in response to a magnetic field; I've never seen any simulations showing the process (outside of academic papers and talks), and I think it has the potential to be visually appealing while still being understandable for non-scientists. On the microscopic scale, you can think of a magnetic material as being composed of many small bar magnets:
 
-<figure class="align-center">
+<!-- <figure class="align-center">
   <a href="https://simple.wikipedia.org/wiki/Magnet#/media/File:Bar_magnet.jpg">
     <img src="/assets/images/science_to_blender/magnet.svg" alt="">
   </a>
@@ -34,7 +34,7 @@ I really wanted to make an animation of how a ferromagnet reacts in response to 
       Source
     </a>
   </figcaption>
-</figure>
+</figure> -->
 
 When a magnetic field is applied, these small magnets move and reorient themselves to align with the applied magnetic field. So the idea is to first simulate the motion of these microscopic magnetic moments and then visualize their motion in Blender. To produce the data I'll eventually be reading into Blender, I used the [Mumax3][mumax] micromagnetics simulation package. In a nutshell, Mumax simulates the behavior of magnetic materials on the nanoscale by dividing up the simulated material into little cubic cells, each with its own magnetic moment. These little magnetic moments then are allowed to interact with each other according to the [Landau-Lifshitz-Gilbert][llg] equation, which describes how the little magnets move. The simulations shown here show how a thin, planar layer of perpendicularly magnetized material reacts when a magnetic field is applied out-of-plane.
 
@@ -207,9 +207,9 @@ for i in range(nframes):
 
 Here, colors is simply a list of RGBA tuples; for me, these were taken from the matplotlib `RdBu_r` colormap. After running this script, the Blender interface should look like this:
 
-<figure style="width: 900px" class="align-center">
+<!-- <figure style="width: 900px" class="align-center">
   <img src="/assets/images/science_to_blender/after_loading_data.png" alt="">
-</figure>
+</figure> -->
 
 Now all that remains is to add lighting and cameras, and then render whatever animations or images we need.
 
@@ -217,17 +217,17 @@ Now all that remains is to add lighting and cameras, and then render whatever an
 
 After spending more time than I'd like to admit keyframing camera motion and adding lighting, I was able to make an animation that I'm happy with. After rendering the animation using the fast Eevee render engine, I found that the animation was slower than I wanted it to be, but this was easily fixed by increasing the frame rate with FFMPEG. This animation shows how the domain wall propagates under the external magnetic field, and I think it captures its chaotic motion really well:
 
-<video autoplay="autoplay" loop="loop" width="800" height="450" codecs="h264" controls>
+<!-- <video autoplay="autoplay" loop="loop" width="800" height="450" codecs="h264" controls>
   <source src="/assets/images/science_to_blender/dw_eyecandy.mp4" type="video/mp4">
-</video>
+</video> -->
 
 The z-component of the magnetization is used to color the cones: when the cone points up the color is red, and when it points down the color is blue. I also rendered a different pair of images of the domain wall which I used in a previous post as well:
 
-<figure class="half">
+<!-- <figure class="half">
     <a href="/assets/images/paraview_blender/down_the_wall.jpg"><img src="/assets/images/paraview_blender/down_the_wall.jpg"></a>
     <a href="/assets/images/paraview_blender/wall_night.jpg"><img src="/assets/images/paraview_blender/wall_night.jpg"></a>
     <figcaption>The lighting and depth of field make these images so much more interesting.</figcaption>
-</figure>
+</figure> -->
 
 The time I spent learning to use Blender's Python API has really been worth it, and I think it will be useful for creating professional level data visualizations in the future. Bridging the gap from the Mumax micromagnetics simulator using a combination of custom Go functions and Python scripting took a significant investment of time and effort, but ultimately the payoff can be worth it.
 
