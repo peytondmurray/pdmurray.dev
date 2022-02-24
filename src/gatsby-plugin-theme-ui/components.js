@@ -3,6 +3,8 @@ import TeX from '@matejmazur/react-katex'
 import Prism from '@theme-ui/prism'
 import styled from '@emotion/styled'
 
+import Centered from '../components/Centered'
+
 const settings = {
     trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
     macros: {
@@ -25,6 +27,8 @@ const components = {
     div: (props) => {
         if (props?.className?.includes('math-display')) {
             return <TeX block math={props.children} settings={settings} />
+        } else if (props?.className?.includes('embedVideo-container')) {
+            return <Centered {...props} />
         }
         return <div {...props} />
     },
