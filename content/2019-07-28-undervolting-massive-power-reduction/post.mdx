@@ -32,9 +32,8 @@ bigger, there are a number of tools which make undervolting your CPU surprisingl
 I started off by installing both the [sysbench](https://github.com/akopytov/sysbench) (community)
 benchmarking utility and [intel-undervolt](https://github.com/kitsunyan/intel-undervolt) (AUR),
 which allows you to change the CPU voltage in real time without going into the BIOS, making the
-process extremely fast. Start out by opening up a new terminal and entering `# intel-undervolt
-measure`, to show a persistent display of the current CPU temperatures, frequencies, and power
-consumption. The `# intel-undervolt read` command is also useful here, and will display the current
+process extremely fast. Start out by opening up a new terminal and entering `intel-undervolt measure`, to show a persistent display of the current CPU temperatures, frequencies, and power
+consumption. The `intel-undervolt read` command is also useful here, and will display the current
 _offset_ in the various CPU voltages. By default, it should show something like this:
 
 ```
@@ -63,8 +62,7 @@ voltages, and are given in units of mV. Start out by setting both the CPU and GP
 so. In reality it doesn't really matter what you set these to as long as you make sure the values
 are negative (remember, we want to _undervolt_); if you undervolt too much the system won't be
 damaged, it'll just crash and you'll have to reboot. I didn't bother messing with the `CPU Cache`,
-`System Agent`, or `Analog I/O` voltages. Apply the new voltage setting by typing `# intel-undervolt
-apply`. The effect might not be immediately obvious unless a benchmark is running - I tested a
+`System Agent`, or `Analog I/O` voltages. Apply the new voltage setting by typing `intel-undervolt apply`. The effect might not be immediately obvious unless a benchmark is running - I tested a
 number of different voltage settings with `sysbench cpu --threads=8 --time=300 run` running in the
 background; this benchmark pins my CPU usage to 100%, so the change in power consumption should be
 considered a best-case scenario here. On my i7-4770k, the reported power consumption decreased
@@ -73,18 +71,22 @@ substantially as the voltage was drastically reduced:
 <Plot
     data={[
         {
-            x: [1, 2, 3],
-            y: [3, 4, 5],
+            x: [0, 20, 40, 60, 80, 100],
+            y: [41.7, 40.9, 39.8, 36.7, 36.1, 35.0],
             type: 'scatter',
-            mode: 'line+markers',
-            marker: {color: 'red'}
         },
     ]}
+    layout={{
+        xaxis: {
+            title: 'Power Consumption (W)',
+        },
+        yaxis: {
+            title: 'Offset Voltage (mV)',
+        },
+    }}
 />
 
 Unfortunately, the system wasn't stable below -100 mV, though I didn't do an exhaustive search.
-Finally, I made the changes permanent by `# systemctl enable intel-undervolt.service` and `#
-systemctl start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power
-consumption by ~7 W, or ~16% (at 100% CPU load). Considering the fact that this power savings comes
-at zero cost to performance, I'm really pleased with how it turned out. In principle this should
-make the CPU less susceptible to thermal throttling, too.
+Finally, I made the changes permanent by `systemctl enable intel-undervolt.service` and `systemctl start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power
+consumption by ~7 W, or ~16% (at 100% CPU load). In principle this should make the CPU less
+susceptible to thermal throttling, too.
