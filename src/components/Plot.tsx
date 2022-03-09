@@ -2,7 +2,7 @@ import Loadable from 'react-loadable'
 import Centered from '../../src/components/Centered'
 import { useThemeUI } from 'theme-ui'
 
-function mergeDeep(a: any, b: any) {
+function mergeDeep(a: any, b: any): any {
     const isObject = (obj: any) => obj && typeof obj === 'object'
 
     if (isObject(b) && isObject(b)) {
@@ -17,24 +17,9 @@ function mergeDeep(a: any, b: any) {
         return output
     } else if (Array.isArray(a) && Array.isArray(b)) {
         return [...a, ...b]
+    } else {
+        console.log("mergeDeep called with invalid arguments: a: ", a, "b: ", b)
     }
-
-    return objects.reduce((prev, obj) => {
-        Object.keys(obj).forEach((key) => {
-            const pVal = prev[key]
-            const oVal = obj[key]
-
-            if (Array.isArray(pVal) && Array.isArray(oVal)) {
-                prev[key] = pVal.concat(...oVal)
-            } else if (isObject(pVal) && isObject(oVal)) {
-                prev[key] = mergeDeep(pVal, oVal)
-            } else {
-                prev[key] = oVal
-            }
-        })
-
-        return prev
-    }, {})
 }
 
 const LoadablePlot = Loadable({
@@ -71,17 +56,14 @@ export default function Plot({
         yaxis: {
             showgrid: false,
         },
-        ...layout,
     }
-
-    // console.log(mergeDeep(layout, defaultLayout))
-
+    console.log(mergeDeep(layout, defaultLayout))
     return (
         <Centered>
             <LoadablePlot
                 data={data}
-                // layout={mergeDeep(layout, defaultLayout)}
-                layout={layout}
+                layout={mergeDeep(layout, defaultLayout)}
+                // layout={layout}
             />
         </Centered>
     )
