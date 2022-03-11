@@ -62,7 +62,8 @@ voltages, and are given in units of mV. Start out by setting both the CPU and GP
 so. In reality it doesn't really matter what you set these to as long as you make sure the values
 are negative (remember, we want to _undervolt_); if you undervolt too much the system won't be
 damaged, it'll just crash and you'll have to reboot. I didn't bother messing with the `CPU Cache`,
-`System Agent`, or `Analog I/O` voltages. Apply the new voltage setting by typing `intel-undervolt apply`. The effect might not be immediately obvious unless a benchmark is running - I tested a
+`System Agent`, or `Analog I/O` voltages. Apply the new voltage setting by typing `intel-undervolt
+apply`. The effect might not be immediately obvious unless a benchmark is running - I tested a
 number of different voltage settings with `sysbench cpu --threads=8 --time=300 run` running in the
 background; this benchmark pins my CPU usage to 100%, so the change in power consumption should be
 considered a best-case scenario here. On my i7-4770k, the reported power consumption decreased
@@ -87,6 +88,7 @@ substantially as the voltage was drastically reduced:
 />
 
 Unfortunately, the system wasn't stable below -100 mV, though I didn't do an exhaustive search.
-Finally, I made the changes permanent by `systemctl enable intel-undervolt.service` and `systemctl start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power
+Finally, I made the changes permanent by `systemctl enable intel-undervolt.service` and `systemctl
+start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power
 consumption by ~7 W, or ~16% (at 100% CPU load). In principle this should make the CPU less
 susceptible to thermal throttling, too.
