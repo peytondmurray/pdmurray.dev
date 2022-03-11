@@ -5,18 +5,27 @@ import { Heading } from 'theme-ui'
 
 import Page from '../components/Page'
 
-// const ComponentName = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
-
 export const query = graphql`
-    {
-        allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-            nodes {
-                id
-                slug
-                excerpt(pruneLength: 100)
-                frontmatter {
-                    title
-                    date(formatString: "YYYY-MM-DD")
+    query MyQuery {
+        allFile(
+            filter: {
+                sourceInstanceName: { eq: "content" }
+                extension: { eq: "mdx" }
+            }
+            sort: { fields: childrenMdx___frontmatter___date, order: DESC }
+        ) {
+            edges {
+                node {
+                    childMdx {
+                        id
+                        body
+                        frontmatter {
+                            title
+                            date(formatString: "YYYY-MM-DD")
+                        }
+                        slug
+                        excerpt(pruneLength: 100)
+                    }
                 }
             }
         }
@@ -35,7 +44,7 @@ function PostLink({
     date,
     excerpt,
 }: {
-    children: JSX.Element
+    children: JSX.Element | null
     title: string
     to: string
     date: string
@@ -62,32 +71,25 @@ export default function Blog({ data }: any): JSX.Element {
     return (
         <Page>
             <PostLayout>
-                {data.allMdx.nodes.map(
-                    ({
-                        id,
-                        excerpt,
-                        slug,
-                        frontmatter: { title, date },
-                    }: {
-                        id: string
-                        excerpt: string
-                        slug: string
-                        frontmatter: {
-                            title: string
-                            date: string
-                        }
-                    }) => {
-                        return (
-                            <PostLink
-                                title={title}
-                                to={`/${slug}`}
-                                date={date}
-                                excerpt={excerpt}
-                                key={id}
-                            ></PostLink>
-                        )
-                    }
-                )}
+                {data.allFile.edges.map(({ node }: { node: any }) => {
+                    const {
+                        childMdx: {
+                            id,
+                            excerpt,
+                            slug,
+                            frontmatter: { title, date },
+                        },
+                    } = node
+                    return (
+                        <PostLink
+                            title={title}
+                            to={`/${slug}`}
+                            date={date}
+                            excerpt={excerpt}
+                            key={id}
+                        />
+                    )
+                })}
             </PostLayout>
         </Page>
     )

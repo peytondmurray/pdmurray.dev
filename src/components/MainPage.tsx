@@ -32,17 +32,17 @@ export default function MainPage(): JSX.Element {
                         layout="fullWidth"
                         sx={{
                             '#curve': {
-                                stroke: (theme) =>
+                                stroke: (theme: any) =>
                                     `${theme.colors.primary} !important`,
                                 strokeWidth: '0.3em !important',
                             },
                             '#labels': {
-                                fill: (theme) =>
+                                fill: (theme: any) =>
                                     `${theme.colors.secondary} !important`,
                             },
                             '#axes': {
                                 path: {
-                                    stroke: (theme) =>
+                                    stroke: (theme: any) =>
                                         `${theme.colors.secondary} !important`,
                                     strokeWidth: '0.15em !important',
                                 },
