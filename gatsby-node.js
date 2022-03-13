@@ -33,13 +33,6 @@ exports.createPages = async function ({ actions, graphql }) {
                     }
                 }
             }
-            file(name: { eq: "research" }) {
-                childMdx {
-                    id
-                    body
-                    slug
-                }
-            }
         }
     `)
 
@@ -57,11 +50,6 @@ exports.createPages = async function ({ actions, graphql }) {
 
     actions.createPage({
         path: 'research',
-        component: path.resolve(__dirname, './src/templates/page.tsx'),
-        context: {
-            id: data.file.childMdx.id,
-            title: 'Research',
-            body: data.file.childMdx.body,
-        },
+        component: path.resolve(__dirname, './src/heroPages/research/research.tsx')
     })
 }
