@@ -9,19 +9,23 @@ categories: coding
 toc: true
 ---
 
+import Centered from '../../src/components/Centered'
+import Magnet from './magnet.svg'
+import Walls from './walls'
+
 I've been playing around with [blender](www.blender.org) again.
 
 ## Blender, again
 
 I'd been thinking about submitting something for this year's [John D. Hunter Excellence in Plotting
-Contest](https://matplotlib.org/), but as it turned out I went away for about a week leading up to the final submission
-date, and didn't have anything prepared by the last day. I struggled for a few hours before the
-deadline to come up with something worth submitting, but nothing I tried seemed as visually
-impressive as I originally hoped it would be. Ultimately I just didn't have enough time to submit an
-entry, because I had made plans to travel with my parents on the final submission day, and I wasn't
-about to put off going on an awesome trip (Helsinki!) to make figures. But after returning from my
-trip, I wanted to complete my original goal: use Blender to make a visualization of something
-related to magnetism.
+Contest](https://matplotlib.org/), but as it turned out I went away for about a week leading up to
+the final submission date, and didn't have anything prepared by the last day. I struggled for a few
+hours before the deadline to come up with something worth submitting, but nothing I tried seemed as
+visually impressive as I originally hoped it would be. Ultimately I just didn't have enough time to
+submit an entry, because I had made plans to travel with my parents on the final submission day, and
+I wasn't about to put off going on an awesome trip (Helsinki!) to make figures. But after returning
+from my trip, I wanted to complete my original goal: use Blender to make a visualization of
+something related to magnetism.
 
 Back to Blender. Previously I made a [post](/2019-03-26-paraview-blender-workflow/post) about how
 you can import scientific data into [Paraview](https://www.paraview.org/), manipulate it, and export
@@ -52,16 +56,9 @@ think it has the potential to be visually appealing while still being understand
 non-scientists. On the microscopic scale, you can think of a magnetic material as being composed of
 many small bar magnets:
 
-<!-- <figure class="align-center">
-  <a href="https://simple.wikipedia.org/wiki/Magnet#/media/File:Bar_magnet.jpg">
-    <img src="/assets/images/science_to_blender/magnet.svg" alt="">
-  </a>
-  <figcaption>
-    <a href="https://simple.wikipedia.org/wiki/Magnet#/media/File:Bar_magnet.jpg" title="Source">
-      Source
-    </a>
-  </figcaption>
-</figure> -->
+<Centered>
+    <Magnet />
+</Centered>
 
 When a magnetic field is applied, these small magnets move and reorient themselves to align with the
 applied magnetic field. So the idea is to first simulate the motion of these microscopic magnetic
@@ -273,9 +270,7 @@ for i in range(nframes):
 Here, colors is simply a list of RGBA tuples; for me, these were taken from the matplotlib `RdBu_r`
 colormap. After running this script, the Blender interface should look like this:
 
-<!-- <figure style="width: 900px" class="align-center">
-  <img src="/assets/images/science_to_blender/after_loading_data.png" alt="">
-</figure> -->
+![after loading data](after_loading_data.png)
 
 Now all that remains is to add lighting and cameras, and then render whatever animations or images
 we need.
@@ -296,16 +291,13 @@ The z-component of the magnetization is used to color the cones: when the cone p
 is red, and when it points down the color is blue. I also rendered a different pair of images of the
 domain wall which I used in a previous post as well:
 
-<!-- <figure class="half">
-    <a href="/assets/images/paraview_blender/down_the_wall.jpg"><img src="/assets/images/paraview_blender/down_the_wall.jpg"></a>
-    <a href="/assets/images/paraview_blender/wall_night.jpg"><img src="/assets/images/paraview_blender/wall_night.jpg"></a>
-    <figcaption>The lighting and depth of field make these images so much more interesting.</figcaption>
-</figure> -->
+<Walls />
 
-The time I spent learning to use Blender's Python API has really been worth it, and I think it will
-be useful for creating professional level data visualizations in the future. Bridging the gap from
-the Mumax micromagnetics simulator using a combination of custom Go functions and Python scripting
-took a significant investment of time and effort, but ultimately the payoff can be worth it.
+The lighting and depth of field make these images so much more interesting! The time I spent
+learning to use Blender's Python API has really been worth it, and I think it will be useful for
+creating professional level data visualizations in the future. Bridging the gap from the Mumax
+micromagnetics simulator using a combination of custom Go functions and Python scripting took a
+significant investment of time and effort, but ultimately the payoff can be worth it.
 
 [^1]:
     While you can actually split this single mesh into a bunch of separate objects in Blender,
@@ -320,13 +312,3 @@ took a significant investment of time and effort, but ultimately the payoff can 
 [^2]:
     After posting this, I've discovered that you _can_ in fact align objects to a vector using the
     mathutils.to_track_quat() function. Maybe I'll make another post about this later.
-
-[blender]: www.blender.org
-[jdh]: https://matplotlib.org/
-
-<!-- [post]: {{ site.url }}{{ site.baseurl }}/coding/paraview-blender-workflow/
-[paraview]: https://www.paraview.org/
-[mumax]: https://mumax.github.io/
-[llg]: https://en.wikipedia.org/wiki/Landau%E2%80%93Lifshitz%E2%80%93Gilbert_equation
-[rodrigues]: https://en.wikipedia.org/wiki/Rodrigues'_rotation_formula
-[python]: https://www.scipy.org/index.html -->

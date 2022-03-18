@@ -22,7 +22,7 @@ export default function MainPage(): JSX.Element {
                 <HeroLink title="Blog" to="/blog">
                     <StaticImage
                         src="../images/corner.png"
-                        alt="A corner plot of some MCMC samples"
+                        alt="A corner plot of some MCMC samples."
                         layout="fullWidth"
                     />
                 </HeroLink>
