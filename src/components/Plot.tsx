@@ -47,7 +47,7 @@ export default function Plot({
         paper_bgcolor: '#00000000',
         plot_bgcolor: '#00000000',
         font: {
-            color: theme.rawColors.primary,
+            color: theme?.rawColors?.primary,
             size: 16,
         },
         xaxis: {
@@ -63,7 +63,7 @@ export default function Plot({
             <LoadablePlot
                 data={data}
                 layout={mergeDeep(layout, defaultLayout)}
-                // layout={layout}
+                config={{displaylogo: false}}
             />
         </Centered>
     )

@@ -49,7 +49,12 @@ exports.createPages = async function ({ actions, graphql }) {
     })
 
     actions.createPage({
+        path: 'about',
+        component: path.resolve(__dirname, './src/pages/about/about.tsx')
+    })
+
+    actions.createPage({
         path: 'research',
-        component: path.resolve(__dirname, './src/heroPages/research/research.tsx')
+        component: path.resolve(__dirname, './src/pages/research/research.tsx')
     })
 }

@@ -71,14 +71,6 @@ module.exports = {
             },
             __key: 'pages',
         },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: 'heroPages',
-                path: `${__dirname}/src/heroPages/`,
-            },
-            __key: 'heroPages',
-        },
         'gatsby-plugin-theme-ui',
         {
             resolve: 'gatsby-plugin-react-svg',
