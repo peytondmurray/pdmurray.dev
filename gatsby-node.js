@@ -50,11 +50,21 @@ exports.createPages = async function ({ actions, graphql }) {
 
     actions.createPage({
         path: 'about',
-        component: path.resolve(__dirname, './src/pages/about/about.tsx')
+        component: path.resolve(__dirname, './src/pages/about/about.tsx'),
     })
 
     actions.createPage({
         path: 'research',
-        component: path.resolve(__dirname, './src/pages/research/research.tsx')
+        component: path.resolve(__dirname, './src/pages/research/research.tsx'),
     })
+
+    // actions.createPage({
+    //     path: 'projects',
+    //     component: path.resolve(__dirname, './src/pages/projects/projects.tsx'),
+    //     context: {
+    //         id: node.childMdx.id,
+    //         title: node.childMdx.frontmatter.title,
+    //         body: node.childMdx.body,
+    //     }
+    // })
 }

@@ -57,6 +57,12 @@ export default function MainPage(): JSX.Element {
                         layout="fullWidth"
                     />
                 </HeroLink>
+                <HeroLink title="Projects" to="/projects">
+                    <StaticImage
+                        src="https://github.com/peytondmurray/bhsim/raw/main/blackhole.png"
+                        alt="A simulated image of a black hole."
+                    />
+                </HeroLink>
             </HeroRow>
         </Page>
     )
