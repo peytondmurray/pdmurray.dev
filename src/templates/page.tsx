@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import Page from '../components/Page'
 
 import 'katex/dist/katex.min.css'
+import './styles.css'
 
 const BlogTitle = styled.h2``
 

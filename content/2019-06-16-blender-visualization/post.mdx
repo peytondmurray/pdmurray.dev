@@ -11,7 +11,6 @@ toc: true
 
 import Centered from '../../src/components/Centered'
 import Magnet from './magnet.svg'
-import Walls from './walls'
 
 I've been playing around with [blender](www.blender.org) again.
 
@@ -283,15 +282,14 @@ render engine, I found that the animation was slower than I wanted it to be, but
 fixed by increasing the frame rate with FFMPEG. This animation shows how the domain wall propagates
 under the external magnetic field, and I think it captures its chaotic motion really well:
 
-<!-- <video autoplay="autoplay" loop="loop" width="800" height="450" codecs="h264" controls>
-  <source src="/assets/images/science_to_blender/dw_eyecandy.mp4" type="video/mp4">
-</video> -->
+{{ youtube: https://www.youtube.com/watch?v=IbckhRNdX4w }}
 
 The z-component of the magnetization is used to color the cones: when the cone points up the color
 is red, and when it points down the color is blue. I also rendered a different pair of images of the
 domain wall which I used in a previous post as well:
 
-<Walls />
+![A view looking parallel to the magnetic domain wall.](down_the_wall.jpg)
+![An image of the domain wall with dramatic lighting.](wall_night.jpg)
 
 The lighting and depth of field make these images so much more interesting! The time I spent
 learning to use Blender's Python API has really been worth it, and I think it will be useful for
@@ -300,14 +298,14 @@ micromagnetics simulator using a combination of custom Go functions and Python s
 significant investment of time and effort, but ultimately the payoff can be worth it.
 
 [^1]:
-    While you can actually split this single mesh into a bunch of separate objects in Blender,
-    this still doesn't really solve the problem. For example, suppose I have some object in Paraview
-    which moves as a function of time, and I want to make a movie of it in Blender. I can try
-    to export my data in Paraview as a set of PLY files (`frame1.ply, frame2.ply, frame3.ply, ...`), like
-    images from a flip-book. But there is still no way to tell Blender that the object I import from
-    `frame1.ply` is the same object as in `frame2.ply`, shown at a different time. As far as Blender
-    is concerned these are compeletely different objects, so Blender's most powerful animation
-    features - specifically, keyframing the motion of objects - just won't work here.
+    While you can actually split this single mesh into a bunch of separate objects in Blender, this
+    still doesn't really solve the problem. For example, suppose I have some object in Paraview
+    which moves as a function of time, and I want to make a movie of it in Blender. I can try to
+    export my data in Paraview as a set of PLY files (`frame1.ply, frame2.ply, frame3.ply, ...`),
+    like frames from a movie. But there is still no way to tell Blender that the object I import
+    from `frame1.ply` is the same object as in `frame2.ply`, shown at a different time. As far as
+    Blender is concerned these are compeletely different objects, so Blender's most powerful
+    animation features - specifically, keyframing the motion of objects - just won't work here.
 
 [^2]:
     After posting this, I've discovered that you _can_ in fact align objects to a vector using the
