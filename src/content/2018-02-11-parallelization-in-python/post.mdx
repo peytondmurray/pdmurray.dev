@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 read_time: true
 share: true
-date: "2018-02-11 18:37:01 -0800"
+date: '2018-02-11 18:37:01 -0800'
 categories: coding
 ---
 
@@ -33,8 +33,8 @@ workerPool.join()
 
 Let's break it down:
 
-- `Pool()` creates a set of worker processes which will be given jobs to do later on. By default creating the same number of workers as CPU cores in your machine.
-- We give these workers the job of evaluating `processItem` on each element of `dataset`, converting the output mapping to a list.
-- `Pool.close()` tells the workers that we are done asking them to do work, and that they need to exit. `Pool.join()` stops execution of the script and waits for the workers to exit.
+-   `Pool()` creates a set of worker processes which will be given jobs to do later on. By default creating the same number of workers as CPU cores in your machine.
+-   We give these workers the job of evaluating `processItem` on each element of `dataset`, converting the output mapping to a list.
+-   `Pool.close()` tells the workers that we are done asking them to do work, and that they need to exit. `Pool.join()` stops execution of the script and waits for the workers to exit.
 
 I'm glossing over a few details here, and there are admittedly a few lines of boilerplate, but it's not a lot of effort for what can be an enormous performance gain.

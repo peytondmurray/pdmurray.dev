@@ -18,7 +18,7 @@ function mergeDeep(a: any, b: any): any {
     } else if (Array.isArray(a) && Array.isArray(b)) {
         return [...a, ...b]
     } else {
-        console.log("mergeDeep called with invalid arguments: a: ", a, "b: ", b)
+        console.log('mergeDeep called with invalid arguments: a: ', a, 'b: ', b)
     }
 }
 
@@ -63,7 +63,7 @@ export default function Plot({
             <LoadablePlot
                 data={data}
                 layout={mergeDeep(layout, defaultLayout)}
-                config={{displaylogo: false}}
+                config={{ displaylogo: false }}
             />
         </Centered>
     )

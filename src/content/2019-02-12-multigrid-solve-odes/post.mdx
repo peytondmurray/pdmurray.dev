@@ -4,21 +4,21 @@ layout: single
 author_profile: true
 read_time: true
 share: true
-date: "2019-02-26 14:30:00 -0800"
+date: '2019-02-26 14:30:00 -0800'
 categories: coding
 toc: true
 ---
 
-import Centered from "../../src/components/Centered";
+import Centered from '../../src/components/Centered'
 
-import ProblemLayout from "./problem_layout.svg";
-import CoarseGridJacobi from "./coarse_grid_jacobi.svg";
-import ErrorVsGridsize from "./error_vs_gridsize.svg";
-import FineToCoarse from "./fine_to_coarse.svg";
-import OneLevelV from "./one_level_v.svg";
-import MultiLevelV from "./multi_level_v.svg";
-import FullMultigrid from "./full_multigrid.svg";
-import Efficiency from "./efficiency.svg";
+import ProblemLayout from './problem_layout.svg'
+import CoarseGridJacobi from './coarse_grid_jacobi.svg'
+import ErrorVsGridsize from './error_vs_gridsize.svg'
+import FineToCoarse from './fine_to_coarse.svg'
+import OneLevelV from './one_level_v.svg'
+import MultiLevelV from './multi_level_v.svg'
+import FullMultigrid from './full_multigrid.svg'
+import Efficiency from './efficiency.svg'
 
 ## Introduction
 
@@ -57,7 +57,7 @@ I have a grid of equally spaced points with a charge distribution $\rho$ defined
 at each point:
 
 <Centered>
-  <ProblemLayout />
+    <ProblemLayout />
 </Centered>
 
 and so on. The goal is to find the voltage $v$ everywhere, where the voltage is
@@ -230,7 +230,7 @@ let's first use the Jacobi method on a coarse grid with $n/2$ points (with
 spacing $2h$) to try to improve our initial guess.
 
 <Centered>
-  <CoarseGridJacobi />
+    <CoarseGridJacobi />
 </Centered>
 
 After iterating the Jacobi solver 100 times, the error $e=f-Av$ is much smaller
@@ -239,14 +239,14 @@ iterations are still needed to get close to the actual answer). The efficiency
 gains can be even greater if you move to even more coarse grids:
 
 <Centered>
-  <ErrorVsGridsize />
+    <ErrorVsGridsize />
 </Centered>
 
 This behavior is really simple to understand when you look at what happens when
 you move from a fine grid to a coarse grid:
 
 <Centered>
-  <FineToCoarse />
+    <FineToCoarse />
 </Centered>
 
 Slowly varying functions on the fine grid _appear_ to vary more rapidly on the
@@ -255,7 +255,7 @@ motivates the main steps of the multigrid method, which I think are best
 represented as a schematic:
 
 <Centered>
-  <OneLevelV />
+    <OneLevelV />
 </Centered>
 
 Of course you don't have to stop with one grid-coarsening step - in fact, it's
@@ -266,7 +266,7 @@ grid, Jacobi-iterate a few times, move to a finer grid, Jacobi iterate a few
 more times, and so on until you get back to the original grid spacing:
 
 <Centered>
-  <MultiLevelV />
+    <MultiLevelV />
 </Centered>
 
 This is called the V-cycle multigrid method (VMG), and it allows these sorts of
@@ -276,7 +276,7 @@ coarsest grid possible, and follow this sort of pattern, called Full Multigrid
 (FMG):
 
 <Centered>
-  <FullMultigrid />
+    <FullMultigrid />
 </Centered>
 
 ## Moving Between Grids
@@ -362,7 +362,7 @@ can be for helping convergence, and highlights how slowly the trial solution
 converges when trying to Jacobi iterate on a gigantic grid.
 
 <Centered>
-  <Efficiency />
+    <Efficiency />
 </Centered>
 
 I've purposely left out details of the implementation because I thought the concepts behind the

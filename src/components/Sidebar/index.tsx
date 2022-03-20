@@ -2,13 +2,13 @@ import styled from '@emotion/styled'
 
 import { Link } from 'theme-ui'
 
-import { ReactComponent as AtIcon } from './at-solid.svg'
-import { ReactComponent as GithubIcon } from './github.svg'
-import { ReactComponent as GoogleScholarIcon } from './google-scholar.svg'
-import { ReactComponent as LinkedinIcon } from './linkedin.svg'
-import { ReactComponent as OrcidIcon } from './orcid.svg'
-import { ReactComponent as ResearchgateIcon } from './researchgate.svg'
-import { ReactComponent as StackoverflowIcon } from './stackoverflow.svg'
+import AtIcon from './at-solid.svg'
+import GithubIcon from './github.svg'
+import GoogleScholarIcon from './google-scholar.svg'
+import LinkedinIcon from './linkedin.svg'
+import OrcidIcon from './orcid.svg'
+import ResearchgateIcon from './researchgate.svg'
+import StackoverflowIcon from './stackoverflow.svg'
 
 const links = [
     {
