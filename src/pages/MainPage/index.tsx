@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 
-import { StaticImage } from 'gatsby-plugin-image'
+import HeroLink from '../../components/HeroLink'
+import Page from '../../components/Page'
 
-import HeroLink from '../components/HeroLink'
-import Page from '../components/Page'
-
-import OOPML from '../images/svgs/OOPML.svg'
+import Corner from './corner.png'
+import { ReactComponent as OOPML } from './OOPML.svg'
+import About from './about_me_400x400px.jpg'
 
 const HeroRow = styled.div`
     display: flex;
@@ -13,23 +13,21 @@ const HeroRow = styled.div`
     > div:not(:first-of-type):not(:last-of-type) {
         margin: 0px 15px 0px 15px;
     }
+
+    img {
+        width: 100%;
+    }
 `
 
 export default function MainPage(): JSX.Element {
     return (
         <Page>
             <HeroRow>
-                <HeroLink title="Blog" to="/blog">
-                    <StaticImage
-                        src="../images/corner.png"
-                        alt="A corner plot of some MCMC samples."
-                        layout="fullWidth"
-                    />
+                <HeroLink title="Blog" href="/blog">
+                    <img src={Corner} />
                 </HeroLink>
-                <HeroLink title="Research" to="/research">
+                <HeroLink title="Research" href="/research">
                     <OOPML
-                        alt="My research interests in condensed matter physics."
-                        layout="fullWidth"
                         sx={{
                             '#curve': {
                                 stroke: (theme: any) =>
@@ -50,18 +48,8 @@ export default function MainPage(): JSX.Element {
                         }}
                     />
                 </HeroLink>
-                <HeroLink title="About" to="/about">
-                    <StaticImage
-                        src="../images/about_me_400x400px.jpg"
-                        alt="A picture of me."
-                        layout="fullWidth"
-                    />
-                </HeroLink>
-                <HeroLink title="Projects" to="/projects">
-                    <StaticImage
-                        src="https://github.com/peytondmurray/bhsim/raw/main/blackhole.png"
-                        alt="A simulated image of a black hole."
-                    />
+                <HeroLink title="About" href="/about">
+                    <img src={About} />
                 </HeroLink>
             </HeroRow>
         </Page>

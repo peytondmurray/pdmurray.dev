@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link } from 'theme-ui'
 import styled from '@emotion/styled'
 
 const HeaderLayout = styled.div`
@@ -16,7 +16,7 @@ export default function Header(): JSX.Element {
             }}
         >
             <Link
-                to="/"
+                href="/"
                 sx={{
                     textDecoration: 'none',
                     color: 'primary',

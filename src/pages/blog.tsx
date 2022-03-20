@@ -1,41 +1,7 @@
-import { graphql, Link } from 'gatsby'
+import { Heading, Link } from 'theme-ui'
 import styled from '@emotion/styled'
 
-import { Heading } from 'theme-ui'
-
 import Page from '../components/Page'
-
-export const query = graphql`
-    query MyQuery {
-        allFile(
-            filter: {
-                sourceInstanceName: { eq: "content" }
-                extension: { eq: "mdx" }
-            }
-            sort: { fields: childrenMdx___frontmatter___date, order: DESC }
-        ) {
-            edges {
-                node {
-                    childMdx {
-                        id
-                        body
-                        frontmatter {
-                            title
-                            date(formatString: "YYYY-MM-DD")
-                        }
-                        slug
-                        excerpt(pruneLength: 100)
-                    }
-                }
-            }
-        }
-    }
-`
-
-const PostLayout = styled.div`
-    display: flex;
-    flex-direction: column;
-`
 
 function PostLink({
     children,
@@ -52,7 +18,7 @@ function PostLink({
 }): JSX.Element {
     return (
         <Link
-            to={to}
+            href={to}
             sx={{
                 textDecoration: 'none',
                 color: 'primary',
@@ -64,33 +30,5 @@ function PostLink({
             {children}
             <p>{excerpt}</p>
         </Link>
-    )
-}
-
-export default function Blog({ data }: any): JSX.Element {
-    return (
-        <Page>
-            <PostLayout>
-                {data.allFile.edges.map(({ node }: { node: any }) => {
-                    const {
-                        childMdx: {
-                            id,
-                            excerpt,
-                            slug,
-                            frontmatter: { title, date },
-                        },
-                    } = node
-                    return (
-                        <PostLink
-                            title={title}
-                            to={`/${slug}`}
-                            date={date}
-                            excerpt={excerpt}
-                            key={id}
-                        />
-                    )
-                })}
-            </PostLayout>
-        </Page>
     )
 }

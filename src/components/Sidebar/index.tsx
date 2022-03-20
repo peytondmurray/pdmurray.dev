@@ -2,49 +2,49 @@ import styled from '@emotion/styled'
 
 import { Link } from 'theme-ui'
 
-import AtIcon from '../images/icons/at-solid.svg'
-import GithubIcon from '../images/icons/github.svg'
-import GoogleScholarIcon from '../images/icons/google-scholar.svg'
-import LinkedinIcon from '../images/icons/linkedin.svg'
-import OrcidIcon from '../images/icons/orcid.svg'
-import ResearchgateIcon from '../images/icons/researchgate.svg'
-import StackoverflowIcon from '../images/icons/stackoverflow.svg'
+import { ReactComponent as AtIcon } from './at-solid.svg'
+import { ReactComponent as GithubIcon } from './github.svg'
+import { ReactComponent as GoogleScholarIcon } from './google-scholar.svg'
+import { ReactComponent as LinkedinIcon } from './linkedin.svg'
+import { ReactComponent as OrcidIcon } from './orcid.svg'
+import { ReactComponent as ResearchgateIcon } from './researchgate.svg'
+import { ReactComponent as StackoverflowIcon } from './stackoverflow.svg'
 
 const links = [
     {
         name: 'peynmurray@gmail.com',
         to: 'email:peynmurray@gmail.com',
-        icon: <AtIcon alt="at symbol" />,
+        icon: <AtIcon />,
     },
     {
         name: 'GitHub',
         to: 'https://github.com/peytondmurray',
-        icon: <GithubIcon alt="GitHub logo" />,
+        icon: <GithubIcon />,
     },
     {
         name: 'Linkedin',
         to: 'https://www.linkedin.com/in/peytondm/',
-        icon: <LinkedinIcon alt="LinkedIn logo" />,
+        icon: <LinkedinIcon />,
     },
     {
         name: 'ORCiD',
         to: 'https://orcid.org/0000-0003-0389-0611',
-        icon: <OrcidIcon alt="ORCiD logo" />,
+        icon: <OrcidIcon />,
     },
     {
         name: 'Google Scholar',
         to: 'https://scholar.google.ca/citations?user=NXE8TDYAAAAJ&hl=en&oi=ao',
-        icon: <GoogleScholarIcon alt="Google Scholar logo" />,
+        icon: <GoogleScholarIcon />,
     },
     {
         name: 'ResearchGate',
         to: 'https://www.researchgate.net/profile/Peyton-Murray',
-        icon: <ResearchgateIcon alt="ResearchGate logo" />,
+        icon: <ResearchgateIcon />,
     },
     {
         name: 'Stack Overflow',
         to: 'https://stackoverflow.com/users/8100451/peytondmurray',
-        icon: <StackoverflowIcon alt="Stack Overflow logo" />,
+        icon: <StackoverflowIcon />,
     },
 ]
 
@@ -90,7 +90,8 @@ export default function SidebarBase(): JSX.Element {
                         <IconTextLayout>
                             <Icon
                                 sx={{
-                                    fill: (theme) => `${theme?.styles?.a?.color}`,
+                                    fill: (theme: any) =>
+                                        `${theme?.styles?.a?.color}`,
                                 }}
                             >
                                 {icon}

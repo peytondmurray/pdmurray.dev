@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-import { Link as GatsbyLink } from 'gatsby'
 import { Link } from 'theme-ui'
 
 const TextImageLink = styled.div`
@@ -16,15 +15,15 @@ const ImageTitle = styled.h2`
 export default function HeroLink({
     children,
     title,
-    to,
+    href,
 }: {
     children: JSX.Element
     title: string
-    to: string
+    href: string
 }): JSX.Element {
     return (
         <TextImageLink>
-            <Link to={to} as={GatsbyLink}>
+            <Link href={href}>
                 {children}
                 <ImageTitle>{title}</ImageTitle>
             </Link>
