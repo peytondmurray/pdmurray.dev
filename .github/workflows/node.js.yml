@@ -11,16 +11,30 @@ jobs:
     deploy-gh-pages:
         runs-on: ubuntu-latest
         env:
-            TARGET_NODE_VERSION: 16.x
+            TARGET_NODE_VERSION: '16'
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Use Node.js ${{ env.TARGET_NODE_VERSION }}
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v3
               with:
                   node-version: ${{ env.TARGET_NODE_VERSION }}
                   cache: 'yarn'
-            - name: Gatsby Publish
-              uses: enriikke/gatsby-gh-pages-action@v2.2.0
-              with:
-                  access-token: ${{ secrets.ACCESS_TOKEN }}
-                  deploy-branch: deploy
+            - name: Publish website
+              run: |
+                  # abort on errors
+                  set -e
+
+                  # build
+                  yarn build
+
+                  # navigate into the build output directory
+                  cd dist
+
+                  git init
+                  git checkout -b deploy
+                  git add -A
+                  git commit -nm 'deploy'
+
+                  git push -f git@github.com:peytondmurray/peytondmurray.github.io.git deploy
+
+                  cd -

@@ -1,57 +1,25 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# New Project
 
-## 🚀 Quick start
+> ✨ Bootstrapped with Create Snowpack App (CSA).
 
-1.  **Create a Gatsby site.**
+## Available Scripts
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+### npm start
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Runs the app in the development mode.
+Open http://localhost:8080 to view it in the browser.
 
-2.  **Start developing.**
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-    Navigate into your new site’s directory and start it up.
+### npm run build
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Builds a static copy of your site to the `build/` folder.
+Your app is ready to be deployed!
 
-3.  **Open the code and start customizing!**
+**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
 
-    Your site is now running at http://localhost:8000!
+### npm test
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    -   [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    -   [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    -   [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    -   [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    -   [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    -   [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
-
-<!-- This repository uses [font-awesome icons](https://fontawesome.com/license). Some
-changes to the icons may have been made to match the theme of my site. -->
+Launches the application test runner.
+Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
