@@ -1,19 +1,27 @@
 {
+    "include": ["src", "types"],
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "esnext",
         "target": "esnext",
-        "jsx": "react-jsx",
-        "jsxImportSource": "theme-ui",
-        "lib": ["dom", "es2015", "es2017"],
-        "strict": true,
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "baseUrl": "./",
+        /* paths - import rewriting/resolving */
+        "paths": {
+            // If you configured any Snowpack aliases, add them here.
+            // Add this line to get types for streaming imports (packageOptions.source="remote"):
+            //     "*": [".snowpack/types/*"]
+            // More info: https://www.snowpack.dev/guides/streaming-imports
+        },
+        /* noEmit - Snowpack builds (emits) files, not tsc. */
         "noEmit": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
+        /* Additional Options */
+        "strict": true,
         "skipLibCheck": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "removeComments": false,
-        "preserveConstEnums": true
-    },
-    "include": ["./src/**/*"]
+        "types": ["mocha", "snowpack-env"],
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "importsNotUsedAsValues": "error"
+    }
 }
