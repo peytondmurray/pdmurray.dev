@@ -1,0 +1,11 @@
+{
+    "name": "peytondmurray.github.io",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:peytondmurray/peytondmurray.github.io",
+    "author": "pdmurray <peynmurray@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "snowpack": "^3.8.8"
+    }
+}
