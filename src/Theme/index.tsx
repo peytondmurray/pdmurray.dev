@@ -1,5 +1,5 @@
-import type { Theme } from 'theme-ui'
-import nightOwl from '@theme-ui/prism/presets/night-owl.json'
+// import type { Theme } from 'theme-ui'
+// import nightOwl from '@theme-ui/prism/presets/night-owl.json'
 
 // cmocean "tempo" colormap
 const colormap = [
@@ -37,7 +37,7 @@ const colormap = [
     '#030512',
 ]
 
-const theme: Theme = {
+const theme = {
     fonts: {
         body: 'system-ui, sans-serif',
         heading: '"Avenir Next", sans-serif',
@@ -59,9 +59,9 @@ const theme: Theme = {
         SidebarLayout: {
             background: colormap[16],
         },
-        code: {
-            ...nightOwl,
-        },
+        // code: {
+        //     ...nightOwl,
+        // },
     },
 }
 

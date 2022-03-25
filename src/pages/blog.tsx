@@ -1,7 +1,4 @@
-import { Heading, Link } from 'theme-ui'
-import styled from '@emotion/styled'
-
-import Page from '../components/Page'
+import { Heading, Link } from '@chakra-ui/react'
 
 function PostLink({
     children,
@@ -17,13 +14,7 @@ function PostLink({
     excerpt: string
 }): JSX.Element {
     return (
-        <Link
-            href={to}
-            sx={{
-                textDecoration: 'none',
-                color: 'primary',
-            }}
-        >
+        <Link href={to} textDecoration="none" color="primary">
             <Heading as="h2">
                 {title} [{date}]
             </Heading>

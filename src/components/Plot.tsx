@@ -1,6 +1,5 @@
 // import Loadable from 'react-loadable'
 // import Centered from '../../src/components/Centered'
-// import { useThemeUI } from 'theme-ui'
 
 // function mergeDeep(a: any, b: any): any {
 //     const isObject = (obj: any) => obj && typeof obj === 'object'
@@ -36,7 +35,6 @@
 //     data: any
 //     layout: any
 // }): JSX.Element {
-//     const { theme } = useThemeUI()
 //     const defaultLayout = {
 //         margin: {
 //             r: 50,

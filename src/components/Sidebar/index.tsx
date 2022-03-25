@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { Link } from 'theme-ui'
-
 import AtIcon from './at-solid.svg'
 import GithubIcon from './github.svg'
 import GoogleScholarIcon from './google-scholar.svg'
@@ -80,28 +78,29 @@ const Icon = styled.div`
 
 export default function SidebarBase(): JSX.Element {
     return (
-        <SidebarLayout
-            sx={{
-                borderRight: (theme) => `0.1em solid ${theme?.colors?.accent}`,
-            }}
-        >
-            {links.map(({ name, to, icon }) => {
-                return (
-                    <Link href={to} key={name}>
-                        <IconTextLayout>
-                            <Icon
-                                sx={{
-                                    fill: (theme: any) =>
-                                        `${theme?.styles?.a?.color}`,
-                                }}
-                            >
-                                {icon}
-                            </Icon>
-                            <Name>{name}</Name>
-                        </IconTextLayout>
-                    </Link>
-                )
-            })}
-        </SidebarLayout>
+        // <SidebarLayout
+        //     sx={{
+        //         borderRight: (theme) => `0.1em solid ${theme?.colors?.accent}`,
+        //     }}
+        // >
+        //     {links.map(({ name, to, icon }) => {
+        //         return (
+        //             <Link href={to} key={name}>
+        //                 <IconTextLayout>
+        //                     <Icon
+        //                         sx={{
+        //                             fill: (theme: any) =>
+        //                                 `${theme?.styles?.a?.color}`,
+        //                         }}
+        //                     >
+        //                         {icon}
+        //                     </Icon>
+        //                     <Name>{name}</Name>
+        //                 </IconTextLayout>
+        //             </Link>
+        //         )
+        //     })}
+        // </SidebarLayout>
+        <p>foo</p>
     )
 }

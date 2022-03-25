@@ -1,13 +1,12 @@
 import React from 'react'
-import { ThemeProvider } from 'theme-ui'
-import theme from './Theme'
+import { ChakraProvider } from '@chakra-ui/react'
+// import theme from './Theme'
+import MainPage from './pages/MainPage'
 
 export default function App(): JSX.Element {
     return (
-        <ThemeProvider theme={theme}>
-            <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-        </ThemeProvider>
+        <ChakraProvider>
+            <MainPage />
+        </ChakraProvider>
     )
 }

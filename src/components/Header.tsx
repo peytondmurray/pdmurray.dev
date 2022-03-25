@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'theme-ui'
+import { Link } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const HeaderLayout = styled.div`
@@ -11,18 +11,8 @@ const HeaderLayout = styled.div`
 
 export default function Header(): JSX.Element {
     return (
-        <HeaderLayout
-            sx={{
-                background: (theme) => `${theme?.colors?.accent}`,
-            }}
-        >
-            <Link
-                href="/"
-                sx={{
-                    textDecoration: 'none',
-                    color: 'primary',
-                }}
-            >
+        <HeaderLayout>
+            <Link href="/" textDecoration="none">
                 <h1>Peyton Murray</h1>
             </Link>
         </HeaderLayout>

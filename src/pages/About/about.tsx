@@ -1,4 +1,4 @@
-import { Link } from 'theme-ui'
+import { Link } from '@chakra-ui/react'
 
 import Page from '../../components/Page'
 

@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from '@emotion/styled'
 
-import { Link } from 'theme-ui'
+import { Link } from '@chakra-ui/react'
 
 const TextImageLink = styled.div`
     display: flex;

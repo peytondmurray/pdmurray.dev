@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Heading, Link } from 'theme-ui'
+import { Link, Heading } from '@chakra-ui/react'
 
 import Page from '../../components/Page'
 import Particles from './particles-300x240px.png'

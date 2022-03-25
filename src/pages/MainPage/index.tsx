@@ -1,35 +1,22 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { Box, Image, Icon } from '@chakra-ui/react'
 
 import HeroLink from '../../components/HeroLink'
 import Page from '../../components/Page'
 
 import Corner from './corner.png'
 import OOPML from './OOPML.svg'
-// import { ReactComponent as OOPML } from './OOPML.svg'
 import About from './about_me_400x400px.jpg'
-
-const HeroRow = styled.div`
-    display: flex;
-    flex-direction: row;
-    > div:not(:first-of-type):not(:last-of-type) {
-        margin: 0px 15px 0px 15px;
-    }
-
-    img {
-        width: 100%;
-    }
-`
 
 export default function MainPage(): JSX.Element {
     return (
         <Page>
-            <HeroRow>
+            <Box display="flex" flexDirection="row">
                 <HeroLink title="Blog" href="/blog">
-                    <img src={Corner} />
+                    <Image src={Corner} width="100%" />
                 </HeroLink>
                 <HeroLink title="Research" href="/research">
-                    <OOPML
+                    <Box
                         sx={{
                             '#curve': {
                                 stroke: (theme: any) =>
@@ -48,12 +35,12 @@ export default function MainPage(): JSX.Element {
                                 },
                             },
                         }}
-                    />
+                    ></Box>
                 </HeroLink>
                 <HeroLink title="About" href="/about">
                     <img src={About} />
                 </HeroLink>
-            </HeroRow>
+            </Box>
         </Page>
     )
 }
