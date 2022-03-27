@@ -24,7 +24,11 @@ export default {
         // "bundle": true,
     },
     packageOptions: {
-        /* ... */
+        knownEntrypoints: [
+            'framesync',
+            '@chakra-ui/hooks/use-animation-state',
+            '@chakra-ui/hooks',
+        ],
     },
     devOptions: {
         /* ... */

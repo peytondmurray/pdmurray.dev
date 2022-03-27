@@ -1,5 +1,4 @@
-// import type { Theme } from 'theme-ui'
-// import nightOwl from '@theme-ui/prism/presets/night-owl.json'
+import { extendTheme, ThemeConfig } from '@chakra-ui/react'
 
 // cmocean "tempo" colormap
 const colormap = [
@@ -37,33 +36,38 @@ const colormap = [
     '#030512',
 ]
 
-const theme = {
-    fonts: {
-        body: 'system-ui, sans-serif',
-        heading: '"Avenir Next", sans-serif',
-        monospace: 'Menlo, monospace',
-    },
-    colors: {
-        text: colormap[12],
-        background: colormap[31],
-        primary: colormap[12],
-        secondary: colormap[18],
-        accent: colormap[25],
-    },
-    styles: {
-        a: {
-            color: colormap[6],
-            fontWeight: 'bold',
-            textDecoration: 'none',
-        },
-        SidebarLayout: {
-            background: colormap[16],
-        },
-        // code: {
-        //     ...nightOwl,
-        // },
-    },
-}
+// const theme = {
+//     fonts: {
+//         body: 'system-ui, sans-serif',
+//         heading: '"Avenir Next", sans-serif',
+//         monospace: 'Menlo, monospace',
+//     },
+//     colors: {
+//         text: colormap[12],
+//         background: colormap[31],
+//         primary: colormap[12],
+//         secondary: colormap[18],
+//         accent: colormap[25],
+//     },
+//     styles: {
+//         a: {
+//             color: colormap[6],
+//             fontWeight: 'bold',
+//             textDecoration: 'none',
+//         },
+//         SidebarLayout: {
+//             background: colormap[16],
+//         },
+//         // code: {
+//         //     ...nightOwl,
+//         // },
+//     },
+// }
+
+const theme = extendTheme({
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+})
 
 export default theme
 export { colormap }
