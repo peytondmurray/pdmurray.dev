@@ -16,31 +16,34 @@ export default function MainPage(): JSX.Element {
                     <Image src={Corner} width="100%" />
                 </HeroLink>
                 <HeroLink title="Research" href="/research">
-                    <Box
-                        sx={{
-                            '#curve': {
-                                stroke: (theme: any) =>
-                                    `${theme.colors.primary} !important`,
-                                strokeWidth: '0.3em !important',
-                            },
-                            '#labels': {
-                                fill: (theme: any) =>
-                                    `${theme.colors.secondary} !important`,
-                            },
-                            '#axes': {
-                                path: {
-                                    stroke: (theme: any) =>
-                                        `${theme.colors.secondary} !important`,
-                                    strokeWidth: '0.15em !important',
-                                },
-                            },
-                        }}
-                    ></Box>
+                    {OOPML}
                 </HeroLink>
                 <HeroLink title="About" href="/about">
-                    <img src={About} width="100%" />
+                    <Image src={About} width="100%" />
                 </HeroLink>
             </Box>
         </Page>
     )
 }
+// <Box
+//     sx={{
+//         '#curve': {
+//             stroke: (theme: any) =>
+//                 `${theme.colors.primary} !important`,
+//             strokeWidth: '0.3em !important',
+//         },
+//         '#labels': {
+//             fill: (theme: any) =>
+//                 `${theme.colors.secondary} !important`,
+//         },
+//         '#axes': {
+//             path: {
+//                 stroke: (theme: any) =>
+//                     `${theme.colors.secondary} !important`,
+//                 strokeWidth: '0.15em !important',
+//             },
+//         },
+//     }}
+// >
+//     <Image src={Corner} alt="A hysteresis loop."/>
+// </Box>

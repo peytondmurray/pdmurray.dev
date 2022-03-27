@@ -14,6 +14,7 @@ export default {
                 ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
             },
         ],
+        'snowpack-svgr-cli-plugin',
     ],
     routes: [
         /* Enable an SPA Fallback in development: */
