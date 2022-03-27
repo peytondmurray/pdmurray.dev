@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Icon } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 
 import HeroLink from '../../components/HeroLink'
 import Page from '../../components/Page'
@@ -16,7 +16,7 @@ export default function MainPage(): JSX.Element {
                     <Image src={Corner} width="100%" />
                 </HeroLink>
                 <HeroLink title="Research" href="/research">
-                    {OOPML}
+                    <OOPML />
                 </HeroLink>
                 <HeroLink title="About" href="/about">
                     <Image src={About} width="100%" />

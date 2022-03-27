@@ -5,6 +5,7 @@ export default {
         src: { url: '/dist' },
     },
     plugins: [
+        'snowpack-svgr-cli-plugin',
         '@snowpack/plugin-react-refresh',
         '@snowpack/plugin-dotenv',
         [
@@ -14,7 +15,6 @@ export default {
                 ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
             },
         ],
-        'snowpack-svgr-cli-plugin',
     ],
     routes: [
         /* Enable an SPA Fallback in development: */
