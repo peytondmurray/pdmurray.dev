@@ -38,7 +38,7 @@ export default function MainPage(): JSX.Element {
                     ></Box>
                 </HeroLink>
                 <HeroLink title="About" href="/about">
-                    <img src={About} />
+                    <img src={About} width="100%" />
                 </HeroLink>
             </Box>
         </Page>

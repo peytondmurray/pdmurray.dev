@@ -1,4 +1,4 @@
-import { extendTheme, ThemeConfig } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 
 // cmocean "tempo" colormap
 const colormap = [
@@ -65,8 +65,10 @@ const colormap = [
 // }
 
 const theme = extendTheme({
-    initialColorMode: 'dark',
-    useSystemColorMode: false,
+    config: {
+        initialColorMode: 'dark',
+        useSystemColorMode: false,
+    },
 })
 
 export default theme
