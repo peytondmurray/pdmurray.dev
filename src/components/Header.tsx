@@ -1,29 +1,17 @@
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
-
-const HeaderLayout = styled.div`
-    display: flex;
-    flex-direction: row;
-    padding: 0em 0em 0em 5em;
-    margin: 0em 0em 1em 0em;
-`
+import { Link, Flex, Heading } from '@chakra-ui/react'
 
 export default function Header(): JSX.Element {
     return (
-        <HeaderLayout
-            sx={{
-                background: (theme) => `${theme?.colors?.accent}`,
-            }}
+        <Flex
+            flex-direction="row"
+            padding="0em 0em 0em 5em"
+            margin="1em 0em 1em 0em"
         >
-            <Link
-                to="/"
-                sx={{
-                    textDecoration: 'none',
-                    color: 'primary',
-                }}
-            >
-                <h1>Peyton Murray</h1>
+            <Link href="/" textDecoration="none">
+                <Heading as="h1" size="2xl" fontFamily="Michroma">
+                    PEYTON MURRAY
+                </Heading>
             </Link>
-        </HeaderLayout>
+        </Flex>
     )
 }

@@ -1,6 +1,7 @@
-import Loadable from 'react-loadable'
-import Centered from '../../src/components/Centered'
-import { useThemeUI } from 'theme-ui'
+import { Center } from '@chakra-ui/react'
+import PlotlyReactPlot from 'react-plotly.js'
+
+import theme from '../Theme'
 
 function mergeDeep(a: any, b: any): any {
     const isObject = (obj: any) => obj && typeof obj === 'object'
@@ -18,16 +19,9 @@ function mergeDeep(a: any, b: any): any {
     } else if (Array.isArray(a) && Array.isArray(b)) {
         return [...a, ...b]
     } else {
-        console.log("mergeDeep called with invalid arguments: a: ", a, "b: ", b)
+        console.log('mergeDeep called with invalid arguments: a: ', a, 'b: ', b)
     }
 }
-
-const LoadablePlot = Loadable({
-    loader: () => import('react-plotly.js'),
-    loading() {
-        return <div>Loading...</div>
-    },
-})
 
 export default function Plot({
     data,
@@ -36,7 +30,6 @@ export default function Plot({
     data: any
     layout: any
 }): JSX.Element {
-    const { theme } = useThemeUI()
     const defaultLayout = {
         margin: {
             r: 50,
@@ -47,7 +40,7 @@ export default function Plot({
         paper_bgcolor: '#00000000',
         plot_bgcolor: '#00000000',
         font: {
-            color: theme?.rawColors?.primary,
+            color: theme.colors.primary,
             size: 16,
         },
         xaxis: {
@@ -57,14 +50,13 @@ export default function Plot({
             showgrid: false,
         },
     }
-    console.log(mergeDeep(layout, defaultLayout))
     return (
-        <Centered>
-            <LoadablePlot
+        <Center>
+            <PlotlyReactPlot
                 data={data}
                 layout={mergeDeep(layout, defaultLayout)}
-                config={{displaylogo: false}}
+                config={{ displaylogo: false }}
             />
-        </Centered>
+        </Center>
     )
 }
