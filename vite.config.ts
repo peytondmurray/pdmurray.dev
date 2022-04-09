@@ -8,9 +8,9 @@ import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import rehypePrism from '@mapbox/rehype-prism'
 import remarkGfm from 'remark-gfm'
-import rehypeReact from 'rehype-react'
 
 export default defineConfig({
+    base: '/peytondmurray/',
     plugins: [
         react(),
         mdx({
