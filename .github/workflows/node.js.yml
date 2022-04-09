@@ -36,6 +36,6 @@ jobs:
                   git config --local user.name "Github Action"
                   git commit -nm 'deploy'
 
-                  git push -f git@github.com:peytondmurray/peytondmurray.github.io.git deploy
+                  git push -f https://${{ secrets.ACCESS_TOKEN }}@github.com:peytondmurray/peytondmurray.github.io.git deploy
 
                   cd -
