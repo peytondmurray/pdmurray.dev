@@ -27,6 +27,7 @@ const blogPosts = Object.entries(posts).map(
         const postName = globPattern.match(regexp)?.groups?.postName
         return {
             path: `/blog/${postName}`,
+            key: `/blog/${postName}`,
             element: (
                 <PostLayout title={title}>
                     <Box textAlign="justify">

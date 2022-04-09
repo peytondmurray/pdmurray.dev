@@ -10,7 +10,6 @@ import rehypePrism from '@mapbox/rehype-prism'
 import remarkGfm from 'remark-gfm'
 
 export default defineConfig({
-    base: '/peytondmurray/',
     plugins: [
         react(),
         mdx({
