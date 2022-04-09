@@ -32,6 +32,8 @@ jobs:
                   git init
                   git checkout -b deploy
                   git add -A
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "Github Action"
                   git commit -nm 'deploy'
 
                   git push -f git@github.com:peytondmurray/peytondmurray.github.io.git deploy
