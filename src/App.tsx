@@ -7,6 +7,7 @@ import {
     OrderedList,
     UnorderedList,
 } from '@chakra-ui/react'
+import { Helmet } from 'react-helmet'
 import { useRoutes } from 'react-router-dom'
 
 import MainPage from './pages/MainPage'
@@ -22,17 +23,6 @@ import './components/Fonts/fonts.css'
 import './styles/styles.css'
 import { MDXProvider } from '@mdx-js/react'
 
-const customComponents = {
-    h1: (props: any) => <Heading as="h1" {...props} />,
-    h2: (props: any) => <Heading as="h2" {...props} />,
-    h3: (props: any) => <Heading as="h3" {...props} />,
-    h4: (props: any) => <Heading as="h4" {...props} />,
-    a: Link,
-    ol: OrderedList,
-    ul: UnorderedList,
-    li: ListItem,
-}
-
 export default function App(): JSX.Element {
     const routes = useRoutes([
         { path: '/', element: <MainPage /> },
@@ -46,7 +36,12 @@ export default function App(): JSX.Element {
 
     return (
         <ChakraProvider theme={theme}>
-            <MDXProvider components={customComponents}>{routes}</MDXProvider>
+            <MDXProvider>
+                <Helmet>
+                    <title>peytondmurray.github.io</title>
+                </Helmet>
+                {routes}
+            </MDXProvider>
         </ChakraProvider>
     )
 }
