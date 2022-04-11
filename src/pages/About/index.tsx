@@ -1,7 +1,7 @@
 import { Link, Image, Text } from '@chakra-ui/react'
 
 import Page from '../../components/Page'
-import Nicoo from './NiCoO_r1_reduced_cropped.jpg'
+import Nicoo from './NiCoO_r1_reduced_cropped.avif'
 
 export default function AboutPage(): JSX.Element {
     return (

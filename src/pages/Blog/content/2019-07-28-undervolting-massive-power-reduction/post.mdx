@@ -9,7 +9,8 @@ date: '2019-07-27 18:37:01 -0800'
 categories: coding
 ---
 
-import Plot from '../../../../components/Plot'
+import { Center } from '@chakra-ui/react'
+import { ReactComponent as Plot } from './voltage.svg'
 
 I've spent a decent amount of time overclocking my computers in the past. I'm definitely no expert,
 but it's fun to fiddle with the CPU voltages and frequencies, trying to squeeze every last bit of
@@ -68,23 +69,15 @@ background; this benchmark pins my CPU usage to 100%, so the change in power con
 considered a best-case scenario here. On my i7-4770k, the reported power consumption decreased
 substantially as the voltage was drastically reduced:
 
-<Plot
-    data={[
-        {
-            x: [0, 20, 40, 60, 80, 100],
-            y: [41.7, 40.9, 39.8, 36.7, 36.1, 35.0],
-            type: 'scatter',
-        },
-    ]}
-    layout={{
-        xaxis: {
-            title: 'Voltage Below Nominal (mV)',
-        },
-        yaxis: {
-            title: 'Power Consumption (W)',
+<Center
+    sx={{
+        svg: {
+            width: 1024,
         },
     }}
-/>
+>
+    <Plot />
+</Center>
 
 Unfortunately, the system wasn't stable below -100 mV, though I didn't do an exhaustive search.
 Finally, I made the changes permanent by `systemctl enable intel-undervolt.service` and `systemctl start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power
