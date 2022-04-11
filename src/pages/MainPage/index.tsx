@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Image, Grid } from '@chakra-ui/react'
 
 import HeroLink from '../../components/HeroLink'
 import Page from '../../components/Page'
@@ -6,12 +6,12 @@ import Page from '../../components/Page'
 import Corner from './corner.avif'
 import { ReactComponent as Oopml } from './OOPML.svg'
 import About from './about_me_400x400px.avif'
-import Blackhole from './blackhole.avif'
+import { ReactComponent as Blackhole } from './isoradials_80_deep_r.svg'
 
 export default function MainPage(): JSX.Element {
     return (
         <Page>
-            <Box display="flex" flexDirection="row" gap="1em">
+            <Grid gridAutoFlow="column" gridAutoColumns="1fr" gap="1em">
                 <HeroLink title="Blog" href="/blog">
                     <Image src={Corner} width="100%" />
                 </HeroLink>
@@ -43,9 +43,17 @@ export default function MainPage(): JSX.Element {
                     <Image src={About} width="100%" />
                 </HeroLink>
                 <HeroLink title="Projects" href="/projects">
-                    <Image src={Blackhole} />
+                    <Box
+                        sx={{
+                            svg: {
+                                fill: '#00000000',
+                            },
+                        }}
+                    >
+                        <Blackhole />
+                    </Box>
                 </HeroLink>
-            </Box>
+            </Grid>
         </Page>
     )
 }

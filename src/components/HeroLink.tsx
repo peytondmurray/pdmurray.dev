@@ -10,13 +10,13 @@ export default function HeroLink({
     href: string
 }): JSX.Element {
     return (
-        <Box display="flex" flexDirection="column" flexBasis="100%">
-            <Link href={href}>
+        <Link href={href}>
+            <Box display="block" flexDirection="column" height="100%">
                 {children}
                 <Heading as="h2" textAlign="center">
                     {title}
                 </Heading>
-            </Link>
-        </Box>
+            </Box>
+        </Link>
     )
 }
