@@ -25,9 +25,7 @@ export default defineConfig({
     ],
     clearScreen: false,
     logLevel: 'info',
-    resolve: {
-        alias: {
-            'react/jsx-runtime': 'react/jsx-runtime.js',
-        },
+    optimizeDeps: {
+      include: ['react/jsx-runtime'],
     },
 })
