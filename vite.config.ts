@@ -10,22 +10,22 @@ import rehypePrism from '@mapbox/rehype-prism'
 import remarkGfm from 'remark-gfm'
 
 export default defineConfig({
-    plugins: [
-        react(),
-        mdx({
-            remarkPlugins: [
-                remarkGfm,
-                remarkFrontmatter,
-                remarkMdxFrontmatter,
-                remarkMath,
-            ],
-            rehypePlugins: [[rehypeKatex, { trust: true }], rehypePrism],
-        }),
-        svgrPlugin(),
-    ],
-    clearScreen: false,
-    logLevel: 'info',
-    optimizeDeps: {
-      include: ['react/jsx-runtime'],
-    },
+  plugins: [
+    react(),
+    mdx({
+      remarkPlugins: [
+        remarkGfm,
+        remarkFrontmatter,
+        remarkMdxFrontmatter,
+        remarkMath,
+      ],
+      rehypePlugins: [[rehypeKatex, { trust: true }], rehypePrism],
+    }),
+    svgrPlugin(),
+  ],
+  clearScreen: false,
+  logLevel: 'info',
+  optimizeDeps: {
+    include: ['react/jsx-runtime'],
+  },
 })

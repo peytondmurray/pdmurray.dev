@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 read_time: true
 share: true
-date: '2019-02-26 14:30:00 -0800'
+date: '2019-02-26T14:30:00-0800'
 categories: coding
 toc: true
 ---
@@ -58,7 +58,7 @@ I have a grid of equally spaced points with a charge distribution $\rho$ defined
 at each point:
 
 <Center>
-    <ProblemLayout />
+  <ProblemLayout />
 </Center>
 
 and so on. The goal is to find the voltage $v$ everywhere, where the voltage is
@@ -231,7 +231,7 @@ let's first use the Jacobi method on a coarse grid with $n/2$ points (with
 spacing $2h$) to try to improve our initial guess.
 
 <Center>
-    <CoarseGridJacobi />
+  <CoarseGridJacobi />
 </Center>
 
 After iterating the Jacobi solver 100 times, the error $e=f-Av$ is much smaller
@@ -240,14 +240,14 @@ iterations are still needed to get close to the actual answer). The efficiency
 gains can be even greater if you move to even more coarse grids:
 
 <Center>
-    <ErrorVsGridsize />
+  <ErrorVsGridsize />
 </Center>
 
 This behavior is really simple to understand when you look at what happens when
 you move from a fine grid to a coarse grid:
 
 <Center>
-    <FineToCoarse />
+  <FineToCoarse />
 </Center>
 
 Slowly varying functions on the fine grid _appear_ to vary more rapidly on the
@@ -256,7 +256,7 @@ motivates the main steps of the multigrid method, which I think are best
 represented as a schematic:
 
 <Center>
-    <OneLevelV />
+  <OneLevelV />
 </Center>
 
 Of course you don't have to stop with one grid-coarsening step - in fact, it's
@@ -267,7 +267,7 @@ grid, Jacobi-iterate a few times, move to a finer grid, Jacobi iterate a few
 more times, and so on until you get back to the original grid spacing:
 
 <Center>
-    <MultiLevelV />
+  <MultiLevelV />
 </Center>
 
 This is called the V-cycle multigrid method (VMG), and it allows these sorts of
@@ -277,7 +277,7 @@ coarsest grid possible, and follow this sort of pattern, called Full Multigrid
 (FMG):
 
 <Center>
-    <FullMultigrid />
+  <FullMultigrid />
 </Center>
 
 ## Moving Between Grids
@@ -363,7 +363,7 @@ can be for helping convergence, and highlights how slowly the trial solution
 converges when trying to Jacobi iterate on a gigantic grid.
 
 <Center>
-    <Efficiency />
+  <Efficiency />
 </Center>
 
 I've purposely left out details of the implementation because I thought the concepts behind the

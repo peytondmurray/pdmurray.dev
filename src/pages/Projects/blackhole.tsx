@@ -16,9 +16,12 @@ async function getImg(image: string) {
   return img
 }
 
-async function loadImage(image: string, canvas: HTMLCanvasElement): Promise<HTMLImageElement> {
+async function loadImage(
+  image: string,
+  canvas: HTMLCanvasElement
+): Promise<HTMLImageElement> {
   let img!: HTMLImageElement
-  const loadPromise = new Promise(resolve => {
+  const loadPromise = new Promise((resolve) => {
     img = new Image()
     img.onload = resolve
     img.crossOrigin = 'Anonymous'
@@ -32,7 +35,7 @@ async function getLuminanceData(image: string) {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
   const img = await loadImage(image, canvas)
-  const {width, height} = img
+  const { width, height } = img
   canvas.width = width
   canvas.height = height
   ctx?.drawImage(img, 0, 0, width, height)
@@ -45,12 +48,15 @@ async function getLuminanceData(image: string) {
     values: new Float64Array(width * height),
   }
   for (let i = 0; i < rgba.length / 4; i++) {
-    data.values[i] = Math.max(0, rgba[i*4] / 255)
+    data.values[i] = Math.max(0, rgba[i * 4] / 255)
   }
   return data
 }
 
-async function generateStippledImage(image: string, ref: React.MutableRefObject<any>) {
+async function generateStippledImage(
+  image: string,
+  ref: React.MutableRefObject<any>
+) {
   const imageData = await getLuminanceData(image)
   const canvas: any = d3
     .select(ref.current)
@@ -62,14 +68,13 @@ async function generateStippledImage(image: string, ref: React.MutableRefObject<
     type: 'module',
   })
 
-
   async function messaged({
-    data: { values, width, height }
+    data: { values, width, height },
   }: {
     data: {
-        values: Float64Array,
-        width: number,
-        height: number,
+      values: Float64Array
+      width: number
+      height: number
     }
   }) {
     context.fillStyle = '#101010'
@@ -99,7 +104,5 @@ export default function BlackHole(): JSX.Element {
     }
   }, [canvasRef.current])
 
-  return (
-      <canvas id="canvas" ref={canvasRef} />
-  )
+  return <canvas id="canvas" ref={canvasRef} />
 }

@@ -1,11 +1,11 @@
 // import { ChakraProvider } from '@chakra-ui/react'
 import {
-    ChakraProvider,
-    Heading,
-    Link,
-    ListItem,
-    OrderedList,
-    UnorderedList,
+  ChakraProvider,
+  Heading,
+  Link,
+  ListItem,
+  OrderedList,
+  UnorderedList,
 } from '@chakra-ui/react'
 import { Helmet } from 'react-helmet'
 import { useRoutes } from 'react-router-dom'
@@ -25,25 +25,25 @@ import './styles/styles.css'
 import { MDXProvider } from '@mdx-js/react'
 
 export default function App(): JSX.Element {
-    const routes = useRoutes([
-        { path: '/', element: <MainPage /> },
-        { path: '/about', element: <About /> },
-        { path: '/research', element: <Research /> },
-        { path: '/projects', element: <Projects /> },
-        {
-            path: '/blog',
-            children: [{ path: '/blog', element: <Blog /> }, ...blogPosts],
-        },
-    ])
+  const routes = useRoutes([
+    { path: '/', element: <MainPage /> },
+    { path: '/about', element: <About /> },
+    { path: '/research', element: <Research /> },
+    { path: '/projects', element: <Projects /> },
+    {
+      path: '/blog',
+      children: [{ path: '/blog', element: <Blog /> }, ...blogPosts],
+    },
+  ])
 
-    return (
-        <ChakraProvider theme={theme}>
-            <MDXProvider>
-                <Helmet>
-                    <title>peytondmurray.github.io</title>
-                </Helmet>
-                {routes}
-            </MDXProvider>
-        </ChakraProvider>
-    )
+  return (
+    <ChakraProvider theme={theme}>
+      <MDXProvider>
+        <Helmet>
+          <title>peytondmurray.github.io</title>
+        </Helmet>
+        {routes}
+      </MDXProvider>
+    </ChakraProvider>
+  )
 }

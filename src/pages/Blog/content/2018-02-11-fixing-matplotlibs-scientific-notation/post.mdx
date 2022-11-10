@@ -5,7 +5,7 @@ classes: wide
 author_profile: true
 read_time: true
 share: true
-date: '2017-10-26 18:37:01 -0800'
+date: '2017-10-26T18:37:01-0800'
 categories: coding
 ---
 
@@ -47,13 +47,13 @@ plt.savefig("example.svg")
 This code produces the following:
 
 <Center
-    sx={{
-        path: {
-            stroke: (theme) => `${theme.colors.primary} !important`,
-        },
-    }}
+  sx={{
+    path: {
+      stroke: (theme) => `${theme.colors.primary} !important`,
+    },
+  }}
 >
-    <Bad />
+  <Bad />
 </Center>
 
 You can immediately see the problem - the exponent is jammed into the plot above. This behavior
@@ -62,10 +62,10 @@ already done if you're here), most of the solutions to this problem suggest usin
 `axis.yaxis.get_offset_text().set_y(yn)` to shift the exponent label to new location _yn_. I have
 two main issues with this solution:
 
--   It only allows you to shift the label along one direction, not actually place it wherever you
-    want
--   Depending on the placement, it can be ambiguous whether the exponent is associated with the top
-    plot or the bottom plot
+- It only allows you to shift the label along one direction, not actually place it wherever you
+  want
+- Depending on the placement, it can be ambiguous whether the exponent is associated with the top
+  plot or the bottom plot
 
 [pyqtgraph](https://www.pyqtgraph.org) does this _so_ much better than matplotlib by letting users
 specify units for the axes. Then the exponent is affixed to the axis units label by appropriate SI
@@ -111,13 +111,13 @@ label_offset(upperAxes, "y")
 ```
 
 <Center
-    sx={{
-        path: {
-            stroke: (theme) => `${theme.colors.primary} !important`,
-        },
-    }}
+  sx={{
+    path: {
+      stroke: (theme) => `${theme.colors.primary} !important`,
+    },
+  }}
 >
-    <Good />
+  <Good />
 </Center>
 
 When we use `plt.show()`, the axes and labels work exactly how we want them to. Best of all, the

@@ -1,14 +1,18 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './App'
 
-ReactDOM.render(
+const rootElement = document.getElementById('root')
+if (rootElement) {
+  createRoot(rootElement).render(
     <React.StrictMode>
-        <Router>
-            <App />
-        </Router>
-    </React.StrictMode>,
-    document.getElementById('root')
-)
+      <Router>
+        <App />
+      </Router>
+    </React.StrictMode>
+  )
+} else {
+  console.error('Unable to render the react app on the root element.')
+}
