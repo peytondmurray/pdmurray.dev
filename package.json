@@ -4,8 +4,10 @@
   "author": "pdmurray <peynmurray@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "eleventy-dev": "npx @11ty/eleventy --serve",
-    "eleventy-build": "npx @11ty/eleventy"
+    "eleventy-dev": "@11ty/eleventy --serve",
+    "eleventy-build": "@11ty/eleventy",
+    "build": "tsc && yarn eleventy-dev",
+    "dev": "@11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",

@@ -1,4 +1,10 @@
 module.exports = function(eleventyConfig) {
-  // Return your Object options:
-  return {}
+  return {
+    dir: {
+      input: "src",
+      includes: "includes",
+      data: "data",
+      output: "_site",
+    }
+  }
 };
