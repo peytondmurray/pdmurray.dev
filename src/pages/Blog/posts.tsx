@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/react'
 import customComponents from '../../Theme/components'
 import PostLayout from './Layout'
-const posts = import.meta.globEager('./content/**/*.mdx')
+
+const posts = import.meta.glob('./content/**/*.mdx', {eager: true})
 
 const blogPosts = Object.entries(posts).map(
   ([globPattern, { default: PostMdx, title }]) => {
