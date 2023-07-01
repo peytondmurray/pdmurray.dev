@@ -3,5 +3,6 @@
     "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "h.Fragment",
+    "esModuleInterop": true
   }
 }

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N41FVWN1PK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-N41FVWN1PK')
+    </script>
+
+    <!-- Add main css -->
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <div id="main-pane">
+      {% include "topbar.njk" %}
+      {% include "sidebar.njk" %}
+      <div id="content">
+        {{ content | safe }}
+      </div>
+    </div>
+  </body>
+</html>
