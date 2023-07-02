@@ -1,3 +1,109 @@
+/* CSS Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* cmocean "tempo" colormap */
+:root {
+  --cm0: #EAFCFD;
+  --cm1: #DBF4F5;
+  --cm2: #CDECEE;
+  --cm3: #BEE4E7;
+  --cm4: #ADDCE0;
+  --cm5: #9ED4DB;
+  --cm6: #8FCCD6;
+  --cm7: #83C4D3;
+  --cm8: #76BBCF;
+  --cm9: #6DB3CB;
+  --cm10: #64AAC8;
+  --cm11: #5CA2C5;
+  --cm12: #5498C1;
+  --cm13: #4E90BE;
+  --cm14: #4887BC;
+  --cm15: #447FB9;
+  --cm16: #4075B5;
+  --cm17: #3E6CB1;
+  --cm18: #3E63AC;
+  --cm19: #3E5AA6;
+  --cm20: #3E509C;
+  --cm21: #3E4891;
+  --cm22: #3C4185;
+  --cm23: #393A78;
+  --cm24: #343369;
+  --cm25: #2E2D5B;
+  --cm26: #28264F;
+  --cm27: #222042;
+  --cm28: #1A1935;
+  --cm29: #121329;
+  --cm30: #0A0C1E;
+  --cm31: #030512;
+  --text: var(--cm12);
+  --background: var(--cm31);
+  --primary: var(--cm12);
+  --secondary: var(--cm18);
+  --accent: var(--cm25);
+}
+
+#main-pane {
+  background: var(--background);
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text);
+}
+
+svg {
+  fill: var(--text);
+}
+
+html, body {
+  height: 100%;
+}
+
 .icon {
   width: 2em;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0em 1em 0em 1em;
+}
+
+.sidebar-icon-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon > svg {
+  width: 1em;
+}
+
+h1, h2, h3, h4, h5, p, span {
+  color: var(--text);
 }

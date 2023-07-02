@@ -1,6 +1,6 @@
 // must be module.exports, not export defult.
 module.exports = function (eleventyConfig: any) {
-  eleventyConfig.addPassthroughCopy("styles");
+  eleventyConfig.addPassthroughCopy("src/styles");
   eleventyConfig.addExtension('11ty.tsx', {
     key: '11ty.js',
   });
@@ -14,7 +14,9 @@ module.exports = function (eleventyConfig: any) {
   });
   return {
     dir: {
-      input: "src"
+      includes: "_includes",
+      input: "src",
+      output: "_site",
     }
   }
 }
