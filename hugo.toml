@@ -1,4 +1,4 @@
 baseURL = 'https://pdmurray.dev/'
 languageCode = 'en-us'
 title = 'peytondmurray'
-theme = 'ananke'
+theme = 'gokarna'
