@@ -1,0 +1,13 @@
+title = "pdmurray.dev"
+languageName = "English"
+weight = 1
+
+[params.author]
+name = "Peyton Murray"
+image = "img/avatar.jpg"
+links = [
+    {github = "https://github.com/peytondmurray"},
+    {linkedin = "https://www.linkedin.com/in/peytondm/"},
+    {stack-overflow = "https://stackoverflow.com/users/8100451/peytondmurray"},
+    {email = "email:peynmurray@gmail.com"},
+]

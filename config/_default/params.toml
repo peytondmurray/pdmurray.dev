@@ -1,0 +1,10 @@
+colorScheme = "congo"
+
+autoSwitchAppearance = true
+
+[homepage]
+layout = "profile"
+
+enableSearch = true
+[footer]
+  showAppearanceSwitcher = true

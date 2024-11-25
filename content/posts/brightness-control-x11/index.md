@@ -1,10 +1,6 @@
 ---
 title: Brightness Control with X11
-author_profile: true
-read_time: true
-share: true
 date: '2018-09-25T14:30:00-0800'
-categories: coding
 ---
 
 import CenterImage from '../../../../components/CenteredImage'
