@@ -1,10 +1,11 @@
 +++
 date = '2024-11-02T11:25:47-07:00'
-# draft = true
 title = 'Research'
 +++
 
 ## Nanoparticles
+
+![A SEM image of some metallic nanoparticles.](particles-300x240px.png)
 
 Structures confined to nanometer length scales in one or more dimensions can
 possess strikingly different properties than in bulk. In contrast to bulk
@@ -17,19 +18,24 @@ or for consumer technology.
 
 ## First Order Reversal Curves (FORC)
 
+![An example plot of first order reversal curve data.](forc.jpg)
+
 Magnetic materials are widely used in consumer products, industry, and in
 research applications. Utilizing these materials in device applications requires
 an understanding of their behavior from the macroscopic level all the way down
-to atomic length scales. Alongside micromagnetic simulations ( <Link
-href="https://math.nist.gov/oommf/">OOMMF</Link>, &nbsp; <Link
-href="http://mumax.github.io/">Mumax3</Link>), one of the major tools I have
-used to understand hysteretic behavior is the First Order Reversal Curve (FORC)
-technique. While simple major loop measurements can yield information about the
-average magnetization of an ensemble of magnetic moments, FORC analysis allows
-individual switching events to be probed, revealing microscopic details about
-iteractions between magnetic moments.
+to atomic length scales. Alongside micromagnetic simulations
+([OOMMF](https://math.nist.gov/oommf/), [Mumax3](http://mumax.github.io/)), one
+of the major tools I have used to understand hysteretic behavior is the First
+[Order Reversal Curve (FORC)
+technique](https://doi.org/10.1038/s41598-021-83349-z). While simple major loop
+measurements can yield information about the average magnetization of an
+ensemble of magnetic moments, FORC analysis allows individual switching events
+to be probed, revealing microscopic details about iteractions between magnetic
+moments.
 
 ## Magnetoionics
+
+![A render of the structure of a monolayer of NiCoO.](NiCoO_r1_little.jpg)
 
 Conventional logic and memory technologies which rely on electric currents
 suffer from Joule heating, limiting their energy efficiency, and are volatile,
@@ -43,10 +49,13 @@ chemically-induced and electric-field-induced ionic motion.
 
 ## Chiral Magnetism
 
+![A render of a magnetic skyrmion.](skyrmion.jpg)
+
 In certain bulk materials or thin film systems, competing magnetic interactions
 can lead to winding magnetization textures known as skyrmions. These
 particle-like textures resemble magnetic vortices, and have extraordinary
 properties which make them of particular interest both for fundamental physics
 as well as for nonvolatile, ultra-fast, and low-dissipation storage and logic
-applications. Recently, I have carried out resistivity measurements in search of
-Hall effect signatures of skyrmions in novel artificial skyrmion lattices.
+applications. As part of my doctoral work, I carried out resistivity
+measurements in search of Hall effect signatures of skyrmions in novel
+artificial skyrmion lattices.
