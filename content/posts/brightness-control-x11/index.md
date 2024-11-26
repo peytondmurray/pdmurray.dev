@@ -3,9 +3,6 @@ title: Brightness Control with X11
 date: '2018-09-25T14:30:00-0800'
 ---
 
-import CenterImage from '../../../../components/CenteredImage'
-import Screenshot from './Screenshot_20180925_221931.png'
-
 I'm one of those people who likes having everything on my devices set to night mode. It's becoming
 more common to see dark themes everywhere, but I still rely on tools like the
 [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en)
@@ -83,7 +80,7 @@ Save this as a .sh file, then do `sudo chmod +x <your_script>.sh` and voila! Whe
 your screen brightness will be toggled. I tied this to my Pause/Break button in KDE using the Custom
 Shortcuts settings:
 
-<CenterImage src={Screenshot} width="50%" />
+![Screenshot showing brightness control in KDE.](./Screenshot_20180925_221931.png)
 
 Now, just hit the hotkey to toggle the brightness. This works by acting on the gamma values of the
 display, so it isn't actual backlight control like you get from a laptop screen dimmer button, but

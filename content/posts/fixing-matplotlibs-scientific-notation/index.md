@@ -9,10 +9,6 @@ date: '2017-10-26T18:37:01-0800'
 categories: coding
 ---
 
-import { Center } from '@chakra-ui/react'
-import { ReactComponent as Bad } from './bad-exponent-example.svg'
-import { ReactComponent as Good } from './better-exponent-example.svg'
-
 I use matplotlib all the time, but one of the most common problems I run into is when my axes are
 plotted on a scale that uses scientific notation. This is especially annoying when you're trying to
 make two plots stacked on top of each other which share an x-axis. Here's a simple example of the
@@ -46,15 +42,7 @@ plt.savefig("example.svg")
 
 This code produces the following:
 
-<Center
-  sx={{
-    path: {
-      stroke: (theme) => `${theme.colors.primary} !important`,
-    },
-  }}
->
-  <Bad />
-</Center>
+{{< svg class="center graph" src="./bad-exponent-example.svg" >}}
 
 You can immediately see the problem - the exponent is jammed into the plot above. This behavior
 turns out to be harder to fix than you think. If you spend some time googling (which you've probably
@@ -110,15 +98,7 @@ label_offset(lowerAxes, "y")
 label_offset(upperAxes, "y")
 ```
 
-<Center
-  sx={{
-    path: {
-      stroke: (theme) => `${theme.colors.primary} !important`,
-    },
-  }}
->
-  <Good />
-</Center>
+{{< svg class="center graph" src="./better-exponent-example.svg" >}}
 
 When we use `plt.show()`, the axes and labels work exactly how we want them to. Best of all, the
 factor of 10<sup>12</sup> will change appropriately if we interact with the plot.

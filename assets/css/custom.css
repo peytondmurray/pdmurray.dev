@@ -1,13 +1,19 @@
-.prose {
-  .table {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  };
-}
-
 /*  change prose width for shiggles */
 .max-w-prose {
-  max-width: 120ch !important;
+	max-width: 120ch !important;
+}
+
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+figure.graph path {
+	stroke: var(--tw-prose-body);
+}
+
+figure.graph use {
+	fill: var(--tw-prose-body);
 }

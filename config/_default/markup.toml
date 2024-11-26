@@ -3,5 +3,8 @@
 enable = true
 
 [goldmark.extensions.passthrough.delimiters]
-  block = [['$$', '$$']]
-  inline = [['$', '$']]
+block = [['$$', '$$']]
+inline = [['$', '$']]
+
+[goldmark.renderer]
+unsafe = true

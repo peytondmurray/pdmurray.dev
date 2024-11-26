@@ -39,13 +39,13 @@
               <path
                  d="M 0,0 V 3.5"
                  id="m7969ae070d"
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round" />
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round" />
             </defs>
             <g
                id="g17"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="73.832726"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -65,7 +65,7 @@
                id="g23"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="138.76364"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -85,7 +85,7 @@
                id="g29"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="203.69455"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -105,7 +105,7 @@
                id="g35"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="268.62546"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -125,7 +125,7 @@
                id="g41"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="333.55637"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -145,7 +145,7 @@
                id="g47"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="398.48727"
                  xlink:href="#m7969ae070d"
                  y="171.28273"
@@ -170,13 +170,13 @@
               <path
                  d="M 0,0 H -3.5"
                  id="mf57821bfbc"
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round" />
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round" />
             </defs>
             <g
                id="g57"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="165.3824"
@@ -257,7 +257,7 @@
                id="g80"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="135.87991"
@@ -326,7 +326,7 @@
                id="g100"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="106.37743"
@@ -380,7 +380,7 @@
                id="g115"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="76.874954"
@@ -434,7 +434,7 @@
                id="g130"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="47.372471"
@@ -485,7 +485,7 @@
         <path
            clip-path="url(#p506903cc85)"
            d="m 73.832727,106.37744 9.099427,-16.322252 4.874693,-8.298282 4.224734,-6.750112 3.574774,-5.301625 3.249796,-4.435807 2.924819,-3.641524 2.92481,-3.278573 2.59984,-2.588019 2.59984,-2.2636 2.27485,-1.703067 2.27486,-1.435185 2.27485,-1.160258 2.27486,-0.879639 1.94988,-0.527316 1.94988,-0.316049 1.94987,-0.103644 1.94988,0.109135 1.94988,0.321521 1.94987,0.532748 1.94988,0.742052 2.27486,1.126655 2.27485,1.402341 2.27486,1.671143 2.27486,1.931745 2.59983,2.514593 2.59984,2.82643 2.92482,3.529844 2.92481,3.872903 3.2498,4.667284 3.57477,5.522453 4.22474,6.961931 5.19967,9.049358 8.12449,14.676156 8.12448,14.52331 4.8747,8.26213 3.89975,6.20931 3.57478,5.2958 3.24979,4.42976 2.92482,3.63552 2.92481,3.27209 2.59984,2.58188 2.59983,2.25717 2.27486,1.69723 2.27486,1.42917 2.27485,1.15411 2.27486,0.87337 1.94988,0.52188 1.94988,0.31058 1.94987,0.0982 1.94988,-0.11462 1.94988,-0.32699 1.94987,-0.53818 1.94988,-0.74743 2.27486,-1.13282 2.27485,-1.40836 2.27486,-1.67701 2.27486,-1.93741 2.59983,-2.52079 2.59984,-2.83229 2.92482,-3.536 2.92481,-3.87854 3.2498,-4.67288 3.57477,-5.52775 4.22474,-6.96692 5.19967,-9.05352 8.44947,-15.26799 7.7995,-13.929554 4.8747,-8.257193 3.89975,-6.204018 3.57478,-5.289971 3.24979,-4.423704 2.92482,-3.629506 2.92481,-3.265589 2.59984,-2.575752 2.59984,-2.250732 2.27485,-1.691378 2.27486,-1.423157 2.27486,-1.147951 1.94987,-0.760607 1.94988,-0.551511 1.94988,-0.340425 1.94987,-0.128112 1.94988,0.08466 1.94988,0.297134 1.94988,0.508532 1.94987,0.718097 2.27486,1.09915 2.27486,1.375442 2.27485,1.644982 2.27486,1.90645 2.59984,2.486904 2.59983,2.800212 2.92482,3.502317 2.92481,3.847671 3.2498,4.642192 3.57477,5.498718 4.22474,6.939479 4.87469,8.454242 7.47453,13.472138 9.09943,16.31136 4.87469,8.28387 4.22473,6.73306 0.32498,0.49719 v 0"
-           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
+           style="fill:none;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
            id="path144" />
       </g>
       <g
@@ -493,7 +493,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,171.28273 V 41.472"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path147" />
       </g>
       <g
@@ -501,7 +501,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 414.72,171.28273 V 41.472"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path150" />
       </g>
       <g
@@ -509,7 +509,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,171.28273 H 414.72"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path153" />
       </g>
       <g
@@ -517,7 +517,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,41.472 H 414.72"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path156" />
       </g>
     </g>
@@ -540,7 +540,7 @@
                id="g165"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="73.832726"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -578,7 +578,7 @@
                id="g176"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="138.76364"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -623,7 +623,7 @@
                id="g190"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="203.69455"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -668,7 +668,7 @@
                id="g204"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="268.62546"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -713,7 +713,7 @@
                id="g218"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="333.55637"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -758,7 +758,7 @@
                id="g232"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="398.48727"
                  xlink:href="#m7969ae070d"
                  y="307.58401"
@@ -808,7 +808,7 @@
                id="g246"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="301.6835"
@@ -862,7 +862,7 @@
                id="g261"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="278.08047"
@@ -916,7 +916,7 @@
                id="g276"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="254.47746"
@@ -970,7 +970,7 @@
                id="g291"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="230.87445"
@@ -1024,7 +1024,7 @@
                id="g306"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="207.27142"
@@ -1078,7 +1078,7 @@
                id="g321"
                style="stroke-linecap:butt;stroke-linejoin:round">
               <use
-                 style="stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
+                 style="stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round"
                  x="57.599998"
                  xlink:href="#mf57821bfbc"
                  y="183.6684"
@@ -1178,7 +1178,7 @@
         <path
            clip-path="url(#pa878a359d5)"
            d="m 73.832727,301.68351 2.924816,-10.16714 2.924816,-9.29122 2.924815,-8.49078 2.924816,-7.75929 2.924816,-7.09081 2.924816,-6.47994 2.924815,-5.92168 2.924816,-5.41152 2.924817,-4.94531 2.92481,-4.51926 2.92482,-4.12993 2.92482,-3.77413 3.24979,-3.81338 3.2498,-3.45013 3.24979,-3.12151 3.2498,-2.82416 3.57477,-2.79689 3.57478,-2.50527 3.57477,-2.24406 3.89976,-2.18208 3.89975,-1.9351 4.22473,-1.84999 4.54972,-1.74067 4.87469,-1.61322 5.19967,-1.47366 5.52465,-1.32756 5.84964,-1.17995 6.49959,-1.08433 7.14955,-0.96697 8.12448,-0.86901 9.09943,-0.74701 10.72432,-0.6496 12.67421,-0.53638 15.59901,-0.42851 20.47371,-0.32492 28.92318,-0.21804 49.39689,-0.11857 59.14627,-0.0278 v 0"
-           style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
+           style="fill:none;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:round"
            id="path349" />
       </g>
       <g
@@ -1186,7 +1186,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,307.584 V 177.77327"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path352" />
       </g>
       <g
@@ -1194,7 +1194,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 414.72,307.584 V 177.77327"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path355" />
       </g>
       <g
@@ -1202,7 +1202,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,307.584 H 414.72"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path358" />
       </g>
       <g
@@ -1210,7 +1210,7 @@
          style="stroke-linecap:butt;stroke-linejoin:round">
         <path
            d="M 57.6,177.77327 H 414.72"
-           style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
+           style="fill:none;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
            id="path361" />
       </g>
     </g>
