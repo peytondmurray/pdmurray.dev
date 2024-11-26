@@ -8,3 +8,5 @@ layout = "profile"
 enableSearch = true
 [footer]
   showAppearanceSwitcher = true
+
+math = true

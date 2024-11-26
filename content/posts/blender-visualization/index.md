@@ -94,7 +94,7 @@ process of animating the simulated data in Blender becomes straightforward:
 
 Now the main problem is finding $\theta$ and $\textbf{k}$, but this isn't actually very hard. By
 default, the cones start out pointing up: $\textbf{v} = (0, 0, 1)$, and we want to use Blender to
-rotate $\textbf{v}$ to align with the magnetization data $$\textbf{v}_{rot}$$. This can always be
+rotate $\textbf{v}$ to align with the magnetization data $\textbf{v}_{rot}$. This can always be
 done by choosing a rotation axis $\textbf{k}$ which lies in in the $xy$-plane. To find a direction
 of $\textbf{k}$ which works, just take the cross product $$\textbf{v} \times \textbf{v}_{rot}$$,
 which always points at right angles to both vectors. What about $\theta$? Well, since the cones
@@ -258,7 +258,7 @@ for i in range(nframes):
 Here, colors is simply a list of RGBA tuples; for me, these were taken from the matplotlib `RdBu_r`
 colormap. After running this script, the Blender interface should look like this:
 
-{{ $image := .Resources.Get "after_loading_data.png" }}
+![A view of the blender interface after having loaded the magnetization data.](after_loading_data.png)
 
 Now all that remains is to add lighting and cameras, and then render whatever animations or images
 we need.
@@ -271,14 +271,15 @@ render engine, I found that the animation was slower than I wanted it to be, but
 fixed by increasing the frame rate with FFMPEG. This animation shows how the domain wall propagates
 under the external magnetic field, and I think it captures its chaotic motion really well:
 
-<ResponsivePlayer url="https://www.youtube.com/watch?v=IbckhRNdX4w" />
+{{< youtube IbckhRNdX4w >}}
 
 The z-component of the magnetization is used to color the cones: when the cone points up the color
 is red, and when it points down the color is blue. I also rendered a different pair of images of the
 domain wall which I used in a previous post as well:
 
-{{ $image := .Resources.Get "down_the_wall.jpg" }}
-{{ $image := .Resources.Get "wall_night.jpg" }}
+![A render of the magnetic vector field with viewpoint along a domain wall.](down_the_wall.jpg)
+![A render of the magnetic vector field from above, showing the same domain wall from
+a different perspective.](wall_night.jpg)
 
 The lighting and depth of field make these images so much more interesting! The time I spent
 learning to use Blender's Python API has really been worth it, and I think it will be useful for
