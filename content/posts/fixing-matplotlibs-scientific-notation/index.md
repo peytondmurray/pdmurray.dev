@@ -1,12 +1,6 @@
 ---
 title: Fixing Matplotlib's Scientific Notation
-layout: single
-classes: wide
-author_profile: true
-read_time: true
-share: true
 date: '2017-10-26T18:37:01-0800'
-categories: coding
 ---
 
 I use matplotlib all the time, but one of the most common problems I run into is when my axes are

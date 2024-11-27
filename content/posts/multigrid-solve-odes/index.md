@@ -1,25 +1,7 @@
 ---
 title: Solving Linear ODEs With Multigrid
-layout: single
-author_profile: true
-read_time: true
-share: true
 date: '2019-02-26T14:30:00-0800'
-categories: coding
-toc: true
 ---
-
-import { CenteredReactPlayer } from '../../../../components/Players'
-import { Center } from '@chakra-ui/react'
-
-import { ReactComponent as ProblemLayout } from './problem_layout.svg'
-import { ReactComponent as CoarseGridJacobi } from './coarse_grid_jacobi.svg'
-import { ReactComponent as ErrorVsGridsize } from './error_vs_gridsize.svg'
-import { ReactComponent as FineToCoarse } from './fine_to_coarse.svg'
-import { ReactComponent as OneLevelV } from './one_level_v.svg'
-import { ReactComponent as MultiLevelV } from './multi_level_v.svg'
-import { ReactComponent as FullMultigrid } from './full_multigrid.svg'
-import { ReactComponent as Efficiency } from './efficiency.svg'
 
 ## Introduction
 
@@ -57,9 +39,7 @@ cool that I had to share it here.
 I have a grid of equally spaced points with a charge distribution $\rho$ defined
 at each point:
 
-<Center>
-  <ProblemLayout />
-</Center>
+{{< svg class="center" src="problem_layout.svg" >}}
 
 and so on. The goal is to find the voltage $v$ everywhere, where the voltage is
 determined by Poisson's equation [\[1\]](#poisson). In the context of
@@ -183,7 +163,7 @@ where $w$ is a constant less than $1$. This is the _weighted Jacobi method_, and
 it's faster than standard Jacobi iteration. When $w=1$, the original Jacobi
 iteration is recovered.
 
-<CenteredReactPlayer url="https://www.youtube.com/watch?v=3htKJiADsPY" />
+{{< youtube 3htKJiADsPY >}}
 
 On the left side is the actual value of $f$ plotted as a function of $x$ in
 blue, with $Av$ shown in black. On the right is the $v$ plotted as a function of
@@ -204,14 +184,14 @@ iterations - $n$ iterations for a grid of $n$ points - for values of $v$ on one
 end of the lattice to have any effect on the other end. This makes the Jacobi
 method great for relaxing initial guesses like this:
 
-<CenteredReactPlayer url="https://www.youtube.com/watch?v=xxFFmur8zYs" />
+{{< youtube xxFFmur8zYs >}}
 
 See how quickly it suppresses the high frequency components of the initial
 guess? After only a few iterations $v$ is relaxed into a more sensible form, but
 it takes a _lot_ more iterations to actually get it close to the real solution.
 On the other hand, it's terrible for intial guesses like this:
 
-<CenteredReactPlayer url="https://www.youtube.com/watch?v=ptpK8cPvXT4" />
+{{< youtube ptpK8cPvXT4 >}}
 
 which only have low frequencies; it just takes too many iterations for it to get
 smoothed out and converge. This is the most important point about the Jacobi
@@ -230,34 +210,26 @@ to find the solution on the original grid with $n$ points (with spacing $h$),
 let's first use the Jacobi method on a coarse grid with $n/2$ points (with
 spacing $2h$) to try to improve our initial guess.
 
-<Center>
-  <CoarseGridJacobi />
-</Center>
+{{< svg class="center" src="coarse_grid_jacobi.svg" >}}
 
 After iterating the Jacobi solver 100 times, the error $e=f-Av$ is much smaller
 on the coarse $2h$ grid than it is on the original $h$ grid (though a lot more
 iterations are still needed to get close to the actual answer). The efficiency
 gains can be even greater if you move to even more coarse grids:
 
-<Center>
-  <ErrorVsGridsize />
-</Center>
+{{< svg class="center" src="error_vs_gridsize.svg" >}}
 
 This behavior is really simple to understand when you look at what happens when
 you move from a fine grid to a coarse grid:
 
-<Center>
-  <FineToCoarse />
-</Center>
+{{< svg class="center" src="fine_to_coarse.svg" >}}
 
 Slowly varying functions on the fine grid _appear_ to vary more rapidly on the
 coarse grid! So this is why the Jacobi method is better on coarser grids, and it
 motivates the main steps of the multigrid method, which I think are best
 represented as a schematic:
 
-<Center>
-  <OneLevelV />
-</Center>
+{{< svg class="center" src="one_level_v.svg" >}}
 
 Of course you don't have to stop with one grid-coarsening step - in fact, it's
 best to move to a coarse grid, iterate the Jacobi solver a few times, then move
@@ -266,9 +238,7 @@ coarse grid will only consist of a few points; then you move back to a finer
 grid, Jacobi-iterate a few times, move to a finer grid, Jacobi iterate a few
 more times, and so on until you get back to the original grid spacing:
 
-<Center>
-  <MultiLevelV />
-</Center>
+{{< svg class="center" src="multi_level_v.svg" >}}
 
 This is called the V-cycle multigrid method (VMG), and it allows these sorts of
 problems to be solved way faster than using the Jacobi method on the original
@@ -276,9 +246,7 @@ problem alone. In practice, it turns out to be even better to start on the
 coarsest grid possible, and follow this sort of pattern, called Full Multigrid
 (FMG):
 
-<Center>
-  <FullMultigrid />
-</Center>
+{{< svg class="center" src="full_multigrid.svg" >}}
 
 ## Moving Between Grids
 
@@ -362,9 +330,7 @@ astonishingly effective even just a few Jacobi iterations on very coarse grids
 can be for helping convergence, and highlights how slowly the trial solution
 converges when trying to Jacobi iterate on a gigantic grid.
 
-<Center>
-  <Efficiency />
-</Center>
+{{< svg class="center" src="efficiency.svg" >}}
 
 I've purposely left out details of the implementation because I thought the concepts behind the
 algorithm are the most important part, but if you're interested in seeing how I generated these

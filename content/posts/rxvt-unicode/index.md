@@ -1,16 +1,7 @@
 ---
 title: Enhanced rxvt-unicode
-layout: single
-author_profile: true
-read_time: true
-share: true
 date: '2019-06-16T14:30:00-0800'
-categories: coding
-toc: true
 ---
-
-import CenterImage from '../../../../components/CenteredImage'
-import IdealTransparency from './ideal_transparency.png'
 
 I really like rxvt-unicode as a terminal emulator. I can customize nearly everything I want without
 too much effort, and it seems to do everything I could want a terminal to do. Over time, the changes
@@ -78,7 +69,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
 Check this out:
 
-<CenterImage src={IdealTransparency} width="50%" />
+![Transparency](ideal_transparency.png)
 
 See how the background in the highlighted window is transparent, but the text is not? You can't do
 this by modifying Compton transparency settings, since those settings affect the entire window

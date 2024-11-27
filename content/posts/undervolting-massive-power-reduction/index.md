@@ -1,15 +1,7 @@
 ---
 title: Undervolting drastically reduces CPU power draw
-layout: single
-classes: wide
-author_profile: true
-read_time: true
-share: true
 date: '2019-07-27T18:37:01-0800'
-categories: coding
 ---
-
-import Plot from './Plot'
 
 I've spent a decent amount of time overclocking my computers in the past. I'm definitely no expert,
 but it's fun to fiddle with the CPU voltages and frequencies, trying to squeeze every last bit of
@@ -68,7 +60,7 @@ background; this benchmark pins my CPU usage to 100%, so the change in power con
 considered a best-case scenario here. On my i7-4770k, the reported power consumption decreased
 substantially as the voltage was drastically reduced:
 
-<Plot />
+{{< svg class="center graph" src="voltage.svg" >}}
 
 Unfortunately, the system wasn't stable below -100 mV, though I didn't do an exhaustive search.
 Finally, I made the changes permanent by `systemctl enable intel-undervolt.service` and `systemctl start intel-undervolt.service`. For a few minutes work, I was able to reduce the CPU power

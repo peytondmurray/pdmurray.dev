@@ -1,22 +1,7 @@
 ---
 title: Science With Paraview and Blender
-layout: single
-author_profile: true
-read_time: true
-share: true
 date: '2019-02-26T14:30:00-0800'
-categories: coding
 ---
-
-import { Flex } from '@chakra-ui/react'
-import CenteredImage from '../../../../components/CenteredImage'
-
-import DataJustIn from './data_just_in.png'
-import ColorByComponent from './color_by_component.png'
-import Cones from './cones.png'
-import VertexColors from './vertex_colors.png'
-import DownTheWall from './down_the_wall.jpg'
-import WallNight from './wall_night.jpg'
 
 I simulate magnetic materials for science. The output of the [simulation
 package](http://mumax.github.io/) that I use is a binary data format (ovf) which I then convert into
@@ -30,18 +15,18 @@ isn't some sort of attack on you - I know how difficult good documentation can b
 really steep learning curve, so I'm hoping that showcasing how I use Paraview will help others get
 over this barrier. Here's what the data looks like when I load it in:
 
-<CenteredImage src={DataJustIn} />
+![Data just in.](data_just_in.png)
 
 My data is a bunch of vectors (here, representing magnetization) stored on a grid in 3D space. I can
 visualize these vectors in a number of different ways. I can color my simulation region by a vector
 component:
 
-<CenteredImage src={ColorByComponent} />
+![Color by component.](color_by_component.png)
 
 Or I can represent my vectors using _glyphs_, (here I use cones to show the direction, and color to
 highlight the x-component of each vector):
 
-<CenteredImage src={Cones} />
+![Cones](cones.png)
 
 This is great for investigating data, but you wouldn't want to use this for publications or serious
 graphics. For that stuff, what you _need_ is ray tracing - you need
@@ -60,7 +45,7 @@ for an _attribute_ named `Col`. This is the name given to the color data by para
 imported data selected, open the `Node Editor`, create an `Attribute Node`, and enter `Col` into
 the `Name` field:
 
-<CenteredImage src={VertexColors} />
+![Vertex colors.](vertex_colors.png)
 
 Now, when the 3D view is set to `Rendered`, the imported mesh should be colored according to the
 colormap that was applied in Paraview. From here, the possibilites are huge - you can get realistic
@@ -68,10 +53,8 @@ lighting, special effects, render movies, and make production quality visualizat
 beyond anything you've even seen on the cover of Nature. Here are just a few examples of my own
 renders:
 
-<Flex flexDirection="row" gap="1em">
-  <CenteredImage src={DownTheWall} />
-  <CenteredImage src={WallNight} />
-</Flex>
+![Down the wall.](down_the_wall.jpg)
+![Wall at night](wall_night.jpg)
 
 Although the images above were rendered using Blender 2.8, the same method works for Blender 2.79b.
 Happy rendering!

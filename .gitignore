@@ -9,3 +9,5 @@ public/
 
 # Hugo-generated images
 resources/
+
+.hugo_build.lock

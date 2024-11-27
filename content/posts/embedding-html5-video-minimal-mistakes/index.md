@@ -1,12 +1,6 @@
 ---
 title: Embedding HTML5 video in Github Pages
-layout: single
-author_profile: true
-read_time: true
-share: true
 date: '2019-12-08T14:30:00-0800'
-categories: coding
-toc: false
 ---
 
 A while back, I wrote some a pair of longer posts about beautifully rendering scientific data using blender. For that

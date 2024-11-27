@@ -1,0 +1,3 @@
+{{ if (.Get "src") }}
+<script src={{ (.Get "src" | js.Build ).Permalink }}></script>
+{{ end }}

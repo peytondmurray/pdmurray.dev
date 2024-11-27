@@ -1,38 +1,40 @@
 ---
 title: LAMMPS Installation in Manjaro
-layout: single
-author_profile: true
-read_time: true
-share: true
 date: '2018-11-03T14:30:00-0800'
-categories: coding
 ---
 
 I've been interested in doing some [molecular
-dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) (MD) simulations for a project I've been
-thinking about for a long time, but it's only recently that I've had the time to start tinkering
-with MD simulation packages. There are a few large projects to choose from if you're looking to get
-into MD simulations, with [GROMACS](http://www.gromacs.org) and [LAMMPS](https://lammps.sandia.gov)
-being two of the more widely used packages. Although the literature suggests that GROMACS can be
-used for MD simulations of crystalline systems, it just seemed to me like it has been primarily used
-for simulating biological systems - proteins and that kind of stuff. So I decided to check out
-LAMMPS, an MD simulator maintained by Sandia, with contributions from people all over the world.
+dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) (MD) simulations for
+a project I've been thinking about for a long time, but it's only recently that
+I've had the time to start tinkering with MD simulation packages. There are a
+few large projects to choose from if you're looking to get into MD simulations,
+with [GROMACS](http://www.gromacs.org) and [LAMMPS](https://lammps.sandia.gov)
+being two of the more widely used packages. Although the literature suggests
+that GROMACS can be used for MD simulations of crystalline systems, it just
+seemed to me like it has been primarily used for simulating biological systems -
+proteins and that kind of stuff. So I decided to check out LAMMPS, an MD
+simulator maintained by Sandia, with contributions from people all over the
+world.
 
-LAMMPS comes with a lot of extensions which add various functionality to the simulator, so building
-the source code is recommended because you can choose what packages you need for your specific
-application. Depending on your system, you can also find prebuilt binaries, but to take full
-advantage of the optimizations available to your system, building from source is the best.
-Fortunately, LAMMPS uses the [CMAKE](https://cmake.org) meta-build system. If you're not familiar
-with CMAKE, it's a tool which creates the files necessary to compile source code. On Linux, it
-builds makefiles; on Windows, you can use it to create Visual C++ project files. It can do lots of
-stuff beyond just creating the instructions for compiling and linking your source code for whatever
-platform you are using, but it's not the focus of this post, so I'm going to move on.
+LAMMPS comes with a lot of extensions which add various functionality to the
+simulator, so building the source code is recommended because you can choose
+what packages you need for your specific application. Depending on your system,
+you can also find prebuilt binaries, but to take full advantage of the
+optimizations available to your system, building from source is the best.
+Fortunately, LAMMPS uses the [CMAKE](https://cmake.org) meta-build system. If
+you're not familiar with CMAKE, it's a tool which creates the files necessary to
+compile source code. On Linux, it builds makefiles; on Windows, you can use it
+to create Visual C++ project files. It can do lots of stuff beyond just creating
+the instructions for compiling and linking your source code for whatever
+platform you are using, but it's not the focus of this post, so I'm going to
+move on.
 
-Since LAMMPS can be built with tons of different packages, based on the description of the package
-in the LAMMPS documentation, I took an educated guess as to whether or not I was going to want to
-have it, and made a shortlist of what to build. Each package has a short summary of what it does as
-a note to myself. Packages with a \* denote ones that require additional CMAKE variables to be
-defined, with the values needed for my system noted below.
+Since LAMMPS can be built with tons of different packages, based on the
+description of the package in the LAMMPS documentation, I took an educated guess
+as to whether or not I was going to want to have it, and made a shortlist of
+what to build. Each package has a short summary of what it does as a note to
+myself. Packages with a \* denote ones that require additional CMAKE variables
+to be defined, with the values needed for my system noted below.
 
 ## Packages
 
@@ -42,23 +44,17 @@ defined, with the values needed for my system noted below.
 - CORESHELL - Compute and pair styles that implement the adiabatic core/shell model for polarizability.
 - DIPOLE - An atom style and several pair styles for point dipole models with short-range or long-range interactions.
 - GPU\* - GPU pair styles and other stuff. KOKKOS uses GPU-enabled styles
-
-  - GPU_API=cuda
-  - GPU_ARCH=sm_60
-  - CUDPP_OPT=yes
-
+- GPU_API=cuda
+- GPU_ARCH=sm_60
+- CUDPP_OPT=yes
 - GRANULAR - Pair styles and fixes for finite-size granular particles, which interact with each other and boundaries via frictional and dissipative potentials.
 - KIM\* - Knowledge Base for Interatomic Models repository of interatomic potentials.
-
-  - DOWNLOAD_KIM=yes
-
+- DOWNLOAD_KIM=yes
 - KOKKOS\* - Parallelization (including GPU) for lots of models.
-
-  - KOKKOS_ARCH=HSW;Pascal61
-  - KOKKOS_ENABLE_CUDA=yes
-  - KOKKOS_ENABLE_OPENMP=yes
-  - CMAKE_CXX_COMPILER=\<path to nvcc_wrapper included with LAMMPS source\>
-
+- KOKKOS_ARCH=HSW;Pascal61
+- KOKKOS_ENABLE_CUDA=yes
+- KOKKOS_ENABLE_OPENMP=yes
+- CMAKE_CXX_COMPILER=\<path to nvcc_wrapper included with LAMMPS source\>
 - KSPACE - Long range coulombic solvers
 - MANYBOCY - Manybody and bond-order potentials
 - MC - Several fixes and a pair style that have Monte Carlo (MC) or MC-like attributes.
@@ -66,9 +62,7 @@ defined, with the values needed for my system noted below.
 - OPT - Optimized pair styles for multiple cores
 - PERI - Particle-based meshless continuum model
 - PYTHON - python command which allows python code to be executed from a LAMMPS input script
-
-  - PYTHON_EXECUTABLE=\<path to python bin\>
-
+- PYTHON_EXECUTABLE=\<path to python bin\>
 - QEQ - Fixes for charge equilibration via different algorthims
 - REPLICA - Nudged elastic band methods, other algorithms used in running multiple LAMMPS simulations
 - RIGID - Fixes which enforce rigid constraints on collections of atoms or particles.
