@@ -1,3 +1,6 @@
-{{ if (.Get "src") }}
-<script src={{ (.Get "src" | js.Build ).Permalink }}></script>
-{{ end }}
+{{ $jsfile := resources.Get (
+  path.Join
+  "/ts/content/"
+  (path.Join .Page.File.Dir (.Get "src"))
+) | js.Build }}
+<script src="{{ $jsfile.Permalink }}" defer></script>
