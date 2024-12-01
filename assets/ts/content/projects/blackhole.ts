@@ -30,7 +30,7 @@ async function getLuminanceData(image: string) {
 	const { width, height } = img;
 	canvas.width = width;
 	canvas.height = height;
-	ctx?.drawImage(img, 0, 0, width, height);
+	ctx.drawImage(img, 0, 0, width, height);
 
 	if (ctx !== null) {
 		const { data: rgba } = ctx.getImageData(0, 0, width, height);
@@ -51,11 +51,11 @@ async function generateStippledImage(image: string, selector: string) {
 	const imageData = await getLuminanceData(image);
 	const canvas = d3
 		.select(selector)
-		.attr("width", imageData?.width)
-		.attr("height", imageData?.height)
+		.attr("width", imageData.width)
+		.attr("height", imageData.height)
 		.node();
 	const context = canvas.getContext("2d");
-	const worker = new Worker(new URL("./worker.js"), {
+	const worker = new Worker(new URL("./worker.js", import.meta.url), {
 		type: "module",
 	});
 
@@ -85,6 +85,9 @@ async function generateStippledImage(image: string, selector: string) {
 	worker.addEventListener("message", messaged);
 	worker.postMessage(imageData);
 }
+
+// document.addEventListener("DOMContentLoaded", (event) => {
+// });
 
 generateStippledImage("blackhole_cropped.png", "#canvas");
 

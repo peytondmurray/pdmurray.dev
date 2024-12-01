@@ -60,3 +60,5 @@ const onmessage = ({ data: { values, width, height } }) => {
 
 	close();
 };
+
+export { onmessage };

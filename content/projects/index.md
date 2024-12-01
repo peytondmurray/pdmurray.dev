@@ -2,8 +2,8 @@
 title: Projects
 ---
 
-{{< addts src="blackhole.ts" >}}
 {{< addts src="worker.js" >}}
+{{< addts src="blackhole.ts" >}}
 
 ## Simulating an image of a black hole
 
@@ -32,6 +32,6 @@ based on the brightness of the original image. To make it more performant
 calculations are done on a web worker, but it still has a terrible impact on
 this page's performance. It's also not anywhere near as pretty as the original.
 
-<canvas id="canvas" />
+<canvas id="canvas"></canvas>
 
 [Check out my repository to learn more.](https://github.com/peytondmurray/bhsim)
