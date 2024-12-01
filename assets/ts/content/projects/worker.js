@@ -1,6 +1,6 @@
 import { Delaunay } from "d3-delaunay";
 
-onmessage = ({ data: { values, width, height } }) => {
+const onmessage = ({ data: { values, width, height } }) => {
 	const n = Math.round((width * height) / 20);
 	const points = new Float64Array(n * 2);
 	const c = new Float64Array(n * 2); // (x0, y0, x1, y1, ...)
@@ -10,8 +10,11 @@ onmessage = ({ data: { values, width, height } }) => {
 	// parts of the image
 	for (let i = 0; i < n; i++) {
 		for (let j = 0; j < 130; j++) {
-			const x = (points[i * 2] = Math.floor(Math.random() * width));
-			const y = (points[i * 2 + 1] = Math.floor(Math.random() * height));
+			points[i * 2] = Math.floor(Math.random() * width);
+			points[i * 2 + 1] = Math.floor(Math.random() * height);
+
+			const x = points[i * 2];
+			const y = points[i * 2 + 1];
 
 			if (Math.random() < values[y * width + x]) {
 				break;
@@ -39,7 +42,7 @@ onmessage = ({ data: { values, width, height } }) => {
 
 		// Relax the diagram by moving points to the weighted centroid.
 		// Wiggle the points a little bit so they don't get stuck.
-		const w = Math.pow(k + 1, -0.8) * 10;
+		const w = (k + 1) ** -0.8 * 10;
 		for (let i = 0; i < n; i++) {
 			const x0 = points[i * 2];
 			const y0 = points[i * 2 + 1];

@@ -2,8 +2,8 @@
 title: Projects
 ---
 
-{{< addjs src="blackhole.js" >}}
-{{< addjs src="worker.js" >}}
+{{< addts src="blackhole.ts" >}}
+{{< addts src="worker.js" >}}
 
 ## Simulating an image of a black hole
 

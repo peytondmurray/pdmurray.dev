@@ -1,6 +1,7 @@
-{{ $jsfile := resources.Get (
-  path.Join
-  "/ts/content/"
-  (path.Join .Page.File.Dir (.Get "src"))
-) | js.Build }}
-<script src="{{ $jsfile.Permalink }}" defer></script>
+{{ $content := (path.Join .Page.File.Dir (.Get "src")) }}
+{{ $inputjs := resources.Get (path.Join "/ts/content/" $content) }}
+
+{{ errorf "inputjs: %s content: %s" $inputjs $content }}
+
+{{ $built := $inputjs | js.Build }}
+<script src="{{ $built.Permalink }}" defer></script>

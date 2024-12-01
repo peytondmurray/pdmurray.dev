@@ -1,4 +1,4 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import * as d3 from "d3";
 
 async function getImg(image: string) {
 	const img = new Image();
@@ -31,29 +31,31 @@ async function getLuminanceData(image: string) {
 	canvas.width = width;
 	canvas.height = height;
 	ctx?.drawImage(img, 0, 0, width, height);
-	const { data: rgba } = ctx!.getImageData(0, 0, width, height);
-	canvas.remove();
 
-	const data = {
-		width: width,
-		height: height,
-		values: new Float64Array(width * height),
-	};
-	for (let i = 0; i < rgba.length / 4; i++) {
-		data.values[i] = Math.max(0, rgba[i * 4] / 255);
+	if (ctx !== null) {
+		const { data: rgba } = ctx.getImageData(0, 0, width, height);
+		canvas.remove();
+		const data = {
+			width: width,
+			height: height,
+			values: new Float64Array(width * height),
+		};
+		for (let i = 0; i < rgba.length / 4; i++) {
+			data.values[i] = Math.max(0, rgba[i * 4] / 255);
+		}
+		return data;
 	}
-	return data;
 }
 
 async function generateStippledImage(image: string, selector: string) {
 	const imageData = await getLuminanceData(image);
-	const canvas: any = d3
+	const canvas = d3
 		.select(selector)
-		.attr("width", imageData.width)
-		.attr("height", imageData.height)
+		.attr("width", imageData?.width)
+		.attr("height", imageData?.height)
 		.node();
 	const context = canvas.getContext("2d");
-	const worker = new Worker(new URL("./worker.js", import.meta.url), {
+	const worker = new Worker(new URL("./worker.js"), {
 		type: "module",
 	});
 
