@@ -2,9 +2,6 @@
 title: Projects
 ---
 
-{{< addts src="worker.js" >}}
-{{< addts src="blackhole.ts" >}}
-
 ## Simulating an image of a black hole
 
 What would it look like if we could take a picture of a black hole? As it turns
@@ -24,14 +21,5 @@ guessing Luminet used punch cards. With modern computers, how hard could it be
 to recreate this result? As it turns out, it's pretty tricky. Here's my effort:
 
 ![My simulated image of a black hole.](https://raw.githubusercontent.com/peytondmurray/bhsim/main/blackhole.png)
-
-Here I've recreated the stippling effect used in Luminet's original figure using
-d3.js. I used rejection sampling to randomly place stipples, and then relaxed
-them a bit by moving them toward the centers of the voronoi cells using weights
-based on the brightness of the original image. To make it more performant
-calculations are done on a web worker, but it still has a terrible impact on
-this page's performance. It's also not anywhere near as pretty as the original.
-
-<canvas id="canvas"></canvas>
 
 [Check out my repository to learn more.](https://github.com/peytondmurray/bhsim)

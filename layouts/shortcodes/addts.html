@@ -2,7 +2,6 @@
 {{ $inputjs := resources.Get (path.Join "/ts/content/" $content) }}
 {{ $built := $inputjs | js.Build (dict "format" "esm" "sourceMap" "inline") }}
 
-
 {{ if $built.Content }}
   <script type="module" src="{{ $built.Permalink }}"></script>
 {{ else }}

@@ -6,6 +6,7 @@ title = 'Research'
 ## Nanoparticles
 
 ![A SEM image of some metallic nanoparticles.](particles-300x240px.png)
+{.center}
 
 Structures confined to nanometer length scales in one or more dimensions can
 possess strikingly different properties than in bulk. In contrast to bulk

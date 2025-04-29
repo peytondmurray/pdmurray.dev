@@ -6,7 +6,7 @@
 }
 
 
-/* Colormap */
+/* Ice colormap, migrated from old site */
 :root {
   --colormap-0: #EAFCFD;
   --colormap-1: #DBF4F5;
@@ -52,18 +52,17 @@
 }
 
 
-.dark figure.graph path {
-	stroke: var(--text-color);
-}
-
-.dark figure.graph use {
-	fill: var(--text-color);
-}
-
 figure.graph path {
 	stroke: var(--primary);
 }
 
 figure.graph use {
 	fill: var(--primary);
+}
+
+/* Hack for getting images to center in posts */
+/* without writing a shortcode to wrap them in a flexbox */
+img.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

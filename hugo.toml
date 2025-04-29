@@ -165,5 +165,9 @@ noClasses = false
           enable = true
         [markup.goldmark.extensions.extras.subscript]
           enable = true
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
   [markup.goldmark.renderer]
     unsafe = true
