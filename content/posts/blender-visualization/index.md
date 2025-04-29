@@ -46,7 +46,7 @@ think it has the potential to be visually appealing while still being understand
 non-scientists. On the microscopic scale, you can think of a magnetic material as being composed of
 many small bar magnets:
 
-{{ $image := .Resources.Get "magnet.svg" }}
+{{< svg class="center graph" src="./magnet.svg" >}}
 
 When a magnetic field is applied, these small magnets move and reorient themselves to align with the
 applied magnetic field. So the idea is to first simulate the motion of these microscopic magnetic

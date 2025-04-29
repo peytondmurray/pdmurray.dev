@@ -49,6 +49,11 @@
   --primary-color: var(--colormap-12);
   --secondary-color: var(--colormap-18);
   --accent-color: var(--colormap-25);
+  --primary-alt: var(--colormap-20);
+}
+
+.dark {
+  --primary-alt: var(--colormap-6);
 }
 
 
@@ -65,4 +70,10 @@ figure.graph use {
 img.center {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.cv > a {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--primary-alt);
 }

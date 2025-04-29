@@ -38,6 +38,8 @@ hidemeta = true
 hideSummary = false
 showtoc = false
 tocopen = false
+hidefooter = true
+math = true
 
   [params.assets]
   favicon = "<link / abs url>"
@@ -160,6 +162,16 @@ noClasses = false
   [markup.goldmark]
     [markup.goldmark.extensions]
       strikethrough = false
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [
+            ["\\[", "\\]"],
+            ["$$", "$$"]
+          ]
+          inline = [
+            ["\\(", "\\)"]
+          ]
       [markup.goldmark.extensions.extras]
         [markup.goldmark.extensions.extras.delete]
           enable = true
@@ -169,5 +181,5 @@ noClasses = false
       wrapStandAloneImageWithinParagraph = false
       [markup.goldmark.parser.attribute]
         block = true
-  [markup.goldmark.renderer]
-    unsafe = true
+    [markup.goldmark.renderer]
+      unsafe = true
