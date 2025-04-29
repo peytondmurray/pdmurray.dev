@@ -26,15 +26,15 @@ disableThemeToggle = false
 ShowReadingTime = false
 ShowShareButtons = false
 ShowPostNavLinks = true
-ShowBreadCrumbs = true
+ShowBreadCrumbs = false
 ShowCodeCopyButtons = false
 ShowWordCount = false
 ShowRssButtonInSectionTermList = false
 UseHugoToc = true
-disableSpecial1stPost = false
-disableScrollToTop = false
+disableSpecial1stPost = true
+disableScrollToTop = true
 comments = false
-hidemeta = false
+hidemeta = true
 hideSummary = false
 showtoc = false
 tocopen = false
@@ -47,8 +47,8 @@ tocopen = false
   safari_pinned_tab = "<link / abs url>"
 
   [params.label]
-  text = "Home"
-  icon = "/apple-touch-icon.png"
+  text = "pdmurray.dev"
+  # icon = "/apple-touch-icon.png"
   iconHeight = 35
 
   [params.profileMode]
@@ -114,20 +114,20 @@ SiteVerificationTag = "XYZabc"
   hiddenInList = true
   hiddenInSingle = true
 
-  [params.editPost]
-  URL = "https://github.com/<path_to_repo>/content"
-  Text = "Suggest Changes"
-  appendFilePath = true
+  # [params.editPost]
+  # URL = "https://github.com/<path_to_repo>/content"
+  # Text = "Suggest Changes"
+  # appendFilePath = true
 
-  [params.fuseOpts]
-  isCaseSensitive = false
-  shouldSort = true
-  location = 0
-  distance = 1_000
-  threshold = 0.4
-  minMatchCharLength = 0
-  limit = 10
-  keys = [ "title", "permalink", "summary", "content" ]
+  # [params.fuseOpts]
+  # isCaseSensitive = false
+  # shouldSort = true
+  # location = 0
+  # distance = 1_000
+  # threshold = 0.4
+  # minMatchCharLength = 0
+  # limit = 10
+  # keys = [ "title", "permalink", "summary", "content" ]
 
 [[menu.main]]
 identifier = "about"
@@ -155,3 +155,15 @@ weight = 20
 
 [markup.highlight]
 noClasses = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+  [markup.goldmark.renderer]
+    unsafe = true

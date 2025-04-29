@@ -1,0 +1,69 @@
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Colormap */
+:root {
+  --colormap-0: #EAFCFD;
+  --colormap-1: #DBF4F5;
+  --colormap-2: #CDECEE;
+  --colormap-3: #BEE4E7;
+  --colormap-4: #ADDCE0;
+  --colormap-5: #9ED4DB;
+  --colormap-6: #8FCCD6;
+  --colormap-7: #83C4D3;
+  --colormap-8: #76BBCF;
+  --colormap-9: #6DB3CB;
+  --colormap-10: #64AAC8;
+  --colormap-11: #5CA2C5;
+  --colormap-12: #5498C1;
+  --colormap-13: #4E90BE;
+  --colormap-14: #4887BC;
+  --colormap-15: #447FB9;
+  --colormap-16: #4075B5;
+  --colormap-17: #3E6CB1;
+  --colormap-18: #3E63AC;
+  --colormap-19: #3E5AA6;
+  --colormap-20: #3E509C;
+  --colormap-21: #3E4891;
+  --colormap-22: #3C4185;
+  --colormap-23: #393A78;
+  --colormap-24: #343369;
+  --colormap-25: #2E2D5B;
+  --colormap-26: #28264F;
+  --colormap-27: #222042;
+  --colormap-28: #1A1935;
+  --colormap-29: #121329;
+  --colormap-30: #0A0C1E;
+  --colormap-31: #030512;
+}
+
+/* Colors */
+:root {
+  --text-color: var(--colormap-12);
+  --background-color: var(--colormap-31);
+  --primary-color: var(--colormap-12);
+  --secondary-color: var(--colormap-18);
+  --accent-color: var(--colormap-25);
+}
+
+
+.dark figure.graph path {
+	stroke: var(--text-color);
+}
+
+.dark figure.graph use {
+	fill: var(--text-color);
+}
+
+figure.graph path {
+	stroke: var(--primary);
+}
+
+figure.graph use {
+	fill: var(--primary);
+}
