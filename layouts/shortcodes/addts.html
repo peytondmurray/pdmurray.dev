@@ -1,0 +1,9 @@
+{{ $content := (path.Join .Page.File.Dir (.Get "src")) }}
+{{ $inputjs := resources.Get (path.Join "/ts/content/" $content) }}
+{{ $built := $inputjs | js.Build (dict "format" "esm" "sourceMap" "inline") }}
+
+{{ if $built.Content }}
+  <script type="module" src="{{ $built.Permalink }}"></script>
+{{ else }}
+  {{ errorf "Trield to add %s, but the result is empty. Tree shaking might have done this if the source file is not empty." $inputjs }}
+{{ end }}

@@ -1,0 +1,101 @@
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Ice colormap, migrated from old site */
+:root {
+	--colormap-0: #eafcfd;
+	--colormap-1: #dbf4f5;
+	--colormap-2: #cdecee;
+	--colormap-3: #bee4e7;
+	--colormap-4: #addce0;
+	--colormap-5: #9ed4db;
+	--colormap-6: #8fccd6;
+	--colormap-7: #83c4d3;
+	--colormap-8: #76bbcf;
+	--colormap-9: #6db3cb;
+	--colormap-10: #64aac8;
+	--colormap-11: #5ca2c5;
+	--colormap-12: #5498c1;
+	--colormap-13: #4e90be;
+	--colormap-14: #4887bc;
+	--colormap-15: #447fb9;
+	--colormap-16: #4075b5;
+	--colormap-17: #3e6cb1;
+	--colormap-18: #3e63ac;
+	--colormap-19: #3e5aa6;
+	--colormap-20: #3e509c;
+	--colormap-21: #3e4891;
+	--colormap-22: #3c4185;
+	--colormap-23: #393a78;
+	--colormap-24: #343369;
+	--colormap-25: #2e2d5b;
+	--colormap-26: #28264f;
+	--colormap-27: #222042;
+	--colormap-28: #1a1935;
+	--colormap-29: #121329;
+	--colormap-30: #0a0c1e;
+	--colormap-31: #030512;
+}
+
+/* Colors */
+:root {
+	--text-color: var(--colormap-12);
+	--background-color: var(--colormap-31);
+	--primary-color: var(--colormap-12);
+	--secondary-color: var(--colormap-18);
+	--accent-color: var(--colormap-25);
+	--primary-alt: var(--colormap-20);
+}
+
+.dark {
+	--primary-alt: var(--colormap-6);
+}
+
+figure.graph path {
+	stroke: var(--primary);
+}
+
+figure.graph use {
+	fill: var(--primary);
+}
+
+/* Hack for getting images to center in posts */
+/* without writing a shortcode to wrap them in a flexbox */
+img.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.cv {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: var(--primary-alt);
+}
+
+.cv > .side-by-side {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+
+.side-by-side > a {
+	padding: 1em;
+}
+
+.cv:hover .side-by-side {
+	opacity: 1;
+}
+
+#cv-short {
+	padding: 1em;
+}
+
+.cv .side-by-side > a:hover {
+	background-color: var(--entry);
+}

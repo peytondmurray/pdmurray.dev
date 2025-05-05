@@ -2,3 +2,15 @@ node_modules/
 .cache/
 yarn-error.log
 dist/
+
+
+# Generated site
+public/
+
+# Hugo-generated images
+resources/
+
+.hugo_build.lock
+
+.yarn/
+yarn.lock

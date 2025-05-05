@@ -1,0 +1,3 @@
+<figure class='{{ .Get "class" }}'>
+  {{ readFile (path.Join .Page.File.Dir (.Get "src")) | safeHTML }}
+</figure>
