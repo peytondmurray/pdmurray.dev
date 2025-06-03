@@ -26,8 +26,8 @@ research applications. Utilizing these materials in device applications requires
 an understanding of their behavior from the macroscopic level all the way down
 to atomic length scales. Alongside micromagnetic simulations
 ([OOMMF](https://math.nist.gov/oommf/), [Mumax3](http://mumax.github.io/)), one
-of the major tools I have used to understand hysteretic behavior is the First
-[Order Reversal Curve (FORC)
+of the major tools I have used to understand hysteretic behavior is the [First
+Order Reversal Curve (FORC)
 technique](https://doi.org/10.1038/s41598-021-83349-z). While simple major loop
 measurements can yield information about the average magnetization of an
 ensemble of magnetic moments, FORC analysis allows individual switching events
