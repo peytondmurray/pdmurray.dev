@@ -84,7 +84,7 @@ math = true
 
   [[params.socialIcons]]
   name = "cv"
-  url = "https://raw.githubusercontent.com/peytondmurray/CV/master/peyton_murray_cv_short.pdf"
+  url = "https://raw.githubusercontent.com/peytondmurray/CV/master/peyton_murray_cv.pdf"
 
   [[params.socialIcons]]
   name = "googlescholar"
