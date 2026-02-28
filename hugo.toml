@@ -15,9 +15,9 @@ minifyOutput = true
 
 [params]
 env = "production"
-title = "Peyton Murray"
-description = "Personal website of Peyton Murray"
-keywords = [ "Blog", "Portfolio", "PaperMod" ]
+title = "pdmurray.dev"
+description = "Peyton Murray"
+keywords = [ "Blog", "Portfolio", "Software", "Open Source", "OSS" ]
 author = "Peyton Murray"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
 DateFormat = "2006-12-01"
