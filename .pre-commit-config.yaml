@@ -1,5 +1,5 @@
 repos:
   - repo: https://github.com/biomejs/pre-commit
-    rev: v2.4.14
+    rev: 669fbb65830382fa403fe131a4f09f0f05192975  # frozen: v2.4.14
     hooks:
       - id: biome-check
