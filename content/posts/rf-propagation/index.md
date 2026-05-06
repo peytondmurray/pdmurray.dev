@@ -45,9 +45,9 @@ especially if there aren't many radios nearby. Networks with only a few radios
 radios will have difficulty propagating messages from one radio to the next,
 making it more likely that messages never reach their intended destination.
 
-This is where the [Meshtastic Site Planner](https://site.meshtastic.org/) comes
-in handy. The site allows you to pick the location of a transmitter, enter in
-your transmitter power and a few other parameters, and then simulate the
+This is where the [Meshtastic Site Planner](https://site.meshtastic.org/) (MSP)
+comes in handy. The site allows you to pick the location of a transmitter, enter
+in your transmitter power and a few other parameters, and then simulate the
 propagation of radio frequencies to get a map of the usable coverage of the
 transmitter.
 
@@ -60,4 +60,41 @@ it took so long to produce a coverage map, and happily, [the code is up on
 GitHub](https://github.com/meshtastic/meshtastic-site-planner), so I decided to
 look into making it go faster.
 
-### Rebuilding for speed
+### Architecture of the Meshtastic Site Planner
+
+Here's what happens when a coverage prediction request is made by a user of the
+MSP:
+
+1. The user sends a request to the MSP webserver
+2. The MSP webserver, a FastAPI app, creates a new prediction request in a redis
+   queue
+3. A python process pulls predictions requests off the queue one-by-one. For
+   each request, the python process first generates a bunch of input files
+   needed to generate a coverage prediction.
+4. The webserver pulls the ground topography data for the region of interest from
+   an S3 bucket
+5. The python process then uses a subprocess to call an RF simulation engine
+   called [SPLAT](https://github.com/jmcmellen/splat) to generate the prediction
+6. The python process then does some postprocessing on the output files
+7. A coverage prediction map is sent back to the user
+
+The architectural choices have some major disadvantages:
+
+- It relies on a webserver for predictions. That's a bottleneck if many users
+  make requests at once, because there's just a single queue of prediction
+  requests here, and a single python process chugging away at them. If we want
+  computations to be fast, we need a big webserver which costs a lot of money to
+  keep available.
+- Someone has to manage the infrastructure.
+- Network latency adds up from the user making the prediction request, the
+  webserver grabbing the ground topography data from the S3 bucket, and then
+  returning the response to the user.
+- The user gets no progress information about the computation.
+
+If I had to guess, the architecture of this server was probably made this
+way because the RF simulation engine, SPLAT, is a standalone binary. How else
+are you supposed to call it?
+
+### Wasm compiling for speed
+
+One alternative is to do everything client-side, without any backend at all.
