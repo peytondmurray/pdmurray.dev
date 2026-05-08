@@ -78,6 +78,8 @@ MSP:
 6. The python process then does some postprocessing on the output files
 7. A coverage prediction map is sent back to the user
 
+{{< svg class="center graph" src="./architecture-msp.svg" >}}
+
 The architectural choices have some major disadvantages:
 
 - It relies on a webserver for predictions. That's a bottleneck if many users
@@ -100,8 +102,6 @@ are you supposed to call it?
 One alternative is to do everything client-side. Since the SPLAT source is [on
 GitHub](https://github.com/jmcmellen/splat), if we could compile it to target
 Web Assembly, we'd be able to do away with the backend entirely.
-
-{{< svg class="center graph" src="./architecture-msp.svg" >}}
 
 I decided to write the webapp with React because I've used it before, and I know
 I can get wasm modules up and running with it. Also, a few years ago I [made a
