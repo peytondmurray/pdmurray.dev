@@ -5,6 +5,11 @@
 	align-items: center;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Ice colormap, migrated from old site */
 :root {
 	--colormap-0: #eafcfd;
@@ -55,6 +60,10 @@
 	--primary-alt: var(--colormap-6);
 }
 
+svg text {
+  fill: var(--primary);
+}
+
 figure.graph path {
 	stroke: var(--primary);
 }
@@ -98,4 +107,12 @@ img.center {
 
 .cv .side-by-side > a:hover {
 	background-color: var(--entry);
+}
+
+.svgdot {
+  fill: var(--primary);
+}
+
+svg ellipse {
+  stroke: var(--primary);
 }
