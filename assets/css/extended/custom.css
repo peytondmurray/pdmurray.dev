@@ -55,6 +55,10 @@
 	--primary-alt: var(--colormap-6);
 }
 
+svg text {
+  fill: var(--primary);
+}
+
 figure.graph path {
 	stroke: var(--primary);
 }
@@ -98,4 +102,12 @@ img.center {
 
 .cv .side-by-side > a:hover {
 	background-color: var(--entry);
+}
+
+.svgdot {
+  fill: var(--primary);
+}
+
+svg ellipse {
+  stroke: var(--primary);
 }

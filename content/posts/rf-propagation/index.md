@@ -101,8 +101,7 @@ One alternative is to do everything client-side. Since the SPLAT source is [on
 GitHub](https://github.com/jmcmellen/splat), if we could compile it to target
 Web Assembly, we'd be able to do away with the backend entirely.
 
-![Architecture diagram before and after
-refactor](./before-after-architecture.webp)
+{{< svg class="center graph" src="./architecture-msp.svg" >}}
 
 I decided to write the webapp with React because I've used it before, and I know
 I can get wasm modules up and running with it. Also, a few years ago I [made a
@@ -433,7 +432,10 @@ After completing the optimizations, I published the wasm-compiled SPLAT package
 to npm. You can download it now with `npm add splat-web`!
 
 After publishing, I finished the rest of the webapp, and it's now live at
-[waveguide.dev](https://waveguide.dev).
+[waveguide.dev](https://waveguide.dev). The architecture is pretty different fom
+the original meshtastic-site-planner:
+
+{{< svg class="center graph" src="./architecture-waveguide.svg" >}}
 
 ## Concluding remarks
 
