@@ -1,4 +1,5 @@
 ---
+
 title: Parallelization in Python
 date: '2018-02-11T18:37:01-0800'
 ---

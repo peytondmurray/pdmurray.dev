@@ -1,4 +1,5 @@
 ---
+
 title: Solving Linear ODEs With Multigrid
 date: '2019-02-26T14:30:00-0800'
 ---
@@ -91,7 +92,7 @@ $$
 \, & \, & \, & \, & -1 & 2
 \end{pmatrix}
 \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_{n-1} \end{pmatrix}
- &= \begin{pmatrix} f_1 \\ f_2 \\ \vdots \\ f_{n-1} \end{pmatrix}
+&= \begin{pmatrix} f_1 \\ f_2 \\ \vdots \\ f_{n-1} \end{pmatrix}
 \end{aligned}
 $$
 

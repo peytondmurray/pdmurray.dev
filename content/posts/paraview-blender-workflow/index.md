@@ -1,4 +1,5 @@
 ---
+
 title: Science With Paraview and Blender
 date: '2019-02-26T14:30:00-0800'
 ---
@@ -60,13 +61,13 @@ Although the images above were rendered using Blender 2.8, the same method works
 Happy rendering!
 
 [^1]:
-    I am aware that ray tracing is possible in Paraview with OSPRay, but I haven't been able to
-    figure out how to use it to any real effect. It doesn't look really much better than rasterization
-    anyway, to say nothing of the customizable lighting, camera, texturing, and post-processing
-    available in blender.
+I am aware that ray tracing is possible in Paraview with OSPRay, but I haven't been able to
+figure out how to use it to any real effect. It doesn't look really much better than rasterization
+anyway, to say nothing of the customizable lighting, camera, texturing, and post-processing
+available in blender.
 
 [^2]:
-    It seems like saving only color data (and not alpha values) makes it impossible to display the
-    data into blender. I'm not sure if this is intended behavior or not, or whether it is an issue
-    with Paraview or with blender, but when you import your file in blender the glyphs are just
-    missing.
+It seems like saving only color data (and not alpha values) makes it impossible to display the
+data into blender. I'm not sure if this is intended behavior or not, or whether it is an issue
+with Paraview or with blender, but when you import your file in blender the glyphs are just
+missing.

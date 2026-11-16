@@ -1,6 +1,6 @@
 ---
-title: Projects
----
+
+## title: Projects
 
 ## Simulating an image of a black hole
 

@@ -1,4 +1,5 @@
 ---
+
 title: Building An Advanced Science-To-Blender Pipeline
 date: '2019-06-16T14:30:00-0800'
 ---
@@ -288,15 +289,15 @@ micromagnetics simulator using a combination of custom Go functions and Python s
 significant investment of time and effort, but ultimately the payoff can be worth it.
 
 [^1]:
-    While you can actually split this single mesh into a bunch of separate objects in Blender, this
-    still doesn't really solve the problem. For example, suppose I have some object in Paraview
-    which moves as a function of time, and I want to make a movie of it in Blender. I can try to
-    export my data in Paraview as a set of PLY files (`frame1.ply, frame2.ply, frame3.ply, ...`),
-    like frames from a movie. But there is still no way to tell Blender that the object I import
-    from `frame1.ply` is the same object as in `frame2.ply`, shown at a different time. As far as
-    Blender is concerned these are compeletely different objects, so Blender's most powerful
-    animation features - specifically, keyframing the motion of objects - just won't work here.
+While you can actually split this single mesh into a bunch of separate objects in Blender, this
+still doesn't really solve the problem. For example, suppose I have some object in Paraview
+which moves as a function of time, and I want to make a movie of it in Blender. I can try to
+export my data in Paraview as a set of PLY files (`frame1.ply, frame2.ply, frame3.ply, ...`),
+like frames from a movie. But there is still no way to tell Blender that the object I import
+from `frame1.ply` is the same object as in `frame2.ply`, shown at a different time. As far as
+Blender is concerned these are compeletely different objects, so Blender's most powerful
+animation features - specifically, keyframing the motion of objects - just won't work here.
 
 [^2]:
-    After posting this, I've discovered that you _can_ in fact align objects to a vector using the
-    mathutils.to_track_quat() function. Maybe I'll make another post about this later.
+After posting this, I've discovered that you _can_ in fact align objects to a vector using the
+mathutils.to_track_quat() function. Maybe I'll make another post about this later.

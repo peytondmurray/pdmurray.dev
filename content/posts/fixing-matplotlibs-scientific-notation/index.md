@@ -1,4 +1,5 @@
 ---
+
 title: Fixing Matplotlib's Scientific Notation
 date: '2017-10-26T18:37:01-0800'
 ---

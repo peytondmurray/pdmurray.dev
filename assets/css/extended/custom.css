@@ -6,8 +6,8 @@
 }
 
 .flex-col {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Ice colormap, migrated from old site */
@@ -61,7 +61,7 @@
 }
 
 svg text {
-  fill: var(--primary);
+	fill: var(--primary);
 }
 
 figure.graph path {
@@ -110,9 +110,9 @@ img.center {
 }
 
 .svgdot {
-  fill: var(--primary);
+	fill: var(--primary);
 }
 
 svg ellipse {
-  stroke: var(--primary);
+	stroke: var(--primary);
 }
