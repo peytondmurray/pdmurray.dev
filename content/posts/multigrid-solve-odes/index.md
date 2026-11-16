@@ -1,5 +1,4 @@
 ---
-
 title: Solving Linear ODEs With Multigrid
 date: '2019-02-26T14:30:00-0800'
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: Building An Advanced Science-To-Blender Pipeline
 date: '2019-06-16T14:30:00-0800'
 ---

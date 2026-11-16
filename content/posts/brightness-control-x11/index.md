@@ -1,5 +1,4 @@
 ---
-
 title: Brightness Control with X11
 date: '2018-09-25T14:30:00-0800'
 ---
