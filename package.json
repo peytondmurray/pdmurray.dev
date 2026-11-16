@@ -1,7 +1,7 @@
 {
   "name": "pdmurray-dev",
   "version": "0.0.0",
-  "packagemanager": "pnpm@12.16.1",
+  "packageManager": "pnpm@12.16.1",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
