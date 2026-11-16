@@ -1,13 +1,14 @@
 {
-	"name": "pdmurray-dev",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev"
-	},
-	"devDependencies": {
-		"wrangler": "^4.162.0"
-	}
+  "name": "pdmurray-dev",
+  "version": "0.0.0",
+  "packagemanager": "pnpm@12.16.1",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.162.0"
+  }
 }
